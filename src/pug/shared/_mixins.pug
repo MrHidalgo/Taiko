@@ -7,3 +7,12 @@ mixin icon(name, modClass)
     - var modClass = ' ' + modClass
   svg(class="ico " + name + modClass)
     use(xlink:href= svgSprite + '#' + name)
+
+
+mixin customBtn(className, text)
+  a(href="javascript:void(0);").cbutton(class= className)
+    .cbutton__block
+      .cbutton__block-bg.cbutton__block-bg--0
+      .cbutton__block-bg.cbutton__block-bg--1
+    .cbutton__text!= text
+

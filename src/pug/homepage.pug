@@ -5,6 +5,33 @@ bodyClass: homepage
 extends shared/_layout
 block content
 
+    // block main - ...
+    .homepage__main
+      .homepage__main-bg
+
+      p.homepage__main-title!= "#единственное в России"
+
+      +customBtn('homepage__main-cbtn', "ЯПОНСКОE")
+      +customBtn('homepage__main-cbtn', "БАРАБАННОЕ ШОУ")
+
+
+    // block programs
+    .homepage__program
+      .container
+
+
+    // block news
+    .homepage__news
+      .container
+        p.homepage__news-title!= "ПОСЛЕДНИЕ НОВОСТИ"
+
+        .homepage__news-wrap
+          -for(var i = 0; i < 3; i++)
+            div.homepage__news-block(class="homepage__news-block--" + i)
+              .homepage__news-hidden
+                p!= "ОТКРЫТИЕ<br/>ЮНИКЛО"
+
+        +customBtn('homepage__news-cbtn', "ДРУГИЕ НОВОСТИ")
 
 block footer
   include ./components/_footer
