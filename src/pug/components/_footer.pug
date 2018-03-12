@@ -1,0 +1,29 @@
+// FOOTER :: START
+footer.footer
+  .container
+    .footer__wrapper
+
+      .footer__row
+        .footer__question
+          p.footer__question-title!= 'ПО ВОПРОСАМ ВЫСТУПЛЕНИЯ'
+          a(href="tel:89629996662").footer__question-phone!= '8 (962) 999-666-2'
+          a(href="mailto:info@taiko.moscow").footer__question-email!= 'INFO@TAIKO.MOSCOW'
+
+        .footer__present
+          .footer__present-image
+            .footer__present-bg
+            .footer__present-icon.icon-pfd
+          .footer__present-text
+            p.footer__present-title!= 'СКАЧАЙТЕ <br/> ПРЕЗЕНТАЦИЮ'
+            p.footer__present-size!= 'PDF, 4МБ'
+
+
+
+      .footer__row
+        block social
+          include ../components/_social
+
+
+      
+      
+// FOOTER :: END

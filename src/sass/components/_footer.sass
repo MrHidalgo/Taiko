@@ -1,0 +1,76 @@
+// FOOTER
+.footer
+  background: $colorBlack
+  min-height: 480px
+  padding-top: 122px
+  padding-bottom: 97px
+
+  .container
+    max-width: (1300 + (40 * 2)) * 1px
+
+  .social
+    margin-top: 103px
+
+  &__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    min-height: 100px
+
+  &__row
+    width: 100%
+    display: flex
+    justify-content: space-between
+
+  //&__question,
+  //&__present
+
+
+  &__question
+    a
+      display: block
+    &-title
+      color: $colorNobel
+      font-size: 24px
+    &-phone
+      font-weight: bold
+      font-size: 39px
+    &-email
+      font-weight: bold
+      font-size: 39px
+      margin-top: 10px
+
+  &__present
+    display: flex
+    &-image
+      cursor: pointer
+      position: relative
+      width: 120px
+      height: 137px
+      margin-right: 34px
+      &:hover
+        .footer__present-bg
+          height: 100%
+        .footer__present-icon
+          bottom: ((137 - 120) / 2) * 1px
+    &-bg
+      width: 120px
+      height: 120px
+      background-color: $colorFuelYellow
+      transition: height .3s ease-in-out, bottom .3s ease-in-out
+    &-icon
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      margin: auto
+      transition: bottom .3s ease-in-out
+    &-text
+      font-size: 24px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    &-title
+      font-weight: bold
+    &-size
+      color: $colorNobel
