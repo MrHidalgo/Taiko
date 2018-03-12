@@ -38,11 +38,8 @@ block content
       .container
         p.homepage__news-title!= "ПОСЛЕДНИЕ НОВОСТИ"
 
-        .homepage__news-wrap
-          -for(var i = 0; i < 3; i++)
-            div.homepage__news-block(class="homepage__news-block--" + i)
-              .homepage__news-hidden
-                p!= "ОТКРЫТИЕ<br/>ЮНИКЛО"
+
+        +newsBlock(3, "")
 
         +customBtn('homepage__news-cbtn', "ДРУГИЕ НОВОСТИ")
 

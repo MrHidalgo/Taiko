@@ -6,5 +6,19 @@ extends shared/_layout
 block content
 
 
+  .news__main
+    .container
+
+      +customBtn('news__main-cbtn', "НОВОСТИ")
+
+      +newsBlock(3, "")
+
+      .news__wrap
+        -for(var i = 0; i < 2; i++)
+          div.news__wrap-elem(class!= (i === 0) ? "news__wrap-elem--full" : "news__wrap-elem--" + i)
+            .news__wrap-hidden
+              p!= "ОТКРЫТИЕ<br/>ЮНИКЛО"
+
+
 block footer
   include ./components/_footer
