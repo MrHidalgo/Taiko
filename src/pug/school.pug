@@ -4,3 +4,30 @@ bodyClass: school
 ---
 extends shared/_layout
 block content
+
+  .school__main
+
+    img(src="./img/img-bg-0.png" class="school__main-bg")
+
+    .container
+
+      img(src="./img/img-school__man.png" class="school__main-man")
+
+      .school__wrap
+        .school__row
+
+          p.school__title!= "Стань частью"
+
+          +customBtn('school__main-cbtn', "TAIKO TEAM")
+
+          p.school__text.school__text--0!= "Летом мы проводим интенсивные мастер-классы. Вы научитесь правильной стойке, базовым ритмам и различным техникам игры. Даже выучите несколько наших ярких номеров."
+          p.school__text.school__text--1!= "Каждый ученик, успешно показавший себя на занятиях, сможет стать частью группы TAIKO in-Spiration."
+          p.school__text.school__text--2!= "Скоро. Следите за новостями!"
+
+          .footer__question
+            p.footer__question-title!= 'ПО ВОПРОСАМ ЗАНЯТИЙ'
+            a(href="tel:89199994858").footer__question-phone!= '8 (919) 999-48-58'
+            a(href="mailto:info@taiko.moscow").footer__question-email!= 'INFO@TAIKO.MOSCOW'
+
+      .school__wrap
+        include ./components/_social
