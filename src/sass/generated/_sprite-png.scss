@@ -1,11 +1,20 @@
 $sprite: (
-	pfd: (
+	logotype: (
 		offset-x: 0px,
 		offset-y: 0px,
+		width: 197px,
+		height: 60px,
+		total-width: 197px,
+		total-height: 190px,
+		image: '../img/sprite.png'
+	),
+	pfd: (
+		offset-x: 0px,
+		offset-y: -70px,
 		width: 82px,
 		height: 120px,
-		total-width: 82px,
-		total-height: 120px,
+		total-width: 197px,
+		total-height: 190px,
 		image: '../img/sprite.png'
 	),
 );
@@ -64,6 +73,9 @@ $sprite: (
 
 
 
+	.icon-logotype {
+		@include sprite(logotype)
+	}
 	.icon-pfd {
 		@include sprite(pfd)
 	}
