@@ -28,7 +28,60 @@
     &-cbtn
       margin-bottom: 10px
 
-  //&__program
+
+  &__program
+    position: relative
+    min-height: 2000px
+    background-color: $colorBlack
+
+    .container
+      z-index: 1
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      height: 100%
+      padding-top: 105px
+
+    &-bg
+      position: absolute
+      z-index: 0
+      top: 100px
+      left: -24%
+
+    &-title
+      font:
+        weight: bold
+        size: 60px
+      margin-bottom: 15px
+
+    &-subTitle
+      font:
+        size: 60px
+
+    &-text
+      font:
+        size: 30px
+      margin:
+        bottom: 70px
+
+    &-box
+      width: 48%
+      margin:
+        top: 130px
+        bottom: 277px
+        left: auto
+
+    &-woman
+      position: absolute
+      right: 40px
+      bottom: 50px
+
+    &-video
+      width: 1080px
+      height: 600px
+      background-color: $colorNero
+
 
   &__news
     padding:

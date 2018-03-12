@@ -17,7 +17,20 @@ block content
 
     // block programs
     .homepage__program
+      img(src="./img/img-bg.png" class="homepage__program-bg")
       .container
+        p.homepage__program-title!= "ТАКАЯ ДАЛЕКАЯ И ЗАГАДОЧНАЯ ЯПОНИЯ"
+        p.homepage__program-subTitle!= "ОКАЖЕТСЯ СОВСЕМ РЯДОМ..."
+
+        .homepage__program-box
+
+          p.homepage__program-text!= "В нашем репертуаре по-настоящему 'ударные' фестивальные композиции и современные барабанные ритмы. Этническая музыка, традиционные костюмы и народные танцы погружают наших зрителей в атмосферу таинственной Азии и заставляют их сердца биться в такт барабанов!"
+
+          +customBtn('homepage__program-cbtn', "ПРОГРАММЫ")
+
+        img(src="./img/img-homepage__program.png" class="homepage__program-woman")
+
+        .homepage__program-video
 
 
     // block news
