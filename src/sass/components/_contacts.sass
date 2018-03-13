@@ -1,0 +1,98 @@
+// CONTACTS
+
+.contacts
+  &__main
+    min-height: 1080px
+    padding-top: 120px
+    background-image: url("../img/ImageBg_contacts.jpg")
+    background-repeat: no-repeat
+    background-position: top left
+    background-size: cover
+
+    &-cbtn
+      margin-bottom: 87px
+
+    &-row
+      display: flex
+
+      &--left,
+      &--right
+        width: 50%
+        margin-bottom: 120px
+
+  &__phone,
+  &__email
+    &-title
+      font-size: 24px
+      margin-bottom: 5px
+    &-number
+      color: $colorFuelYellow
+      font:
+        size: 40px
+        weight: bold
+
+  &__phone
+    &-wrap
+      margin-bottom: 50px
+  &__email
+    &-wrap
+      margin-bottom: 200px
+
+  &__form
+    float: right
+    width: 100%
+    max-width: 660px
+    min-height: 720px
+    padding: 60px
+    background-color: $colorNero
+    box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+
+    &-field
+      width: 100%
+      height: 60px
+      margin-bottom: 30px
+      border: 5px solid $colorBlack
+
+      &--phone
+        border-color: $colorFuelYellow
+
+        input
+          &::-webkit-input-placeholder
+            color: $colorFuelYellow
+          &::-moz-placeholder
+            color: $colorFuelYellow
+          &:-ms-input-placeholder
+            color: $colorFuelYellow
+          &:-moz-placeholder
+            color: $colorFuelYellow
+
+      &--message
+        min-height: 210px
+        margin-bottom: 60px
+
+      input
+        width: 100%
+        line-height: (60px - 10)
+        font:
+          size: 24px
+          weight: bold
+        text-align: center
+        color: $colorWhite
+        background-color: transparent
+        border: none
+
+      textarea
+        resize: none
+        width: 100%
+        height: 100%
+        padding: 15px
+        background-color: transparent
+        border: none
+        font:
+          size: 24px
+          weight: bold
+        text-align: center
+        color: $colorWhite
+
+
+

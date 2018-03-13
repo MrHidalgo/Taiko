@@ -4,3 +4,50 @@ bodyClass: contcts
 ---
 extends shared/_layout
 block content
+
+
+    .contacts__main
+      .container
+        .contacts__main-row
+          .contacts__main-row--left
+
+            +customBtn('contacts__main-cbtn', "КОНТАКТЫ")
+
+            .contacts__phone-wrap
+              p.contacts__phone-title!= "ПОЗВОНИТЬ"
+              a(href="tel:89629996662").contacts__phone-number!= '8 (962) 999-666-2'
+
+            .contacts__email-wrap
+              p.contacts__email-title!= "ПОЗВОНИТЬ"
+              a(href="mailto:info@taiko.moscow").contacts__email-number!= 'INFO@TAIKO.MOSCOW'
+
+            .footer__present
+              .footer__present-image
+                .footer__present-bg
+                .footer__present-icon.icon-pfd
+              .footer__present-text
+                p.footer__present-title!= 'СКАЧАЙТЕ <br/> ПРЕЗЕНТАЦИЮ'
+                p.footer__present-size!= 'PDF, 4МБ'
+
+
+          .contacts__main-row--right
+
+            .contacts__form
+
+              .contacts__form-field
+                input(type="text" placeholder="ВАШЕ ИМЯ")
+
+              .contacts__form-field.contacts__form-field--phone
+                input(type="text" readonly=true placeholder="8 962 999 66 62")
+
+              .contacts__form-field
+                input(type="email" placeholder="ПОЧТА")
+
+              .contacts__form-field.contacts__form-field--message
+                textarea(placeholder="СООБЩЕНИЕ")
+
+              +customBtn('contacts__form-cbtn', "ОТПРАВИТЬ")
+
+
+        include ./components/_social
+
