@@ -6,5 +6,97 @@ extends shared/_layout
 block content
 
 
+  .about__main
+
+    img(src="./img/ImageBg_about.png" class="about__main-bg")
+
+    .container
+
+      .about__main-row
+
+        +customBtn('about__main-cbtn', "О ГРУППЕ")
+
+        p.about__main-text!= "TAIKO in-Spiration - это дружная команда молодых и талантливых музыкантов, объединенных общим увлечением и любовью к японским барабанам тайко."
+
+
+  .about__info
+
+    img(src="./img/ImageInfo_about.jpg")
+
+    .container
+
+      .about__info-slider.js-myCustomSlider(data-num=[7, 32, 18, 46, 3], data-text=["ЛЕТ","НОМЕРА","ТУРОВ","БРЕНДОВ","КЛИПА"])
+        -
+          var infoArr = [
+            "Мы появились на свет в 2011 году, и уже семь лет рабуем всех нашим творчеством. Первый учителем и вдохновителем стала Оксана Мосейчук, перкуссионист из Австрии. Спустя время судьба свела  нас с японским музыкантом и композитором Takuya Taniguchi, который подарил нашим барабанам современное звучание.",
+            "Мы играем на барабанах тайко, в стиле вадайко, хатидже, мийяке, одори. Вдохновленные звуком и ритмами японских барабанов тайко, мы увлеклись культурой Японии и погрузились в ее изучение. Недавно мы расширили репертуар и подготовили китайские номера.",
+            "Челябинск, ростов на дону, нижний новгород, пермь, ижевск, казать, питер, астана. Нас часто зовут на гастроли в разные города России",
+            "Мы работаем с лучшими японскими компаниями и не только. Самое долгое сотрудничество - 4 года с Юникло. toyota, mitsubishi, lexux, honda, tokeda, harmles, samsung, uniclo, orient, hh, subary, suzuki, wall, lifan, nobu, soluxe, hinode, bynthmths, fohow, kuocera",
+            "Певый клип с биянкой, второй с MOUMINA, а третий с киркоровым.",
+          ];
+        -for(var i = 0, len = infoArr.length; i < len; i++)
+          .about__info-slider-item
+            p!= infoArr[i]
+
+
+
+  .about__member
+    .container
+
+      .about__member-wrap
+        img(src="./img/ImageMemberMain_about.png")
+
+        .about__member-row
+
+          .about__member-col
+            p.about__member-hash!= "#лидер группы"
+            +customBtn('about__member-cbtn', "АЛЕКСАНДРА")
+            +customBtn('about__member-cbtn', "САМОХИНА")
+
+          .about__member-col
+            p.about__member-cAt!= "@ALEX_TAIKO"
+
+      p.about__member-title!= "НАШИ БАРАБАНЩИЦЫ"
+
+    .about__member-grid
+      -
+        var arrImage = [
+          "ImageMemberFace_about",
+          "ImageMemberFace_about",
+          "ImageMemberFace_about",
+          "ImageMemberFace_about",
+          "ImageMemberFace_about",
+          "ImageMemberFace_about"
+        ];
+
+      -for(var i = 0, len = arrImage.length; i < len; i++)
+        div(class="about__member-grid-" + i)
+          img(src="./img/" + arrImage[i] + ".jpg")
+
+          .about__member-grid-hidden
+            p.about__member-grid-cAt!= "@SHELOMKA"
+            p.about__member-grid-name!= "АНАСТАСИЯ"
+            p.about__member-grid-surname!= "ШЕЛОМОВА"
+
+
+
+  .about__reviews
+    .container
+      p.about__reviews-title!= "ОТЗЫВЫ"
+
+      .about__reviews-row
+
+        .about__reviews-row--left
+          .about__reviews-image
+            img(src="./img/ImageReview_about.jpg")
+
+        .about__reviews-row--right
+          p.about__reviews-text!= "Очень зажигали барабанщицы! Они такое творили! Это было фантастически мощно и красиво."
+          .about__reviews-wrap
+            p.about__reviews-role!= "певец, актёр, композитор и продюсер"
+            p.about__reviews-name!= "ФИЛЛИП КИРКОРОВ"
+
+
+
 block footer
   include ./components/_footer

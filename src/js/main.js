@@ -170,8 +170,27 @@ $(document).ready(function(){
     })
 
     // other individual sliders goes here
-    $('[js-myCustomSlider]').slick({
+    $('.js-myCustomSlider').slick({
+      dots: true,
+      prevArrow: false,
+      nextArrow: false,
+      infinite: true,
+      speed: 550,
+      pauseOnDotsHover: true,
+      fade: true,
+      slidesToShow: 1,
+      autoplay: true,
+      customPaging: function(slick,index) {
 
+        var sliderName = $(".js-myCustomSlider"),
+          arrNum = sliderName.data('num'),
+          arrText = sliderName.data('text');
+
+        return '<div>' +
+            '<p>' + arrNum[index] + '</p>' +
+            '<p>' + arrText[index] + '</p>' +
+          '</div>';
+      }
     })
 
   }
