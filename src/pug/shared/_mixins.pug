@@ -69,8 +69,21 @@ mixin programFullBlock(imgName, hashText, cbtnText, time)
       p!= hashText
       +customBtn('programs__container-cbtn', cbtnText)
 
-      .programs__container-time
-        i.programs__container-icon.icon-clockWhite
-        span.programs__container-icon!= time
+      if(time)
+        .programs__container-time
+          i.programs__container-icon.icon-clockWhite
+          span.programs__container-icon!= time
 
+
+mixin seasconBlock(text, arr)
+  .season__block
+    p!= text
+
+  .season__elem
+    -for(var i = 0, len = arr.length; i < len; i++)
+      .season__elem-container
+        .season__elem-item
+          != arr[i]
+
+        p!= "#БАРАБАННЫЙ НОМЕР"
 

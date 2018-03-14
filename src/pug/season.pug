@@ -5,6 +5,59 @@ bodyClass: season
 extends shared/_layout
 block content
 
+  -
+    var seaseonArrText = [
+      "Это время бесконечно моросящего дождя, когда непрерывным потоком капает с неба вода, а зонтик становится главным героем событий. Это время затопленных равнин и живительной влаги, когда отцветает слива и наливаются соком плоды, а первые ростки риса и бамбука только начинают появляться. Это время цветения гортензий, когда в их голубизне утопают храмы и сады, улицы и города.",
+    ];
+    var seaseonArrTextElemBlock = [
+      "YATAI BAYASHI",
+      "YAMAGAWA",
+      "SEN NO KAIKYO"
+    ];
+
+
+
+  .season__main
+    p.season__main-hash!= "#ШОУ-ПРОГРАММА"
+    +customBtn('season__main-cbtn', "ЯПОНСКИЕ СЕЗОНЫ")
+
+
+  .season__concept
+
+    img(src="./img/ImageBg0_concept.png" class="season__concept-image season__concept-image--left")
+    img(src="./img/ImageBg1_concept.png" class="season__concept-image season__concept-image--right")
+
+    .container
+      +customBtn('season__concept-cbtn', "КОНЦЕПЦИЯ")
+
+      p.season__concept-title!= "В японской природе за год"
+      p.season__concept-subtitle!= "происходит тысяча изменений<br/>и десять тысяч перемен..."
+      p.season__concept-text!= "Загадка японских сезонов кроется не в яркой смене времён года, а в том, как японцы смотрят на каждое природное явление.<br/><br/>Где ещё любуются, как цветёт сакура, льёт дождь, краснеют листья клёна и падает первый снег?<br/><br/>Чтобы почувствовать загадочную Японию, попробуйте посмотреть по-новому на необыкновенную красоту Японских Сезонов."
+
+  .season__container
+    .container
+      p.season__container-tilte!= "ШОУ-ПРОГРАММА ВКЛЮЧАЕ В СЕБЯ"
+      p.season__container-subtilte!= "<b>6 БЛОКОВ<b/> ПО 15 МИНУТ"
+
+      +programFullBlock("ImageFullBlock_programs", "#БЛОК ПЕРВЫЙ", "ХАРУ", "")
+      +seasconBlock(seaseonArrText[0], seaseonArrTextElemBlock)
+
+      +programFullBlock("ImageFullBlock_programs", "#БЛОК ПЕРВЫЙ", "ХАРУ", "")
+      +seasconBlock(seaseonArrText[0], seaseonArrTextElemBlock)
+
+      +programFullBlock("ImageFullBlock_programs", "#БЛОК ПЕРВЫЙ", "ХАРУ", "")
+      +seasconBlock(seaseonArrText[0], seaseonArrTextElemBlock)
+
+      +programFullBlock("ImageFullBlock_programs", "#БЛОК ПЕРВЫЙ", "ХАРУ", "")
+      +seasconBlock(seaseonArrText[0], seaseonArrTextElemBlock)
+
+      +programFullBlock("ImageFullBlock_programs", "#БЛОК ПЕРВЫЙ", "ХАРУ", "")
+      +seasconBlock(seaseonArrText[0], seaseonArrTextElemBlock)
+
+      +programFullBlock("ImageFullBlock_programs", "#БЛОК ПЕРВЫЙ", "ХАРУ", "")
+      +seasconBlock(seaseonArrText[0], seaseonArrTextElemBlock)
+
+      +customBtn('season__container-cbtn', "СТОИМОСТЬ")
 
 block footer
   include ./components/_footer
