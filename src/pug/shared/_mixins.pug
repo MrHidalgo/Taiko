@@ -24,3 +24,53 @@ mixin customBtn(className, text)
       .cbutton__block-bg.cbutton__block-bg--1
     .cbutton__text!= text
 
+
+mixin customBtnImage(className, iconName)
+  a.cbutton(href="javascript:void(0);" class= className)
+    .cbutton__block
+      .cbutton__block-bg.cbutton__block-bg--0
+      .cbutton__block-bg.cbutton__block-bg--1
+    .cbutton__icon(class= iconName)
+
+
+// programs__block--normal
+// programs__block--reverse
+mixin prgramsBlock(className, imgName, hashText, title, time, text)
+  div(class="programs__block " + className)
+    .programs__block--left
+
+      .programs__block-video
+        img(src="./img/" + imgName + ".jpg")
+        +customBtnImage('cbutton--icon js-play', "icon-play")
+
+      p!= hashText
+
+    .programs__block--right
+
+      .programs__block-header
+        h4!= title
+
+        .programs__block-time
+          i.programs__block-icon.icon-clock
+          span.programs__block-icon!= time
+
+      p!= text
+
+      +customBtn('programs__block-cbtn', "СТОИМОСТЬ")
+
+
+mixin programFullBlock(imgName, hashText, cbtnText, time)
+  .programs__container
+
+    .programs__container-video
+      img(src="./img/" + imgName + ".jpg")
+
+    .programs__container-info
+      p!= hashText
+      +customBtn('programs__container-cbtn', cbtnText)
+
+      .programs__container-time
+        i.programs__container-icon.icon-clockWhite
+        span.programs__container-icon!= time
+
+

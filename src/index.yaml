@@ -4,14 +4,14 @@ PageList:
 - file: homepage.html
   ready: 70
 - file: about.html
-  ready: 60
+  ready: 70
 - file: contacts.html
-  ready: 60
+  ready: 70
 - file: news.html
-  ready: 60
+  ready: 70
 - file: programs.html
-  ready: 20
+  ready: 70
 - file: school.html
-  ready: 60
+  ready: 70
 - file: season.html
   ready: 20

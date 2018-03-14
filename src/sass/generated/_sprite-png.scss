@@ -1,10 +1,28 @@
 $sprite: (
+	clock: (
+		offset-x: -92px,
+		offset-y: -70px,
+		width: 60px,
+		height: 60px,
+		total-width: 267px,
+		total-height: 190px,
+		image: '../img/sprite.png'
+	),
+	clockWhite: (
+		offset-x: -207px,
+		offset-y: 0px,
+		width: 60px,
+		height: 60px,
+		total-width: 267px,
+		total-height: 190px,
+		image: '../img/sprite.png'
+	),
 	logotype: (
 		offset-x: 0px,
 		offset-y: 0px,
 		width: 197px,
 		height: 60px,
-		total-width: 197px,
+		total-width: 267px,
 		total-height: 190px,
 		image: '../img/sprite.png'
 	),
@@ -13,7 +31,16 @@ $sprite: (
 		offset-y: -70px,
 		width: 82px,
 		height: 120px,
-		total-width: 197px,
+		total-width: 267px,
+		total-height: 190px,
+		image: '../img/sprite.png'
+	),
+	play: (
+		offset-x: -207px,
+		offset-y: -70px,
+		width: 52px,
+		height: 60px,
+		total-width: 267px,
 		total-height: 190px,
 		image: '../img/sprite.png'
 	),
@@ -73,9 +100,18 @@ $sprite: (
 
 
 
+	.icon-clock {
+		@include sprite(clock)
+	}
+	.icon-clockWhite {
+		@include sprite(clockWhite)
+	}
 	.icon-logotype {
 		@include sprite(logotype)
 	}
 	.icon-pfd {
 		@include sprite(pfd)
+	}
+	.icon-play {
+		@include sprite(play)
 	}

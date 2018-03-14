@@ -193,6 +193,21 @@ $(document).ready(function(){
       }
     })
 
+    // other individual sliders goes here
+    $('.js-programSuitSlider').slick({
+      dots: true,
+      pauseOnDotsHover: true,
+      prevArrow: false,
+      nextArrow: false,
+      speed: 550,
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      customPaging: function(slick,index) {
+        return '<div></div>';
+      }
+    })
+
   }
 
   //////////

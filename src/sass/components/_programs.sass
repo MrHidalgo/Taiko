@@ -1,0 +1,188 @@
+// PROGRAMS
+
+.programs
+  &__main
+    display: flex
+    align-items: center
+    min-height: 960px
+    background-color: $colorBlack
+    background-image: url("../img/ImageBgMain_programs.jpg")
+    background-repeat: no-repeat
+    background-position: top left
+    background-size: cover
+
+
+  &__wrap
+    padding:
+      top: 90px
+      bottom: 90px
+    background-color: $colorNero
+    box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
+
+  &__container
+    position: relative
+    height: 600px
+    margin-bottom: 113px
+    background-color: $colorBlack
+    box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
+
+    &-video
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba($colorBlack, 0.5)
+
+    &-info
+      position: relative
+      z-index: 1
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+      p
+        margin-bottom: 10px
+        font:
+          size: 24px
+          weight: bold
+        text-align: center
+
+    &-time
+      margin-top: 30px
+      text-align: center
+
+      i,
+      span
+        display: inline-block
+        vertical-align: middle
+      i
+        margin-right: 30px
+      span
+        font-size: 40px
+
+    &-icon
+      display: inline-block
+      vertical-align: middle
+
+  &__block
+    display: flex
+    margin-bottom: 113px
+
+    &--reverse
+      flex-direction: row-reverse
+
+    &--left
+      width: 600px
+      margin-right: 180px
+
+      .programs__block--reverse &
+        margin:
+          right: 0
+          left: 180px
+
+      > p
+        font-size: 24px
+        color: $colorNobel
+
+        .programs__block--reverse &
+          text-align: right
+
+    &--right
+      width: calc(100% - (600px + 180px))
+      padding-top: 30px
+
+      > p
+        font-size: 24px
+        margin-bottom: 80px
+
+    &-video
+      position: relative
+      width: 600px
+      height: 600px
+      margin-bottom: 10px
+      background-color: $colorBlack
+      box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+
+    &-header
+      overflow: hidden
+      margin-bottom: 60px
+
+      > h4,
+      > .programs__block-time
+        display: inline-block
+        vertical-align: middle
+
+      h4
+        min-width: 450px
+        margin: 0
+        font:
+          size: 40px
+          weight: bold
+        color: $colorFuelYellow
+
+    &-time
+      i,
+      span
+        display: inline-block
+        vertical-align: middle
+      i
+        margin-right: 30px
+      span
+        font-size: 40px
+        color: $colorNobel
+
+    &-icon
+      display: inline-block
+      vertical-align: middle
+
+  &__suit
+    &-title
+      margin-bottom: 30px
+      font:
+        size: 40px
+        weight: bold
+      color: $colorFuelYellow
+      text-align: center
+
+    &-item
+      width: 480px
+      height: 720px
+      margin:
+        top: 30px
+        left: 20px
+        right: 20px
+        bottom: 30px
+      box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+
+    .slick-dots
+      margin-top: 30px
+      padding-left: 0
+      text-align: center
+
+
+      li
+        cursor: pointer
+        vertical-align: middle
+        width: 30px
+        height: 30px
+        margin-right: 45px
+        background-color: $colorFuelYellow
+        &:last-child
+          margin-right: 0
+
+        &.slick-active
+          width: 60px
+          height: 60px
+          border: 15px solid $colorFuelYellow
+          background-color: transparent
+
+
