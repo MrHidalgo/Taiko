@@ -120,8 +120,17 @@ $(document).ready(function(){
   _document.on('click', '[js-hamburger]', function(){
     $("html").addClass('is-activeMenu');
   });
-  _document.on('click', '[js-back]', function(){
+  _document.on('click', '[js-backMenu]', function(){
     $("html").removeClass('is-activeMenu');
+  });
+  _document.on('click', '[js-order]', function(){
+    $("html").addClass('is-activeOrder');
+  });
+
+  _document.on('keyup', function(e){
+    if (e.keyCode === 27) {
+      $("html").removeClass('is-activeMenu is-activeOrder');
+    }
   });
 
   function closeMobileMenu(){

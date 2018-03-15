@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>phone</title>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="#ffffff" fill-rule="evenodd">
+        <image id="phone" x="0" y="0" width="30" height="30"
+               xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAnRJREFUSA21l02ITWEYx+/FRhofK5JmIVNKKRumKDVTQ0IpCwvhFvlYKNnYKSRZaJrIWMy9NlIWaJomLExWRklRlNgYCxspX0Mp/P7X+5y59zjnfd9z752nfuf9+D/P+7/v6b7nnluuVqslF4toh2ALvIXj8Ay8UalUvHqeOM8JMn0A6914Ke0EDMATN9fRZo5bbZjWTM1gIR19mA020clWxr2wJ2fRWTOX8aEcU5ueFXMZbzYHT2vmqz05hSQZL4+skHno7kQuVSrJeH50dgcTZfwzcr1p8pJDH1mTmybjqVx1RvhOdwe8nJlqryfjx4ElvqD3w8NAXiFZxvcDFe/RnwZyCssyvgMfPZVr0A569JYkGevLdTVQfQF9WSCnkCxjxUX4UO9lXxYzPQLlbLn4rBl/o/RkoHwb+qlATrRsxiq46fAVn0fc50uI1RqNVXMU3gSKdcsPBHKCsr0IWOJnOnpQ6GwvsclUq5oarADdgd/QFLVabS0Th93kNd5SXjQlMEjvWPpr2A2/NPDEWbR7mOgDJMG4j8EkHHNMurkkR51ywztXk8BgJ9yGuWkhNf7K+DRcgU0wBukfnh/MbWfnydMva8fk1GOU637471b+k5NrF71LoOd4lqkS9UHGGnfuM1bBDdgLoduu3FWQ3qnmLZrMfbfaCtTqDN+CBRq0GbrtW0M7No9xOhthyibaaLXzy7HG8nkO6+CuBm1GdxFjeX2CXaC/D+q3GqNFjc3oOp0eGITYVydS6zHB9UirxlpBOz4BK0Hn+B344g/iMOg8T6cfmb7CTI1F9HN6hjN6jrYX+kB/e+x46SXjEYyQ+4q2Hn8BRcVxyc9GcggAAAAASUVORK5CYII="></image>
+    </g>
+</svg>

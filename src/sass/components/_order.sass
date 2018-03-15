@@ -1,0 +1,145 @@
+// MENU
+
+.order
+  display: none
+  z-index: 100
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba($colorBlack, 0.5)
+  overflow: auto
+
+  .is-activeOrder &
+    display: block
+
+  img
+    z-index: 0
+    position: absolute
+    top: 0
+    left: 0
+
+  &__block
+    position: absolute
+    top: 0
+    right: 0
+    width: 660px
+    //height: 100%
+    padding:
+      top: 88px
+      left: 60px
+      right: 60px
+      bottom: 127px
+    background-color: $colorNero
+    box-shadow: 0 0 36px 24px rgba(0, 0, 0, 0.5)
+
+  &__phone,
+  &__email
+    &-title
+      font-size: 24px
+      margin-bottom: 5px
+      color: $colorNobel
+    &-number
+      color: $colorWhite
+      font:
+        size: 40px
+        weight: bold
+
+  &__phone
+    &-wrap
+      margin-bottom: 50px
+
+  &__email
+    &-wrap
+      margin-bottom: 90px
+
+  &__phone,
+  &__email
+    &-wrap
+      text-align: center
+
+  &__form
+    &-title
+      margin-bottom: 36px
+      font:
+        size: 24px
+        weight: bold
+      text-align: center
+      color: $colorNobel
+
+    &-social
+      display: flex
+      justify-content: space-between
+      width: 100%
+      height: 60px
+      margin-bottom: 30px
+
+      a
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 60px
+        height: 60px
+        border: 5px solid $colorBlack
+        transition: border-color 0.3s ease-in-out
+
+        &:hover
+          border-color: $colorFuelYellow
+          transition: border-color 0.3s ease-in-out
+
+          i
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
+            &:first-child
+              opacity: 0
+              visibility: hidden
+            &:last-child
+              opacity: 1
+              visibility: visible
+
+        i
+          position: absolute
+          transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
+          &:last-child
+            opacity: 0
+            visibility: hidden
+
+    &-icon
+      &--normal
+      &--hover
+
+    &-field
+      width: 100%
+      height: 60px
+      margin-bottom: 30px
+      border: 5px solid $colorBlack
+
+      &--phone
+        border-color: $colorFuelYellow
+
+        input
+          &::-webkit-input-placeholder
+            color: $colorFuelYellow
+          &::-moz-placeholder
+            color: $colorFuelYellow
+          &:-ms-input-placeholder
+            color: $colorFuelYellow
+          &:-moz-placeholder
+            color: $colorFuelYellow
+
+      &--email
+        margin-bottom: 36px
+      &--date
+        margin-bottom: 60px
+
+      input
+        width: 100%
+        line-height: (60px - 10)
+        font:
+          size: 24px
+          weight: bold
+        text-align: center
+        color: $colorWhite
+        background-color: transparent
+        border: none
+

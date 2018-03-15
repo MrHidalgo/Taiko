@@ -1,0 +1,51 @@
+// ORDER :: START
+
+#order.order
+  img(src="./img/ImageBg_order.png")
+
+  .order__block
+
+    .order__phone-wrap
+      p.order__phone-title!= "ПОЗВОНИТЬ"
+      a(href="tel:89629996662").order__phone-number!= '8 (962) 999-666-2'
+
+    .order__email-wrap
+      p.order__email-title!= "НАПИСАТЬ"
+      a(href="mailto:info@taiko.moscow").order__email-number!= 'INFO@TAIKO.MOSCOW'
+
+    form.order__form
+
+      .order__form-field
+        input(type="text" placeholder="ВАШЕ ИМЯ")
+
+      .order__form-field.order__form-field--phone
+        input(type="text" readonly=true placeholder="8 962 999 66 62")
+
+      .order__form-field.order__form-field--email
+        input(type="email" placeholder="ПОЧТА")
+
+      p.order__form-title!= "СПОСОБ СВЯЗИ"
+
+      .order__form-social
+        a(href="tel:89629996662" title="Phone" class="order__form-link")
+          i.icon-phone
+          i.icon-phone_hover
+        a(href="mailto:info@taiko.moscow" title="Email" class="order__form-link")
+          i.icon-email
+          i.icon-email_hover
+        a(href="javascript:void(0);" title="WhatsApp" class="order__form-link")
+          i.icon-whatsapp
+          i.icon-whatsapp_hover
+        a(href="javascript:void(0);" title="Telegram" class="order__form-link")
+          i.icon-telegram
+          i.icon-telegram_hover
+        a(href="javascript:void(0);" title="Viber" class="order__form-link")
+          i.icon-viber
+          i.icon-viber_hover
+
+      .order__form-field.order__form-field--date
+        input(type="text" placeholder="ДАТА МЕРОПРИЯТИЯ")
+
+      +customBtn('order__cbtn', "ОТПРАВИТЬ")
+
+// ORDER :: END

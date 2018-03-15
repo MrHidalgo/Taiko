@@ -17,6 +17,24 @@ $sprite: (
 		total-height: 250px,
 		image: '../img/sprite.png'
 	),
+	email: (
+		offset-x: -212px,
+		offset-y: -200px,
+		width: 30px,
+		height: 22px,
+		total-width: 327px,
+		total-height: 250px,
+		image: '../img/sprite.png'
+	),
+	email_hover: (
+		offset-x: -172px,
+		offset-y: -200px,
+		width: 30px,
+		height: 22px,
+		total-width: 327px,
+		total-height: 250px,
+		image: '../img/sprite.png'
+	),
 	logotype: (
 		offset-x: -130px,
 		offset-y: 0px,
@@ -44,11 +62,83 @@ $sprite: (
 		total-height: 250px,
 		image: '../img/sprite.png'
 	),
+	phone: (
+		offset-x: -170px,
+		offset-y: -70px,
+		width: 30px,
+		height: 30px,
+		total-width: 327px,
+		total-height: 250px,
+		image: '../img/sprite.png'
+	),
+	phone_hover: (
+		offset-x: -250px,
+		offset-y: -70px,
+		width: 30px,
+		height: 30px,
+		total-width: 327px,
+		total-height: 250px,
+		image: '../img/sprite.png'
+	),
 	play: (
 		offset-x: -232px,
 		offset-y: -130px,
 		width: 52px,
 		height: 60px,
+		total-width: 327px,
+		total-height: 250px,
+		image: '../img/sprite.png'
+	),
+	telegram: (
+		offset-x: -92px,
+		offset-y: -200px,
+		width: 30px,
+		height: 26px,
+		total-width: 327px,
+		total-height: 250px,
+		image: '../img/sprite.png'
+	),
+	telegram_hover: (
+		offset-x: -132px,
+		offset-y: -200px,
+		width: 30px,
+		height: 26px,
+		total-width: 327px,
+		total-height: 250px,
+		image: '../img/sprite.png'
+	),
+	viber: (
+		offset-x: -290px,
+		offset-y: -70px,
+		width: 29px,
+		height: 30px,
+		total-width: 327px,
+		total-height: 250px,
+		image: '../img/sprite.png'
+	),
+	viber_hover: (
+		offset-x: -294px,
+		offset-y: -130px,
+		width: 29px,
+		height: 30px,
+		total-width: 327px,
+		total-height: 250px,
+		image: '../img/sprite.png'
+	),
+	whatsapp: (
+		offset-x: -130px,
+		offset-y: -70px,
+		width: 30px,
+		height: 30px,
+		total-width: 327px,
+		total-height: 250px,
+		image: '../img/sprite.png'
+	),
+	whatsapp_hover: (
+		offset-x: -210px,
+		offset-y: -70px,
+		width: 30px,
+		height: 30px,
 		total-width: 327px,
 		total-height: 250px,
 		image: '../img/sprite.png'
@@ -115,6 +205,12 @@ $sprite: (
 	.icon-clockWhite {
 		@include sprite(clockWhite)
 	}
+	.icon-email {
+		@include sprite(email)
+	}
+	.icon-email_hover {
+		@include sprite(email_hover)
+	}
 	.icon-logotype {
 		@include sprite(logotype)
 	}
@@ -124,6 +220,30 @@ $sprite: (
 	.icon-pfd {
 		@include sprite(pfd)
 	}
+	.icon-phone {
+		@include sprite(phone)
+	}
+	.icon-phone_hover {
+		@include sprite(phone_hover)
+	}
 	.icon-play {
 		@include sprite(play)
+	}
+	.icon-telegram {
+		@include sprite(telegram)
+	}
+	.icon-telegram_hover {
+		@include sprite(telegram_hover)
+	}
+	.icon-viber {
+		@include sprite(viber)
+	}
+	.icon-viber_hover {
+		@include sprite(viber_hover)
+	}
+	.icon-whatsapp {
+		@include sprite(whatsapp)
+	}
+	.icon-whatsapp_hover {
+		@include sprite(whatsapp_hover)
 	}
