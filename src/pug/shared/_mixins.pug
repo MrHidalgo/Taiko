@@ -75,6 +75,21 @@ mixin programFullBlock(imgName, hashText, cbtnText, time)
           span.programs__container-icon!= time
 
 
+mixin programFullBlockHover(imgName, hashText, cbtnText, hoverText, hoverName)
+  .season__box
+
+    .season__box-img
+      img(src="./img/" + imgName + ".jpg")
+
+    .season__box-info
+      p!= hashText
+      +customBtn('season__box-cbtn', cbtnText)
+
+    .season__box-hover
+      p!= hoverText
+      span!= hoverName
+
+
 mixin seasconBlock(text, arr)
   .season__block
     p!= text
