@@ -1,0 +1,24 @@
+// MENU :: START
+
+#menu.menu
+
+  //img(src="./img/ImageBg_menu.png" class="menu__img menu__img--bg")
+
+  .container
+
+    i.menu__logo.icon-menuLogo
+
+    img(src="./img/ImageGirl_menu.png" class="menu__img menu__img--girl")
+
+    .menu__row
+      a(href="javascript:void(0);" class="menu__back" js-back)!= "< НАЗАД"
+
+      +customBtn("cbutton--hover menu__cbtn", "О ГРУППЕ")
+      +customBtn("cbutton--hover menu__cbtn", "ПРОГРАММЫ")
+      +customBtn("cbutton--hover menu__cbtn", "ШКОЛА")
+      +customBtn("cbutton--hover menu__cbtn", "КОНТАКТЫ")
+
+      include ../components/_language
+      include ../components/_social
+
+// MENU :: END

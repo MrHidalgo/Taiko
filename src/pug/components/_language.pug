@@ -1,0 +1,18 @@
+// SOCIAL :: START
+-
+  var langArr = [
+    'РУССКИЙ',
+    'ENGLISH'
+  ];
+
+.lang
+  -for(var i = 0, len = langArr.length; i < len; i++)
+    a(
+      href='javascript:void(0);'
+      class='lang__name'
+    )!= langArr[i]
+
+    if (i !== len - 1)
+      span.lang__line!= '&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;'
+
+// SOCIAL :: END

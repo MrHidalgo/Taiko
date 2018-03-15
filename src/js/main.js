@@ -113,9 +113,15 @@ $(document).ready(function(){
 
 
   // HAMBURGER TOGGLER
+  // _document.on('click', '[js-hamburger]', function(){
+  //   $(this).toggleClass('is-active');
+  //   $('.mobile-navi').toggleClass('is-active');
+  // });
   _document.on('click', '[js-hamburger]', function(){
-    $(this).toggleClass('is-active');
-    $('.mobile-navi').toggleClass('is-active');
+    $("html").addClass('is-activeMenu');
+  });
+  _document.on('click', '[js-back]', function(){
+    $("html").removeClass('is-activeMenu');
   });
 
   function closeMobileMenu(){

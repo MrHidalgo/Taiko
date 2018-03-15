@@ -1,0 +1,63 @@
+// MENU
+
+.menu
+  display: none
+  z-index: 100
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: $colorBlack
+  overflow: auto
+
+  .is-activeMenu &
+    display: block
+
+  &__img
+    z-index: 0
+    position: absolute
+
+    &--girl
+      right: 0
+      bottom: 0
+
+    &--bg
+      top: 0
+      left: 0
+
+  .container
+    position: relative
+
+  &__cbtn
+    margin-bottom: 45px
+    &:last-child
+      margin-bottom: 0
+
+  &__logo
+    cursor: pointer
+    z-index: 1
+    position: relative
+    display: block
+    margin:
+      top: 60px
+      left: auto
+      right: auto
+
+  &__row
+    z-index: 1
+    position: relative
+    padding:
+      top: 60px
+      bottom: 97px
+
+  &__back
+    display: block
+    margin:
+      bottom: 39px
+    font:
+      size: 24px
+      weight: bold
+    color: $colorNobel
+    letter-spacing: 0
+
