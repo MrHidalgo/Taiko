@@ -14,4 +14,4 @@ PageList:
 - file: school.html
   ready: 75
 - file: season.html
-  ready: 80
+  ready: 85
