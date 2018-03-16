@@ -24,7 +24,11 @@ html(lang="en")
           block content
 
         block footer
-        //  include ../components/_footer
-          
+          //  include ../components/_footer
+
+      block modal
+        if(bodyClass === "season")
+          include ../components/_modal
+
       block scripts
         include _scripts

@@ -1,0 +1,21 @@
+// FOOTER :: START
+
+#callback.modal.mfp-hide
+
+  form.modal__form
+
+    p!= "14 чел. / 350 000 p."
+    span!= "ЯПОНСКИЕ СЕЗОНЫ"
+
+    .modal__form-field
+      input(type="text" placeholder="ВАШЕ ИМЯ")
+
+    .modal__form-field.modal__form-field--phone
+      input(type="text" readonly=true placeholder="8 962 999 66 62")
+
+    .modal__form-field.modal__form-field--email
+      input(type="email" placeholder="ПОЧТА")
+
+    +customBtn('modal__cbtn', "ОТПРАВИТЬ")
+
+// FOOTER :: END

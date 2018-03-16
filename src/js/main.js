@@ -231,8 +231,10 @@ $(document).ready(function(){
 
   function initPopups(){
     // Magnific Popup
+
     var startWindowScroll = 0;
-    $('[js-popup]').magnificPopup({
+
+    $('.js-popup').magnificPopup({
       type: 'inline',
       fixedContentPos: true,
       fixedBgPos: true,
