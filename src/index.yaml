@@ -10,8 +10,8 @@ PageList:
 - file: news.html
   ready: 75
 - file: programs.html
-  ready: 65
+  ready: 85
 - file: school.html
-  ready: 75
+  ready: 85
 - file: season.html
   ready: 85

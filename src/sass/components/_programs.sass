@@ -11,7 +11,6 @@
     background-position: top left
     background-size: cover
 
-
   &__wrap
     padding:
       top: 90px
@@ -20,6 +19,7 @@
     box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
 
   &__container
+    overflow: hidden
     position: relative
     height: 600px
     margin-bottom: 113px
@@ -34,12 +34,24 @@
       height: 100%
       &:before
         content: ""
+        z-index: 1
         position: absolute
         top: 0
         left: 0
         width: 100%
         height: 100%
         background-color: rgba($colorBlack, 0.5)
+
+      img
+        z-index: 0
+        position: absolute
+        max-width: 100%
+        max-height: 100%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+
 
     &-info
       position: relative
@@ -85,7 +97,8 @@
       flex-direction: row-reverse
 
     &--left
-      width: 600px
+      width: 100%
+      max-width: 600px
       margin-right: 180px
 
       .programs__block--reverse &
@@ -101,7 +114,7 @@
           text-align: right
 
     &--right
-      width: calc(100% - (600px + 180px))
+      width: 100%
       padding-top: 30px
 
       > p
@@ -109,12 +122,22 @@
         margin-bottom: 80px
 
     &-video
+      overflow: hidden
       position: relative
-      width: 600px
+      width: 100%
       height: 600px
       margin-bottom: 10px
       background-color: $colorBlack
       box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+
+      img
+        z-index: 0
+        position: absolute
+        max-width: 100%
+        max-height: 100%
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
 
     &-header
       overflow: hidden
@@ -149,6 +172,13 @@
       vertical-align: middle
 
   &__suit
+    overflow: hidden
+
+    img
+      display: block
+      max-width: 100%
+      height: auto
+
     &-title
       margin-bottom: 30px
       font:
@@ -158,8 +188,9 @@
       text-align: center
 
     &-item
+      overflow: hidden
       width: 480px
-      height: 720px
+      //height: 720px
       margin:
         top: 30px
         left: 20px

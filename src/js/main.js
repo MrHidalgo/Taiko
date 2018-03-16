@@ -155,8 +155,8 @@ $(document).ready(function(){
   //////////
 
   function initSliders(){
-    var slickNextArrow = '<div class="slick-prev"><svg class="ico ico-back-arrow"><use xlink:href="img/sprite.svg#ico-back-arrow"></use></svg></div>';
-    var slickPrevArrow = '<div class="slick-next"><svg class="ico ico-next-arrow"><use xlink:href="img/sprite.svg#ico-next-arrow"></use></svg></div>'
+    var slickNextArrow = '<div class="slick-prev"><i class="icon-prev"></div>';
+    var slickPrevArrow = '<div class="slick-next"><i class="icon-next"></div>';
 
     // General purpose sliders
     $('[js-slider]').each(function(i, slider){
@@ -206,7 +206,7 @@ $(document).ready(function(){
             '<p>' + arrText[index] + '</p>' +
           '</div>';
       }
-    })
+    });
 
     // other individual sliders goes here
     $('.js-programSuitSlider').slick({
@@ -221,6 +221,18 @@ $(document).ready(function(){
       customPaging: function(slick,index) {
         return '<div></div>';
       }
+    });
+
+    // other individual sliders goes here
+    $('.js-gallerySlider').slick({
+      dots: false,
+      pauseOnDotsHover: true,
+      prevArrow: slickNextArrow,
+      nextArrow: slickPrevArrow,
+      speed: 550,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1
     })
 
   }
@@ -240,6 +252,28 @@ $(document).ready(function(){
       fixedBgPos: true,
       overflowY: 'auto',
       closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'popup-buble',
+      callbacks: {
+        beforeOpen: function() {
+          startWindowScroll = _window.scrollTop();
+          // $('html').addClass('mfp-helper');
+        },
+        close: function() {
+          // $('html').removeClass('mfp-helper');
+          _window.scrollTop(startWindowScroll);
+        }
+      }
+    });
+
+    $('.js-play').magnificPopup({
+      type: 'inline',
+      fixedContentPos: true,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: false,
       preloader: false,
       midClick: true,
       removalDelay: 300,

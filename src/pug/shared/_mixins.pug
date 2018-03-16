@@ -33,8 +33,8 @@ mixin customBtnId(href, className, text)
     .cbutton__text!= text
 
 
-mixin customBtnImage(className, iconName)
-  a.cbutton(href="javascript:void(0);" class= className)
+mixin customBtnImage(href, className, iconName)
+  a.cbutton(href= href, class= className)
     .cbutton__block
       .cbutton__block-bg.cbutton__block-bg--0
       .cbutton__block-bg.cbutton__block-bg--1
@@ -49,7 +49,7 @@ mixin prgramsBlock(className, imgName, hashText, title, time, text)
 
       .programs__block-video
         img(src="./img/" + imgName + ".jpg")
-        +customBtnImage('cbutton--icon js-play', "icon-play")
+        +customBtnImage('#gallery', 'cbutton--icon js-play', "icon-play")
 
       p!= hashText
 
@@ -64,7 +64,7 @@ mixin prgramsBlock(className, imgName, hashText, title, time, text)
 
       p!= text
 
-      +customBtn('programs__block-cbtn', "СТОИМОСТЬ")
+      +customBtnId('#callback', 'programs__block-cbtn js-popup', "СТОИМОСТЬ")
 
 
 mixin programFullBlock(imgName, hashText, cbtnText, time)
