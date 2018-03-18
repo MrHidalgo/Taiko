@@ -12,7 +12,8 @@ mixin icon(name, modClass)
 mixin newsBlock(idx, className)
   .news__wrap
     -for(var i = 0; i < idx; i++)
-      div.news__wrap-elem(class="news__wrap-elem--" + i)
+      div.news__wrap-elem(class= className)
+        img(src="./img/ImagePreview-0_news.jpg")
         .news__wrap-hidden
           p!= "ОТКРЫТИЕ<br/>ЮНИКЛО"
 

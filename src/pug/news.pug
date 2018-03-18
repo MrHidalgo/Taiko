@@ -11,11 +11,15 @@ block content
 
       +customBtn('news__main-cbtn', "НОВОСТИ")
 
-      +newsBlock(3, "")
+      +newsBlock(3, "news__wrap-elem--alone")
 
       .news__wrap
         -for(var i = 0; i < 2; i++)
-          div.news__wrap-elem(class!= (i === 0) ? "news__wrap-elem--full" : "news__wrap-elem--" + i)
+          div.news__wrap-elem(class!= (i === 0) ? "news__wrap-elem--full" : "news__wrap-elem--alone")
+            if(i === 0)
+              img(src="./img/ImagePreview-full_news.jpg")
+            else
+              img(src="./img/ImagePreview-0_news.jpg")
             .news__wrap-hidden
               p!= "ОТКРЫТИЕ<br/>ЮНИКЛО"
 
