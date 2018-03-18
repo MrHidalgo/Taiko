@@ -4,27 +4,49 @@
   &__main
     display: flex
     align-items: center
-    min-height: 960px
     background-color: $colorBlack
     background-image: url("../img/ImageBgMain_programs.jpg")
     background-repeat: no-repeat
-    background-position: top left
+    background-position: center
     background-size: cover
+    +rmin(1024)
+      min-height: 760px
+    +rmin(1440)
+      min-height: 860px
+    +rmin(1920)
+      min-height: 960px
 
   &__wrap
-    padding:
-      top: 90px
-      bottom: 90px
     background-color: $colorNero
     box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
+    +rmin(1024)
+      padding:
+        top: 70px
+        bottom: 70px
+    +rmin(1440)
+      padding:
+        top: 80px
+        bottom: 80px
+    +rmin(1920)
+      padding:
+        top: 90px
+        bottom: 90px
 
   &__container
     overflow: hidden
     position: relative
-    height: 600px
-    margin-bottom: 113px
     background-color: $colorBlack
     box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
+    +rmin(1024)
+      height: 400px
+      margin-bottom: 93px
+    +rmin(1440)
+      height: 500px
+      margin-bottom: 103px
+    +rmin(1920)
+      height: 600px
+      margin-bottom: 113px
+
 
     &-video
       position: absolute
@@ -64,9 +86,14 @@
       p
         margin-bottom: 10px
         font:
-          size: 24px
           weight: bold
         text-align: center
+        +rmin(1024)
+          font-size: 20px
+        +rmin(1440)
+          font-size: 22px
+        +rmin(1920)
+          font-size: 24px
 
     &-time
       margin-top: 30px
@@ -80,6 +107,12 @@
         margin-right: 30px
       span
         font-size: 40px
+        +rmin(1024)
+          font-size: 25px
+        +rmin(1440)
+          font-size: 30px
+        +rmin(1920)
+          font-size: 40px
 
     &-icon
       display: inline-block
@@ -91,7 +124,13 @@
 
   &__block
     display: flex
-    margin-bottom: 113px
+    +rmin(1024)
+      margin-bottom: 93px
+    +rmin(1440)
+      margin-bottom: 103px
+    +rmin(1920)
+      margin-bottom: 113px
+
 
     &--reverse
       flex-direction: row-reverse
@@ -99,16 +138,31 @@
     &--left
       width: 100%
       max-width: 600px
-      margin-right: 180px
+      +rmin(1024)
+        margin-right: 120px
+      +rmin(1440)
+        margin-right: 150px
+      +rmin(1920)
+        margin-right: 180px
 
       .programs__block--reverse &
         margin:
           right: 0
-          left: 180px
+        +rmin(1024)
+          margin-left: 120px
+        +rmin(1440)
+          margin-left: 150px
+        +rmin(1920)
+          margin-left: 180px
 
       > p
-        font-size: 24px
         color: $colorNobel
+        +rmin(1024)
+          font-size: 20px
+        +rmin(1440)
+          font-size: 22px
+        +rmin(1920)
+          font-size: 24px
 
         .programs__block--reverse &
           text-align: right
@@ -118,17 +172,27 @@
       padding-top: 30px
 
       > p
-        font-size: 24px
         margin-bottom: 80px
+        +rmin(1024)
+          font-size: 20px
+        +rmin(1440)
+          font-size: 22px
+        +rmin(1920)
+          font-size: 24px
 
     &-video
       overflow: hidden
       position: relative
       width: 100%
-      height: 600px
       margin-bottom: 10px
       background-color: $colorBlack
       box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+      +rmin(1024)
+        height: 500px
+      +rmin(1440)
+        height: 550px
+      +rmin(1920)
+        height: 600px
 
       img
         z-index: 0
@@ -141,7 +205,12 @@
 
     &-header
       overflow: hidden
-      margin-bottom: 60px
+      +rmin(1024)
+        margin-bottom: 40px
+      +rmin(1440)
+        margin-bottom: 50px
+      +rmin(1920)
+        margin-bottom: 60px
 
       > h4,
       > .programs__block-time
@@ -152,9 +221,14 @@
         min-width: 450px
         margin: 0
         font:
-          size: 40px
           weight: bold
         color: $colorFuelYellow
+        +rmin(1024)
+          font-size: 25px
+        +rmin(1440)
+          font-size: 40px
+        +rmin(1920)
+          font-size: 40px
 
     &-time
       i,
@@ -164,8 +238,13 @@
       i
         margin-right: 30px
       span
-        font-size: 40px
         color: $colorNobel
+        +rmin(1024)
+          font-size: 30px
+        +rmin(1440)
+          font-size: 35px
+        +rmin(1920)
+          font-size: 40px
 
     &-icon
       display: inline-block
@@ -182,14 +261,18 @@
     &-title
       margin-bottom: 30px
       font:
-        size: 40px
         weight: bold
       color: $colorFuelYellow
       text-align: center
+      +rmin(1024)
+        font-size: 30px
+      +rmin(1440)
+        font-size: 35px
+      +rmin(1920)
+        font-size: 40px
 
     &-item
       overflow: hidden
-      width: 480px
       //height: 720px
       margin:
         top: 30px
@@ -197,6 +280,12 @@
         right: 20px
         bottom: 30px
       box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+      +rmin(1024)
+        width: 420px
+      +rmin(1440)
+        width: 450px
+      +rmin(1920)
+        width: 480px
 
     .slick-dots
       margin-top: 30px

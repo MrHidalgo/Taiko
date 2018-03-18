@@ -3,11 +3,16 @@
 .modal
   position: relative
   max-width: 600px
-  min-height: 600px
+  min-height: 400px
   background-color: $colorNero
-  padding: 30px 60px 67px 67px
   margin: 40px auto
   color: $colorWhite
+  +rmin(1024)
+    padding: 20px 40px 47px 47px
+  +rmin(1440)
+    padding: 25px 50px 57px 57px
+  +rmin(1920)
+    padding: 30px 60px 67px 67px
 
   &__form
     p,
@@ -16,15 +21,27 @@
       text-align: center
 
     p
-      font-size: 20px
       color: $colorNobel
+      +rmin(1024)
+        font-size: 16px
+      +rmin(1440)
+        font-size: 18px
+      +rmin(1920)
+        font-size: 20px
 
     span
       font:
-        size: 40px
         weight: bold
       color: $colorFuelYellow
-      margin-bottom: 60px
+      +rmin(1024)
+        font-size: 30px
+        margin-bottom: 40px
+      +rmin(1440)
+        font-size: 35px
+        margin-bottom: 50px
+      +rmin(1920)
+        font-size: 40px
+        margin-bottom: 60px
 
     &-field
       width: 100%
@@ -46,20 +63,36 @@
             color: $colorFuelYellow
 
       &--email
-        margin-bottom: 36px
+        +rmin(1024)
+          margin-bottom: 30px
+        +rmin(1440)
+          margin-bottom: 33px
+        +rmin(1920)
+          margin-bottom: 36px
+
       &--date
-        margin-bottom: 60px
+        +rmin(1024)
+          margin-bottom: 40px
+        +rmin(1440)
+          margin-bottom: 50px
+        +rmin(1920)
+          margin-bottom: 60px
 
       input
         width: 100%
         line-height: (60px - 10)
         font:
-          size: 24px
           weight: bold
         text-align: center
         color: $colorWhite
         background-color: transparent
         border: none
+        +rmin(1024)
+          font-size: 20px
+        +rmin(1440)
+          font-size: 22px
+        +rmin(1920)
+          font-size: 24px
 
 
 .popup-buble.mfp-bg

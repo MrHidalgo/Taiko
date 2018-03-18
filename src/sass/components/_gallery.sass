@@ -9,12 +9,15 @@
   &__block
     position: relative
     max-width: 100%
-    min-height: 780px
     background-color: $colorNero
     margin: 40px auto
     color: $colorWhite
-
-
+    +rmin(1024)
+      min-height: 580px
+    +rmin(1440)
+      min-height: 680px
+    +rmin(1920)
+      min-height: 780px
 
 
 .popup-buble.mfp-bg
