@@ -5,24 +5,39 @@
     display: flex
     flex-direction: column
     justify-content: center
-    min-height: 960px
     background-color: $colorBlack
     background-image: url("../img/ImageBgMain_season.jpg")
     background-repeat: no-repeat
     background-position: top left
     background-size: cover
+    +rmin(1024)
+      min-height: 760px
+    +rmin(1440)
+      min-height: 860px
+    +rmin(1920)
+      min-height: 960px
 
     &-hash
       font:
-        size: 24px
         weight: bold
       text-align: center
       margin-bottom: 10px
+      +rmin(1024)
+        font-size: 20px
+      +rmin(1440)
+        font-size: 22px
+      +rmin(1920)
+        font-size: 24px
 
   &__concept
     position: relative
-    min-height: 1200px
     background-color: $colorBlack
+    +rmin(1024)
+      min-height: 1000px
+    +rmin(1440)
+      min-height: 1100px
+    +rmin(1920)
+      min-height: 1200px
 
     .container
       position: absolute
@@ -35,17 +50,34 @@
 
       > p,
       > span
-        font-size: 60px
+        +rmin(1024)
+          font-size: 40px
+        +rmin(1440)
+          font-size: 50px
+        +rmin(1920)
+          font-size: 60px
 
       > span
         display: block
         font-weight: bold
-        margin-bottom: 189px
+        +rmin(1024)
+          margin-bottom: 149px
+        +rmin(1440)
+          margin-bottom: 169px
+        +rmin(1920)
+          margin-bottom: 189px
 
     &-text
       p
-        font-size: 24px
-        margin-left: 50%
+        +rmin(1024)
+          font-size: 20px
+          margin-left: 30%
+        +rmin(1440)
+          font-size: 22px
+          margin-left: 40%
+        +rmin(1920)
+          font-size: 24px
+          margin-left: 50%
 
     &-cbtn
       margin-bottom: 64px
@@ -59,15 +91,27 @@
       &--right
         top: 0
         right: 0
+        +rmin(1024)
+          display: none
+        +rmin(1920)
+          display: block
 
   &__box
     cursor: pointer
     overflow: hidden
     position: relative
-    height: 600px
     margin-bottom: 113px
     background-color: $colorBlack
     box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
+    +rmin(1024)
+      margin-bottom: 87px
+      height: 400px
+    +rmin(1440)
+      margin-bottom: 100px
+      height: 500px
+    +rmin(1920)
+      margin-bottom: 113px
+      height: 600px
 
     &:hover
       .season__box-img
@@ -118,9 +162,14 @@
       p
         margin-bottom: 10px
         font:
-          size: 24px
           weight: bold
         text-align: center
+        +rmin(1024)
+          font-size: 20px
+        +rmin(1440)
+          font-size: 22px
+        +rmin(1920)
+          font-size: 24px
 
     &-hover
       opacity: 0
@@ -138,37 +187,82 @@
         text-shadow: 0 0 36px rgba(0, 0, 0, 0.85)
 
       p
-        font-size: 40px
         margin-bottom: 10px
+        +rmin(1024)
+          font-size: 30px
+        +rmin(1440)
+          font-size: 35px
+        +rmin(1920)
+          font-size: 40px
       span
-        font-size: 24px
         color: $colorFuelYellow
+        +rmin(1024)
+          font-size: 20px
+        +rmin(1440)
+          font-size: 22px
+        +rmin(1920)
+          font-size: 24px
 
 
   &__container
-    padding:
-      top: 112px
-      bottom: 112px
     background-color: $colorNero
     box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
+    +rmin(1024)
+      padding:
+        top: 88px
+        bottom: 88px
+    +rmin(1440)
+      padding:
+        top: 100px
+        bottom: 100px
+    +rmin(1920)
+      padding:
+        top: 112px
+        bottom: 112px
 
     &-tilte,
     &-subtilte
-      font-size: 60px
+      +rmin(1024)
+        font-size: 40px
+      +rmin(1440)
+        font-size: 50px
+      +rmin(1920)
+        font-size: 60px
 
     &-tilte
-      margin-bottom: 30px
+      +rmin(1024)
+        margin-bottom: 22px
+      +rmin(1440)
+        margin-bottom: 26px
+      +rmin(1920)
+        margin-bottom: 30px
 
     &-subtilte
       color: $colorFuelYellow
-      margin-bottom: 112px
+      +rmin(1024)
+        margin-bottom: 88px
+      +rmin(1440)
+        margin-bottom: 100px
+      +rmin(1920)
+        margin-bottom: 112px
 
   &__block
     position: relative
-    padding:
-      top: 60px
-      bottom: 60px
-    margin-bottom: 119px
+    +rmin(1024)
+      margin-bottom: 81px
+      padding:
+        top: 40px
+        bottom: 40px
+    +rmin(1440)
+      margin-bottom: 100px
+      padding:
+        top: 50px
+        bottom: 50px
+    +rmin(1920)
+      margin-bottom: 119px
+      padding:
+        top: 60px
+        bottom: 60px
 
     &:before,
     &:after
@@ -193,17 +287,33 @@
         left: auto
         right: auto
       font:
-        size: 24px
         weight: normal
       text-align: center
+      +rmin(1024)
+        font-size: 20px
+      +rmin(1440)
+        font-size: 22px
+      +rmin(1920)
+        font-size: 24px
 
   &__elem
     display: flex
     justify-content: space-between
-    margin-bottom: 140px
+    +rmin(1024)
+      margin-bottom: 100px
+    +rmin(1440)
+      margin-bottom: 120px
+    +rmin(1920)
+      margin-bottom: 140px
 
     > p
       font-size: 24px
+      +rmin(1024)
+        font-size: 20px
+      +rmin(1440)
+        font-size: 22px
+      +rmin(1920)
+        font-size: 24px
 
     &-container
       width: 100%
@@ -219,12 +329,19 @@
       align-items: center
       justify-content: center
       width: 100%
-      height: 480px
       margin-bottom: 10px
       background-color: $colorBlack
       font:
-        size: 40px
         weight: bold
       color: $colorFuelYellow
       text-align: center
+      +rmin(1024)
+        height: 320px
+        font-size: 25px
+      +rmin(1440)
+        height: 400px
+        font-size: 30px
+      +rmin(1920)
+        height: 480px
+        font-size: 40px
 

@@ -1,4 +1,3 @@
-
 .cbutton
   cursor: pointer
   position: relative
@@ -30,7 +29,13 @@
   &.season__concept-cbtn,
   &.season__container-cbtn,
   &.menu__cbtn
-    height: 105px
+    +rmin(1024)
+      height: 71px
+    +rmin(1440)
+      height: 88px
+    +rmin(1920)
+      height: 105px
+
   &.homepage__program-cbtn,
   &.school__main-cbtn,
   &.about__main-cbtn,
@@ -121,5 +126,11 @@
     .season__concept-cbtn &,
     .season__container-cbtn &,
     .menu__cbtn &
-      font-size: 80px
       padding-top: 11px
+      +rmin(1024)
+        font-size: 50px
+      +rmin(1440)
+        font-size: 65px
+      +rmin(1920)
+        font-size: 80px
+
