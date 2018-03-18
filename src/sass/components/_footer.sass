@@ -1,15 +1,32 @@
 // FOOTER
 .footer
   background: $colorBlack
-  min-height: 480px
-  padding-top: 122px
-  padding-bottom: 97px
+  +rmin(1024)
+    min-height: 420px
+    padding:
+      top: 88px
+      bottom: 63px
+  +rmin(1440)
+    min-height: 450px
+    padding:
+      top: 102px
+      bottom: 80px
+  +rmin(1920)
+    min-height: 480px
+    padding:
+      top: 122px
+      bottom: 97px
 
   .container
     max-width: (1300 + (40 * 2)) * 1px
 
   .social
-    margin-top: 103px
+    +rmin(1024)
+      margin-top: 83px
+    +rmin(1440)
+      margin-top: 93px
+    +rmin(1920)
+      margin-top: 103px
 
 
   &__wrapper
@@ -23,26 +40,33 @@
     display: flex
     justify-content: space-between
 
-  //&__question,
-  //&__present
-
-
   &__question
     a
       display: block
+
     > p
       color: $colorNobel
-      font-size: 24px
-    &-phone
-      font-weight: bold
-      font-size: 39px
+      +rmin(1024)
+        font-size: 20px
+      +rmin(1440)
+        font-size: 22px
+      +rmin(1920)
+        font-size: 24px
+
+    &-phone,
     &-email
-      font-weight: bold
-      font-size: 39px
       margin-top: 10px
+      font-weight: bold
+      +rmin(1024)
+        font-size: 27px
+      +rmin(1440)
+        font-size: 33px
+      +rmin(1920)
+        font-size: 39px
 
   &__present
     display: flex
+
     &-image
       cursor: pointer
       position: relative
@@ -59,6 +83,7 @@
       height: 120px
       background-color: $colorFuelYellow
       transition: height .3s ease-in-out, bottom .3s ease-in-out
+
     &-icon
       position: absolute
       left: 0
@@ -66,12 +91,20 @@
       bottom: 0
       margin: auto
       transition: bottom .3s ease-in-out
+
     &-text
-      font-size: 24px
       display: flex
       flex-direction: column
       justify-content: space-between
+      +rmin(1024)
+        font-size: 20px
+      +rmin(1440)
+        font-size: 22px
+      +rmin(1920)
+        font-size: 24px
+
     &-title
       font-weight: bold
+
     &-size
       color: $colorNobel

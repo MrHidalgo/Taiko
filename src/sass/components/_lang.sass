@@ -2,27 +2,49 @@
 
 // =========================
 
-%fontProperties
+%fontPropertiesLang
   color: $colorNobel
   font-weight: bold
-  font-size: 24px
 
 // =========================
 
 .lang
-  margin:
-    top: 65px
-    bottom: 116px
   letter-spacing: 0
+  +rmin(1024)
+    margin:
+      top: 45px
+      bottom: 96px
+  +rmin(1440)
+    margin:
+      top: 55px
+      bottom: 106px
+  +rmin(1920)
+    margin:
+      top: 65px
+      bottom: 116px
 
   &__name
-    @extend %fontProperties
+    @extend %fontPropertiesLang
     transition: color .3s ease-in-out
+
+    +rmin(1024)
+      font-size: 20px
+    +rmin(1440)
+      font-size: 22px
+    +rmin(1920)
+      font-size: 24px
 
     &:hover
       color: $colorFuelYellow
       transition: color .3s ease-in-out
 
   &__line
-    @extend %fontProperties
+    @extend %fontPropertiesLang
+
+    +rmin(1024)
+      font-size: 20px
+    +rmin(1440)
+      font-size: 22px
+    +rmin(1920)
+      font-size: 24px
 

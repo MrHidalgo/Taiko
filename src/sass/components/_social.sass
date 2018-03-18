@@ -1,11 +1,9 @@
 // SOCIAL
-
 // =========================
 
-%fontProperties
+%fontPropertiesSocial
   color: $colorNobel
   font-weight: bold
-  font-size: 24px
 
 // =========================
 
@@ -15,13 +13,28 @@
   letter-spacing: 0
 
   &__name
-    @extend %fontProperties
+    @extend %fontPropertiesSocial
+
     transition: color .3s ease-in-out
+
+    +rmin(1024)
+      font-size: 20px
+    +rmin(1440)
+      font-size: 22px
+    +rmin(1920)
+      font-size: 24px
 
     &:hover
       color: $colorFuelYellow
       transition: color .3s ease-in-out
 
   &__line
-    @extend %fontProperties
+    @extend %fontPropertiesSocial
+
+    +rmin(1024)
+      font-size: 20px
+    +rmin(1440)
+      font-size: 22px
+    +rmin(1920)
+      font-size: 24px
 

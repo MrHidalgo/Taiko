@@ -19,8 +19,13 @@
     position: absolute
 
     &--girl
-      right: 0
       bottom: 0
+      +rmin(1024)
+        right: -15%
+      +rmin(1440)
+        right: -5%
+      +rmin(1920)
+        right: 0
 
     &--bg
       top: 0
@@ -30,9 +35,15 @@
     position: relative
 
   &__cbtn
-    margin-bottom: 45px
     &:last-child
       margin-bottom: 0
+
+    +rmin(1024)
+      margin-bottom: 35px
+    +rmin(1440)
+      margin-bottom: 40px
+    +rmin(1920)
+      margin-bottom: 45px
 
   &__logo
     cursor: pointer
@@ -40,24 +51,48 @@
     position: relative
     display: block
     margin:
-      top: 60px
       left: auto
       right: auto
+
+    +rmin(1024)
+      margin-top: 40px
+    +rmin(1440)
+      margin-top: 50px
+    +rmin(1920)
+      margin-top: 60px
 
   &__row
     z-index: 1
     position: relative
-    padding:
-      top: 60px
-      bottom: 97px
+    +rmin(1024)
+      padding:
+        top: 40px
+        bottom: 77px
+    +rmin(1440)
+      padding:
+        top: 50px
+        bottom: 87px
+    +rmin(1920)
+      padding:
+        top: 60px
+        bottom: 97px
 
   &__back
     display: block
-    margin:
-      bottom: 39px
     font:
-      size: 24px
       weight: bold
     color: $colorNobel
     letter-spacing: 0
+    +rmin(1024)
+      font-size: 20px
+      margin:
+        bottom: 31px
+    +rmin(1440)
+      font-size: 22px
+      margin:
+        bottom: 35px
+    +rmin(1920)
+      font-size: 24px
+      margin:
+        bottom: 39px
 
