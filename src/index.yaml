@@ -2,13 +2,13 @@ ProjectTitle: Taiko
 
 PageList:
 - file: homepage.html
-  ready: 70
+  ready: 95
 - file: about.html
   ready: 95
 - file: contacts.html
   ready: 95
 - file: news.html
-  ready: 70
+  ready: 95
 - file: programs.html
   ready: 95
 - file: school.html

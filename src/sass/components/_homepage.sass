@@ -3,8 +3,15 @@
 .homepage
   &__main
     position: relative
-    min-height: 960px
-    padding-top: 105px
+    +rmin(1024)
+      min-height: 760px
+      padding-top: 75px
+    +rmin(1440)
+      min-height: 860px
+      padding-top: 90px
+    +rmin(1920)
+      min-height: 960px
+      padding-top: 105px
 
     &-bg
       position: absolute
@@ -22,8 +29,12 @@
       z-index: 1
       text-align: center
       text-shadow: 0 0 50px rgba(0, 0, 0, 0.95)
-      font:
-        size: 40px
+      +rmin(1024)
+        font-size: 25px
+      +rmin(1440)
+        font-size: 30px
+      +rmin(1920)
+        font-size: 40px
 
     &-cbtn
       margin-top: 10px
@@ -41,7 +52,12 @@
       top: 0
       right: 0
       height: 100%
-      padding-top: 105px
+      +rmin(1024)
+        padding-top: 75px
+      +rmin(1440)
+        padding-top: 90px
+      +rmin(1920)
+        padding-top: 105px
 
     &-bg
       position: absolute
@@ -52,25 +68,48 @@
     &-title
       font:
         weight: bold
-        size: 60px
       margin-bottom: 15px
+      +rmin(1024)
+        font-size: 30px
+      +rmin(1440)
+        font-size: 45px
+      +rmin(1920)
+        font-size: 60px
 
     &-subTitle
-      font:
-        size: 60px
+      +rmin(1024)
+        font-size: 30px
+      +rmin(1440)
+        font-size: 45px
+      +rmin(1920)
+        font-size: 60px
 
     &-text
-      font:
-        size: 30px
       margin:
         bottom: 70px
+      +rmin(1024)
+        font-size: 20px
+      +rmin(1440)
+        font-size: 25px
+      +rmin(1920)
+        font-size: 30px
 
     &-box
       width: 48%
       margin:
-        top: 130px
-        bottom: 277px
         left: auto
+      +rmin(1024)
+        margin:
+          top: 90px
+          bottom: 217px
+      +rmin(1440)
+        margin:
+          top: 110px
+          bottom: 247px
+      +rmin(1920)
+        margin:
+          top: 130px
+          bottom: 277px
 
     &-woman
       position: absolute
@@ -78,7 +117,7 @@
       bottom: 50px
 
     &-video
-      width: 1080px
+      max-width: 1080px
       height: 600px
       background-color: $colorNero
 
@@ -92,7 +131,12 @@
     &-title
       font:
         weight: bold
-        size: 40px
       text-align: center
       color: $colorFuelYellow
       margin-bottom: 56px
+      +rmin(1024)
+        font-size: 25px
+      +rmin(1440)
+        font-size: 30px
+      +rmin(1920)
+        font-size: 40px
