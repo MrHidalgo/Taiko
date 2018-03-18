@@ -74,9 +74,9 @@ block content
           img(src="./img/" + arrImage[i] + ".jpg")
 
           .about__member-grid-hidden
-            p.about__member-grid-cAt!= "@SHELOMKA"
-            p.about__member-grid-name!= "АНАСТАСИЯ"
-            p.about__member-grid-surname!= "ШЕЛОМОВА"
+            p!= "@SHELOMKA"
+            p!= "АНАСТАСИЯ"
+            p!= "ШЕЛОМОВА"
 
 
 
@@ -91,10 +91,10 @@ block content
             img(src="./img/ImageReview_about.jpg")
 
         .about__reviews-row--right
-          p.about__reviews-text!= "Очень зажигали барабанщицы! Они такое творили! Это было фантастически мощно и красиво."
+          p!= "Очень зажигали барабанщицы! Они такое творили! Это было фантастически мощно и красиво."
           .about__reviews-wrap
-            p.about__reviews-role!= "певец, актёр, композитор и продюсер"
-            p.about__reviews-name!= "ФИЛЛИП КИРКОРОВ"
+            p!= "певец, актёр, композитор и продюсер"
+            span!= "ФИЛЛИП КИРКОРОВ"
 
 
 

@@ -1,42 +1,70 @@
 // ABOUT
 
 .about
-
   &__main
     overflow: hidden
     position: relative
-    min-height: 1080px
     background-color: $colorBlack
+    +rmin(1024)
+      min-height: 880px
+    +rmin(1440)
+      min-height: 980px
+    +rmin(1920)
+      min-height: 1080px
 
     img
       z-index: 0
       position: absolute
-      left: 0
       bottom: 0
+      +rmin(1024)
+        left: -15%
+      +rmin(1440)
+        left: -10%
+      +rmin(1920)
+        left: 0
 
     .container
       z-index: 1
       position: absolute
-      padding-top: 60px
       left: 0
       top: 0
       right: 0
       height: 100%
+      +rmin(1024)
+        padding-top: 40px
+      +rmin(1440)
+        padding-top: 50px
+      +rmin(1920)
+        padding-top: 60px
 
     &-row
       float: right
-      width: 50%
+      +rmin(1024)
+        width: 60%
+      +rmin(1440)
+        width: 50%
 
     &-text
-      padding-top: 78px
-      font:
-        size: 40px
+      +rmin(1024)
+        padding-top: 58px
+        font-size: 30px
+      +rmin(1440)
+        padding-top: 68px
+        font-size: 35px
+      +rmin(1920)
+        padding-top: 78px
+        font-size: 40px
 
   &__info
     overflow: hidden
     position: relative
-    min-height: 1080px
     background-color: $colorBlack
+    +rmin(1024)
+      min-height: 680px
+    +rmin(1440)
+      min-height: 880px
+    +rmin(1920)
+      min-height: 1080px
 
     img
       z-index: 0
@@ -60,7 +88,13 @@
 
       &-item
         text-align: center
-        font-size: 24px
+        +rmin(1024)
+          font-size: 20px
+        +rmin(1440)
+          font-size: 22px
+        +rmin(1920)
+          font-size: 24px
+
 
         p
           width: 75%
@@ -72,9 +106,16 @@
         position: relative
         padding:
           left: 0
-          bottom: 60px
-        margin-bottom: 120px
         text-align: center
+        +rmin(1024)
+          padding-bottom: 40px
+          margin-bottom: 80px
+        +rmin(1440)
+          padding-bottom: 50px
+          margin-bottom: 100px
+        +rmin(1920)
+          padding-bottom: 60px
+          margin-bottom: 120px
 
         &:after
           content: ''
@@ -82,32 +123,47 @@
           bottom: 0
           left: 0
           right: 0
-          width: 85%
           height: 2px
           margin:
             left: auto
             right: auto
           background-color: $colorNobel
+          +rmin(1024)
+            width: 95%
+          +rmin(1440)
+            width: 90%
+          +rmin(1920)
+            width: 85%
 
         li
           cursor: pointer
           position: relative
           display: inline-block
-          width: 240px
           text-align: center
           transition: all .3s ease-in-out
+          +rmin(1024)
+            width: 180px
+          +rmin(1440)
+            width: 200px
+          +rmin(1920)
+            width: 240px
 
           &.slick-active
             &:after
               content: ''
               z-index: 1
               position: absolute
-              bottom: -62px
               left: 0
               width: 100%
               height: 5px
               background-color: $colorFuelYellow
               transition: all .3s ease-in-out
+              +rmin(1024)
+                bottom: -42px
+              +rmin(1440)
+                bottom: -52px
+              +rmin(1920)
+                bottom: -62px
 
             div
               p
@@ -119,11 +175,22 @@
               transition: color .3s ease-in-out
               &:first-child
                 font:
-                  size: 80px
                   weight: bold
+                +rmin(1024)
+                  font-size: 30px
+                +rmin(1440)
+                  font-size: 50px
+                +rmin(1920)
+                  font-size: 80px
+
               &:last-child
-                font-size: 40px
                 color: $colorNobel
+                +rmin(1024)
+                  font-size: 20px
+                +rmin(1440)
+                  font-size: 30px
+                +rmin(1920)
+                  font-size: 40px
 
   &__member
     padding-top: 120px
@@ -133,59 +200,92 @@
       overflow: hidden
       position: relative
       width: 100%
-      min-height: 720px
       margin-bottom: 120px
       background-color: $colorBlack
       box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+      +rmin(1024)
+        min-height: 640px
+      +rmin(1440)
+        min-height: 680px
+      +rmin(1920)
+        min-height: 720px
 
       img
+        z-index: 0
         position: absolute
-        left: 0
         bottom: 0
+        +rmin(1024)
+          left: -15%
+        +rmin(1440)
+          left: -10%
+        +rmin(1920)
+          left: 0
 
     &-row
+      z-index: 1
+      position: relative
       display: flex
       flex-direction: column
       align-items: flex-end
       justify-content: space-between
-      min-height: 720px
       padding:
         top: 75px
         right: 90px
         bottom: 75px
       text-align: right
+      +rmin(1024)
+        min-height: 640px
+      +rmin(1440)
+        min-height: 680px
+      +rmin(1920)
+        min-height: 720px
 
-    &-hash
-      font-size: 40px
+    &-col
+      > p
+        &:first-child
+          +rmin(1024)
+            font-size: 25px
+          +rmin(1440)
+            font-size: 30px
+          +rmin(1920)
+            font-size: 40px
+        &:last-child
+          color: $colorNobel
+          +rmin(1024)
+            font-size: 25px
+          +rmin(1440)
+            font-size: 30px
+          +rmin(1920)
+            font-size: 40px
+
 
     &-cbtn
       margin-top: 10px
 
-    &-cAt
-      font-size: 40px
-      color: $colorNobel
-
     &-title
-      margin-bottom: 60px
       font:
-        size: 40px
         weight: bold
       color: $colorFuelYellow
       text-align: center
+      +rmin(1024)
+        margin-bottom: 40px
+        font-size: 25px
+      +rmin(1440)
+        margin-bottom: 50px
+        font-size: 30px
+      +rmin(1920)
+        margin-bottom: 60px
+        font-size: 40px
 
     &-grid
       display: flex
       flex-wrap: wrap
-      &-0,
-      &-1,
-      &-2,
-      &-3,
-      &-4,
-      &-5
+
+      > div
         cursor: pointer
         position: relative
         width: (100% / 3)
-        height: 900px
+        //height: 900px
         background-color: $colorBlack
 
         &:hover
@@ -194,15 +294,30 @@
             visibility: visible
             transition: opacity .25s ease-in-out, visible .25s ease-in-out
 
-      &-cAt
-        font-size: 24px
-        color: $colorNobel
-      &-name,
-      &-surname
-        margin-top: 5px
-        font:
-          size: 40px
-          weight: bold
+        img
+          max-width: 100%
+
+      p
+        &:first-child
+          color: $colorNobel
+          +rmin(1024)
+            font-size: 20px
+          +rmin(1440)
+            font-size: 22px
+          +rmin(1920)
+            font-size: 24px
+        &:nth-child(2),
+        &:last-child
+          margin-top: 5px
+          font:
+            weight: bold
+          +rmin(1024)
+            font-size: 25px
+          +rmin(1440)
+            font-size: 30px
+          +rmin(1920)
+            font-size: 40px
+
       &-hidden
         opacity: 0
         visibility: hidden
@@ -224,20 +339,34 @@
 
 
   &__reviews
-    min-height: 1080px
-    padding-top: 120px
     background-color: $colorNero
+    +rmin(1024)
+      min-height: 880px
+      padding-top: 80px
+    +rmin(1440)
+      min-height: 980px
+      padding-top: 100px
+    +rmin(1920)
+      min-height: 1080px
+      padding-top: 120px
 
     .container
       max-width: (1300 + (40 * 2)) * 1px
 
     &-title
-      margin-bottom: 181px
       font:
-        size: 40px
         weight: bold
       color: $colorFuelYellow
       text-align: center
+      +rmin(1024)
+        margin-bottom: 141px
+        font-size: 25px
+      +rmin(1440)
+        margin-bottom: 161px
+        font-size: 30px
+      +rmin(1920)
+        margin-bottom: 181px
+        font-size: 40px
 
     &-row
       display: flex
@@ -254,6 +383,15 @@
 
         width: calc(100% - (480px + 60px))
 
+        > p
+          padding-top: 15px
+          +rmin(1024)
+            font-size: 25px
+          +rmin(1440)
+            font-size: 30px
+          +rmin(1920)
+            font-size: 40px
+
     &-image
       overflow: hidden
       position: relative
@@ -268,19 +406,23 @@
         width: 100%
         height: 100%
 
-    &-text
-      padding-top: 15px
-      font:
-        size: 40px
-
     &-wrap
       padding-bottom: 15px
 
-    &-role
-      font:
-        size: 24px
-      color: $colorNobel
+      p
+        color: $colorNobel
+        +rmin(1024)
+          font-size: 20px
+        +rmin(1440)
+          font-size: 22px
+        +rmin(1920)
+          font-size: 24px
 
-    &-name
-      font:
-        size: 40px
+      span
+        display: block
+        +rmin(1024)
+          font-size: 25px
+        +rmin(1440)
+          font-size: 30px
+        +rmin(1920)
+          font-size: 40px
