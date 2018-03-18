@@ -6,7 +6,7 @@ PageList:
 - file: about.html
   ready: 75
 - file: contacts.html
-  ready: 85
+  ready: 95
 - file: news.html
   ready: 70
 - file: programs.html

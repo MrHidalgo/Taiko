@@ -2,15 +2,28 @@
 
 .contacts
   &__main
-    min-height: 1080px
-    padding-top: 120px
     background-image: url("../img/ImageBg_contacts.jpg")
     background-repeat: no-repeat
-    background-position: top left
+    background-position: center
     background-size: cover
+    +rmin(1024)
+      min-height: 880px
+      padding-top: 80px
+    +rmin(1440)
+      min-height: 980px
+      padding-top: 100px
+    +rmin(1920)
+      min-height: 1080px
+      padding-top: 120px
 
     &-cbtn
-      margin-bottom: 87px
+      +rmin(1024)
+        margin-bottom: 67px
+      +rmin(1440)
+        margin-bottom: 77px
+      +rmin(1920)
+        margin-bottom: 87px
+
 
     &-row
       display: flex
@@ -18,31 +31,52 @@
       &--left,
       &--right
         width: 50%
-        margin-bottom: 120px
+        +rmin(1024)
+          margin-bottom: 40px
+        +rmin(1440)
+          margin-bottom: 80px
+        +rmin(1920)
+          margin-bottom: 120px
 
   &__phone,
   &__email
     &-title
-      font-size: 24px
       margin-bottom: 5px
+      +rmin(1024)
+        font-size: 20px
+      +rmin(1440)
+        font-size: 22px
+      +rmin(1920)
+        font-size: 24px
+
     &-number
       color: $colorFuelYellow
       font:
-        size: 40px
         weight: bold
+      +rmin(1024)
+        font-size: 25px
+      +rmin(1440)
+        font-size: 30px
+      +rmin(1920)
+        font-size: 40px
 
   &__phone
     &-wrap
       margin-bottom: 50px
   &__email
     &-wrap
-      margin-bottom: 200px
+      +rmin(1024)
+        margin-bottom: 140px
+      +rmin(1440)
+        margin-bottom: 170px
+      +rmin(1920)
+        margin-bottom: 200px
 
   &__form
     float: right
     width: 100%
     max-width: 660px
-    min-height: 720px
+    min-height: 400px
     padding: 60px
     background-color: $colorNero
     box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
@@ -74,12 +108,17 @@
         width: 100%
         line-height: (60px - 10)
         font:
-          size: 24px
           weight: bold
         text-align: center
         color: $colorWhite
         background-color: transparent
         border: none
+        +rmin(1024)
+          font-size: 20px
+        +rmin(1440)
+          font-size: 22px
+        +rmin(1920)
+          font-size: 24px
 
       textarea
         resize: none
@@ -89,10 +128,15 @@
         background-color: transparent
         border: none
         font:
-          size: 24px
           weight: bold
         text-align: center
         color: $colorWhite
+        +rmin(1024)
+          font-size: 20px
+        +rmin(1440)
+          font-size: 22px
+        +rmin(1920)
+          font-size: 24px
 
 
 
