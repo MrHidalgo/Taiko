@@ -16,16 +16,20 @@
     padding-left: 60px
     display: flex
     align-items: center
+
     &:hover
       .header__hamburger-line
         background-color: $colorFuelYellow
         transition: background-color .25s ease-in-out
+
       .header__hamburger-text
         color: $colorFuelYellow
         transition: color .25s ease-in-out
+
     &-box
       width: 42px
       margin-right: 60px
+
     &-line
       display: block
       width: 100%
@@ -44,9 +48,14 @@
     &-text
       color: $colorWhite
       font:
-        size: 24px
         weight: bold
       transition: color .25s ease-in-out
+      +rmin(1024)
+        font-size: 20px
+      +rmin(1440)
+        font-size: 22px
+      +rmin(1920)
+        font-size: 24px
 
   &__logotype
     cursor: pointer
@@ -62,11 +71,17 @@
       right: 55px
       top: 32px
     font:
-      size: 24px
       weight: bold
     color: $colorFuelYellow
     text-align: right
     transition: background-color .25s ease-in-out
+    +rmin(1024)
+      font-size: 20px
+    +rmin(1440)
+      font-size: 22px
+    +rmin(1920)
+      font-size: 24px
+
     &:hover
       background-color: $colorFuelYellow
       color: $colorBlack
