@@ -25,6 +25,15 @@ mixin customBtn(className, text)
       .cbutton__block-bg.cbutton__block-bg--1
     .cbutton__text!= text
 
+
+mixin customBtnLink(href, className, text)
+  a.cbutton(href= href, class= className)
+    .cbutton__block
+      .cbutton__block-bg.cbutton__block-bg--0
+      .cbutton__block-bg.cbutton__block-bg--1
+    .cbutton__text!= text
+
+
 mixin customBtnSubmit(className, text)
   button.cbutton(class= className, type="submit")
     .cbutton__block

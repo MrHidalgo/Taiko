@@ -13,10 +13,10 @@
     .menu__row
       a(href="#" class="menu__back" js-backMenu)!= "< НАЗАД"
 
-      +customBtn("cbutton--hover menu__cbtn", "О ГРУППЕ")
-      +customBtn("cbutton--hover menu__cbtn", "ПРОГРАММЫ")
-      +customBtn("cbutton--hover menu__cbtn", "ШКОЛА")
-      +customBtn("cbutton--hover menu__cbtn", "КОНТАКТЫ")
+      +customBtnLink("about.html", "cbutton--hover menu__cbtn", "О ГРУППЕ")
+      +customBtnLink("programs.html", "cbutton--hover menu__cbtn", "ПРОГРАММЫ")
+      +customBtnLink("school.html", "cbutton--hover menu__cbtn", "ШКОЛА")
+      +customBtnLink("contacts", "cbutton--hover menu__cbtn", "КОНТАКТЫ")
 
       include ../components/_language
       include ../components/_social

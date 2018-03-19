@@ -116,7 +116,7 @@ $(document).ready(function(){
   _document.on('click', '[js-hamburger]', function(){
     $("html").addClass('is-activeMenu');
   });
-  _document.on('click', '[js-backMenu]', function(){
+  _document.on('click', '[js-backMenu], .menu__row a', function(){
     $("html").removeClass('is-activeMenu');
   });
   _document.on('click', '[js-order]', function(){
