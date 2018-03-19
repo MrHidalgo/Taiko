@@ -1,7 +1,8 @@
 // MENU
 
 .menu
-  display: none
+  opacity: 0
+  visibility: hidden
   z-index: 100
   position: fixed
   top: 0
@@ -10,9 +11,11 @@
   height: 100vh
   background-color: $colorBlack
   overflow: auto
+  transition: 0.35s
 
   .is-activeMenu &
-    display: block
+    opacity: 1
+    visibility: visible
 
   &__img
     z-index: 0
