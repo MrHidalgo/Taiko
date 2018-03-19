@@ -19,7 +19,19 @@
   to
     opacity: 1
 
-.is-activeOrder .fadeIn
+.fadeIn
+  animation-name: fadeIn
+  animation-duration: 0.8s
+
+// FADE-OUT
+// ===============
+@keyframes fadeIn
+  from
+    opacity: 1
+  to
+    opacity: 0
+
+.fadeIn
   animation-name: fadeIn
   animation-duration: 0.8s
 
@@ -33,7 +45,7 @@
   to
     transform: translate3d(0, 0, 0)
 
-.is-activeOrder .slideInRight
+.slideInRight
   animation-name: slideInRight
   animation-duration: 0.5s
 
