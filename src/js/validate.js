@@ -113,6 +113,22 @@ $(document).ready(function(){
         date: true
       },
       phone: validatePhone
+    },
+    messages: {
+      name: "Заполните это поле",
+      email: {
+        required: "Заполните это поле",
+        email: "Email содержит неправильный формат"
+      },
+      date: {
+        required: "Заполните это поле",
+        date: "Введите корректную дату"
+      },
+      phone: {
+        required: "Заполните это поле",
+        minlength: "Введите не менее 11 символов",
+        phone: "Введите корректный телефон"
+      }
     }
   });
 
