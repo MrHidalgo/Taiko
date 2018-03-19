@@ -113,10 +113,6 @@ $(document).ready(function(){
 
 
   // HAMBURGER TOGGLER
-  // _document.on('click', '[js-hamburger]', function(){
-  //   $(this).toggleClass('is-active');
-  //   $('.mobile-navi').toggleClass('is-active');
-  // });
   _document.on('click', '[js-hamburger]', function(){
     $("html").addClass('is-activeMenu');
   });
@@ -126,9 +122,15 @@ $(document).ready(function(){
   _document.on('click', '[js-order]', function(){
     $("html").addClass('is-activeOrder');
   });
-
   _document.on('keyup', function(e){
     if (e.keyCode === 27) {
+      $("html").removeClass('is-activeMenu is-activeOrder');
+    }
+  });
+
+  // ORDER close
+  $(".order").on("click", function(e) {
+    if(!$(e.target).closest(".order__block").length) {
       $("html").removeClass('is-activeMenu is-activeOrder');
     }
   });
