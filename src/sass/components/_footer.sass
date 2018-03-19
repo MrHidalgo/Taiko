@@ -42,7 +42,7 @@
 
   &__question
     a
-      display: block
+      display: table
       transition: color 0.3s ease-in-out
       &:hover
         color: $colorFuelYellow
@@ -59,8 +59,29 @@
 
     &-phone,
     &-email
+      position: relative
       margin-top: 10px
       font-weight: bold
+
+      &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 3px
+        bottom: 0
+        left: 0
+        background: $colorFuelYellow
+        visibility: hidden
+        border-radius: 5px
+        transform: scaleX(0)
+        transition: .25s linear
+
+      &:hover
+        &:before,
+        &:before
+          visibility: visible
+          transform: scaleX(1)
+
       +rmin(1024)
         font-size: 27px
       +rmin(1440)
