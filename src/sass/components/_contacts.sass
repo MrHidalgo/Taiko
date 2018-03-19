@@ -83,22 +83,11 @@
 
     &-field
       width: 100%
-      height: 60px
+      min-height: 60px
       margin-bottom: 30px
-      border: 5px solid $colorBlack
 
       &--phone
         border-color: $colorFuelYellow
-
-        input
-          &::-webkit-input-placeholder
-            color: $colorFuelYellow
-          &::-moz-placeholder
-            color: $colorFuelYellow
-          &:-ms-input-placeholder
-            color: $colorFuelYellow
-          &:-moz-placeholder
-            color: $colorFuelYellow
 
       &--message
         min-height: 210px
@@ -106,13 +95,30 @@
 
       input
         width: 100%
-        line-height: (60px - 10)
+        height: 60px
+        padding:
+          left: 15px
+          right: 15px
+        background-color: transparent
+        border: 5px solid $colorBlack
         font:
           weight: bold
-        text-align: center
-        color: $colorWhite
-        background-color: transparent
-        border: none
+        text-align: left
+        color: $colorFuelYellow
+        transition: border-color 0.3s ease-in-out
+        &::-webkit-input-placeholder
+          text-align: center
+        &::-moz-placeholder
+          text-align: center
+        &:-ms-input-placeholder
+          text-align: center
+        &:-moz-placeholder
+          text-align: center
+
+        &:focus
+          border-color: $colorFuelYellow
+          transition: border-color 0.3s ease-in-out
+
         +rmin(1024)
           font-size: 20px
         +rmin(1440)
@@ -123,14 +129,19 @@
       textarea
         resize: none
         width: 100%
-        height: 100%
+        min-height: 210px
         padding: 15px
         background-color: transparent
-        border: none
+        border: 5px solid $colorBlack
         font:
           weight: bold
         text-align: center
-        color: $colorWhite
+        color: $colorFuelYellow
+
+        &:focus
+          border-color: $colorFuelYellow
+          transition: border-color 0.3s ease-in-out
+
         +rmin(1024)
           font-size: 20px
         +rmin(1440)

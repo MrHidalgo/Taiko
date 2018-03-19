@@ -32,21 +32,21 @@ block content
 
           .contacts__main-row--right
 
-            .contacts__form
+            form.contacts__form(js-contacts)
 
               .contacts__form-field
-                input(type="text" placeholder="ВАШЕ ИМЯ")
+                input(type="text" name="name" placeholder="ВАШЕ ИМЯ")
 
               .contacts__form-field.contacts__form-field--phone
-                input(type="text" readonly=true placeholder="8 962 999 66 62")
+                input(type="tel" name="phone" placeholder="ВАШ НОМЕР")
 
               .contacts__form-field
-                input(type="email" placeholder="ПОЧТА")
+                input(type="email" name="email" placeholder="ПОЧТА")
 
               .contacts__form-field.contacts__form-field--message
-                textarea(placeholder="СООБЩЕНИЕ")
+                textarea(placeholder="СООБЩЕНИЕ" name="message")
 
-              +customBtn('contacts__form-cbtn', "ОТПРАВИТЬ")
+              +customBtnSubmit('contacts__form-cbtn', "ОТПРАВИТЬ")
 
 
         include ./components/_social

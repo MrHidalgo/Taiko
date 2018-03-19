@@ -132,4 +132,33 @@ $(document).ready(function(){
     }
   });
 
+  // CONTACTS
+  ////////////////////
+  $("[js-contacts]").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      name: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      phone: validatePhone
+    },
+    messages: {
+      name: "Заполните это поле",
+      email: {
+        required: "Заполните это поле",
+        email: "Email содержит неправильный формат"
+      },
+      phone: {
+        required: "Заполните это поле",
+        minlength: "Введите не менее 11 символов",
+        phone: "Введите корректный телефон"
+      }
+    }
+  });
+
 });
