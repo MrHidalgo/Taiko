@@ -13,16 +13,16 @@
       p.order__email-title!= "НАПИСАТЬ"
       a(href="mailto:info@taiko.moscow").order__email-number!= 'INFO@TAIKO.MOSCOW'
 
-    form.order__form
+    form.order__form(js-registrationOrder)
 
       .order__form-field
-        input(type="text" placeholder="ВАШЕ ИМЯ")
+        input(type="text" name="name" placeholder="ВАШЕ ИМЯ")
 
       .order__form-field.order__form-field--phone
-        input(type="text" placeholder="ВАШ НОМЕР")
+        input(type="tel" name="phone" placeholder="ВАШ НОМЕР")
 
       .order__form-field.order__form-field--email
-        input(type="email" placeholder="ПОЧТА")
+        input(type="email" name="email" placeholder="ПОЧТА")
 
       p.order__form-title!= "СПОСОБ СВЯЗИ"
 
@@ -44,8 +44,8 @@
           i.icon-viber_hover
 
       .order__form-field.order__form-field--date
-        input(type="text" placeholder="ДАТА МЕРОПРИЯТИЯ")
+        input(type="text" name="date" placeholder="ДАТА МЕРОПРИЯТИЯ")
 
-      +customBtn('order__cbtn', "ОТПРАВИТЬ")
+      +customBtnSubmit('order__cbtn', "ОТПРАВИТЬ")
 
 // ORDER :: END

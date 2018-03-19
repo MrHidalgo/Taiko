@@ -95,4 +95,25 @@ $(document).ready(function(){
     }
   });
 
+  // ORDER
+  ////////////////////
+  $("[js-registrationOrder]").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      name: "required",
+      email: {
+        required: true,
+        email: true
+      },
+      date: {
+        required: true,
+        date: true
+      },
+      phone: validatePhone
+    }
+  });
+
 });
