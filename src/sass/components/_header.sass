@@ -26,9 +26,12 @@
 
   &__hamburger
     cursor: pointer
-    padding-left: 60px
     display: flex
     align-items: center
+    padding-left: 60px
+    height: 120px
+    .is-fixed &
+      height: 90px
 
     &:hover
       .header__hamburger-line
