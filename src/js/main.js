@@ -127,9 +127,7 @@ $(document).ready(function(){
       $("html").removeClass('is-activeMenu is-activeOrder');
     }
   });
-
-  // ORDER close
-  $(".order").on("click", function(e) {
+  _document.on("click", ".order", function(e) {
     if(!$(e.target).closest(".order__block").length) {
       $("html").removeClass('is-activeMenu is-activeOrder');
     }
@@ -353,9 +351,9 @@ $(document).ready(function(){
         delay = $(el).data('animation-delay');
       }
 
-      var animationClass = $(el).data('animation-class') || "wowFadeUp"
+      var animationClass = $(el).data('animation-class') || "wowFadeUp";
 
-      var animationName = $(el).data('animation-name') || "wowFade"
+      var animationName = $(el).data('animation-name') || "wowFade";
 
       elWatcher.enterViewport(throttle(function() {
         $(el).addClass(animationClass);
