@@ -5,11 +5,24 @@
   right: 0
   left: 0
   background: $colorBlack
+  transition: 0.5s
+
+  &.is-fixed
+    z-index: 100
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    animation-name: slideInDown
 
   &__wrapper
     display: flex
     justify-content: space-between
+    align-items: center
     height: 120px
+
+    .is-fixed &
+      height: 90px
 
   &__hamburger
     cursor: pointer
@@ -60,21 +73,25 @@
   &__logotype
     cursor: pointer
     position: absolute
-    top: (120px - 60) / 2
     left: 0
     right: 0
     margin: auto
 
+
   &__order
+    display: flex
+    align-items: center
+    justify-content: flex-end
     width: 310px
+    height: 100%
     padding:
       right: 55px
-      top: 32px
     font:
       weight: bold
     color: $colorFuelYellow
     text-align: right
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out
+
     +rmin(1024)
       font-size: 20px
     +rmin(1440)

@@ -94,7 +94,7 @@ $(document).ready(function(){
       var header = $('.header').not('.header--static');
       var headerHeight = header.height();
       var firstSection = _document.find('.page__content div:first-child()').height() - headerHeight;
-      var visibleWhen = Math.round(_document.height() / _window.height()) >  2.5
+      var visibleWhen = Math.round(_document.height() / _window.height()) >  2.5;
 
       if (visibleWhen){
         if ( vScroll > headerHeight ){
