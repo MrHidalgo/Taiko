@@ -161,7 +161,6 @@
       width: 100%
       height: 60px
       margin-bottom: 30px
-      border: 5px solid $colorBlack
 
       +rmin(1024)
         margin-bottom: 20px
@@ -171,17 +170,6 @@
         margin-bottom: 30px
 
       &--phone
-        border-color: $colorFuelYellow
-
-        input
-          &::-webkit-input-placeholder
-            color: $colorFuelYellow
-          &::-moz-placeholder
-            color: $colorFuelYellow
-          &:-ms-input-placeholder
-            color: $colorFuelYellow
-          &:-moz-placeholder
-            color: $colorFuelYellow
 
       &--email
         +rmin(1024)
@@ -205,9 +193,15 @@
         font:
           weight: bold
         text-align: center
-        color: $colorWhite
+        color: $colorFuelYellow
         background-color: transparent
-        border: none
+        border: 5px solid $colorBlack
+        transition: border-color 0.3s ease-in-out
+
+        &:focus
+          border-color: $colorFuelYellow
+          transition: border-color 0.3s ease-in-out
+
         +rmin(1024)
           font-size: 20px
         +rmin(1440)
