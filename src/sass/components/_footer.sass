@@ -69,19 +69,24 @@
         font-size: 39px
 
   &__present
+    cursor: pointer
     display: flex
+    &:hover
+      .footer__present-bg
+        height: 100%
+      .footer__present-icon
+        bottom: ((137 - 120) / 2) * 1px
+      .footer__present-text
+        p:first-child
+          color: $colorFuelYellow
+          transition: color 0.3s ease-in-out
 
     &-image
-      cursor: pointer
       position: relative
       width: 120px
       height: 137px
       margin-right: 34px
-      &:hover
-        .footer__present-bg
-          height: 100%
-        .footer__present-icon
-          bottom: ((137 - 120) / 2) * 1px
+
     &-bg
       width: 120px
       height: 120px
@@ -100,6 +105,8 @@
       display: flex
       flex-direction: column
       justify-content: space-between
+      transition: color 0.3s ease-in-out
+
       +rmin(1024)
         font-size: 20px
       +rmin(1440)
