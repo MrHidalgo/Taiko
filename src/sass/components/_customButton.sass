@@ -52,17 +52,20 @@
     margin-right: 0
 
   &--hover
+    overflow: hidden
     &:hover
       .cbutton__block-bg
-        background-color: $colorFuelYellow
-        transition: background-color 0.3s ease-in-out
+        animation-duration: 1s
+        animation-fill-mode: both
+
+        &--0,
+        &--1
+          opacity: 1
 
         &--0
-          box-shadow: 0 0 40px 0 rgba(0,0,0,0.55)
-          transition: box-shadow 0.3s ease-in-out
+          animation-name: slideInDown
         &--1
-          box-shadow: 0 0 40px 0 rgba(0,0,0,0.55)
-          transition: box-shadow 0.3s ease-in-out
+          animation-name: slideInUp
 
 
   &__block
@@ -78,8 +81,8 @@
       background-color: $colorFuelYellow
 
       .cbutton--hover &
-        background-color: transparent
-        transition: background-color 0.3s ease-in-out
+        opacity: 0
+        transition: 0.3s
 
       &--0
         top: 0

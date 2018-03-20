@@ -24,7 +24,7 @@
   animation-duration: 0.8s
 
 
-// FLIP-IN-X
+// SLIDE-IN-DOWN
 // ===============
 @keyframes slideInDown
   from
@@ -36,6 +36,20 @@
 
 .slideInDown
   animation-name: slideInDown
+
+
+// SLIDE-IN-UP
+// ===============
+@keyframes slideInUp
+  from
+    transform: translate3d(0, 100%, 0)
+    visibility: visible
+
+  to
+    transform: translate3d(0, 0, 0)
+
+.slideInUp
+  animation-name: slideInUp
 
 
 // FLIP-IN-X
