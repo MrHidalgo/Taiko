@@ -45,22 +45,8 @@
 
     &-field
       width: 100%
-      height: 60px
+      min-height: 60px
       margin-bottom: 30px
-      border: 5px solid $colorBlack
-
-      &--phone
-        border-color: $colorFuelYellow
-
-        input
-          &::-webkit-input-placeholder
-            color: $colorFuelYellow
-          &::-moz-placeholder
-            color: $colorFuelYellow
-          &:-ms-input-placeholder
-            color: $colorFuelYellow
-          &:-moz-placeholder
-            color: $colorFuelYellow
 
       &--email
         +rmin(1024)
@@ -80,13 +66,31 @@
 
       input
         width: 100%
-        line-height: (60px - 10)
+        height: 60px
+        padding:
+          left: 15px
+          right: 15px
+        background-color: transparent
+        border: 5px solid $colorBlack
         font:
           weight: bold
-        text-align: center
-        color: $colorWhite
-        background-color: transparent
-        border: none
+          family: 'CenturyGothic', Arial, sans-serif
+        text-align: left
+        color: $colorFuelYellow
+        transition: border-color 0.3s ease-in-out
+        &::-webkit-input-placeholder
+          text-align: center
+        &::-moz-placeholder
+          text-align: center
+        &:-ms-input-placeholder
+          text-align: center
+        &:-moz-placeholder
+          text-align: center
+
+        &:focus
+          border-color: $colorFuelYellow
+          transition: border-color 0.3s ease-in-out
+
         +rmin(1024)
           font-size: 20px
         +rmin(1440)

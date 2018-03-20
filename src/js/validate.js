@@ -134,7 +134,7 @@ $(document).ready(function(){
 
   // CONTACTS
   ////////////////////
-  $("[js-contacts]").validate({
+  $("[js-contacts], [js-modal]").validate({
     errorPlacement: validateErrorPlacement,
     highlight: validateHighlight,
     unhighlight: validateUnhighlight,
