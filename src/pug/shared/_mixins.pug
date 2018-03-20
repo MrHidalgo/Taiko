@@ -92,7 +92,7 @@ mixin programFullBlock(imgName, hashText, cbtnText, time)
 
     .programs__container-info
       p!= hashText
-      +customBtn('programs__container-cbtn', cbtnText)
+      +customBtnLink('season.html', 'cbutton--active programs__container-cbtn', cbtnText)
 
       if(time)
         .programs__container-time

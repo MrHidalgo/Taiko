@@ -279,7 +279,7 @@ $(document).ready(function(){
       preloader: false,
       midClick: true,
       removalDelay: 300,
-      mainClass: 'popup-buble',
+      mainClass: 'show',
       callbacks: {
         beforeOpen: function() {
           startWindowScroll = _window.scrollTop();
