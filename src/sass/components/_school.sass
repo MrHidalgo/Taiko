@@ -5,12 +5,13 @@
     overflow: hidden
     position: relative
     background-color: $colorBlack
-    +rmin(1024)
-      min-height: 880px
-    +rmin(1440)
-      min-height: 980px
-    +rmin(1920)
-      min-height: 1080px
+    min-height: 100vh
+    //+rmin(1024)
+    //  min-height: 880px
+    //+rmin(1440)
+    //  min-height: 980px
+    //+rmin(1920)
+    //  min-height: 1080px
 
 
     .container
@@ -38,6 +39,10 @@
       position: absolute
       bottom: 0
       right: 40px
+      max-width: 100%
+      min-height: 100%
+      display: block
+      height: auto
 
   &__wrap
     overflow: hidden
