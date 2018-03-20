@@ -29,7 +29,7 @@ block content
 
           p.homepage__program-text!= "В нашем репертуаре по-настоящему 'ударные' фестивальные композиции и современные барабанные ритмы. Этническая музыка, традиционные костюмы и народные танцы погружают наших зрителей в атмосферу таинственной Азии и заставляют их сердца биться в такт барабанов!"
 
-          +customBtn('homepage__program-cbtn', "ПРОГРАММЫ")
+          +customBtn('cbutton--hover homepage__program-cbtn', "ПРОГРАММЫ")
 
         img(src="./img/ImageWoman_main.png" class="homepage__program-woman")
 
@@ -51,7 +51,7 @@ block content
 
         +newsBlock(3, "")
 
-        +customBtnLink("news.html", 'homepage__news-cbtn', "ДРУГИЕ НОВОСТИ")
+        +customBtnLink("news.html", 'cbutton--hover homepage__news-cbtn', "ДРУГИЕ НОВОСТИ")
 
 block footer
   include ./components/_footer
