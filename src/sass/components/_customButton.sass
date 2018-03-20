@@ -53,9 +53,10 @@
 
   &--hover
     overflow: hidden
+
     &:hover
       .cbutton__block-bg
-        animation-duration: 1s
+        animation-duration: 0.5s
         animation-fill-mode: both
 
         &--0,
@@ -66,6 +67,19 @@
           animation-name: slideInDown
         &--1
           animation-name: slideInUp
+  &--active
+    &:hover
+      .cbutton__text
+        text-shadow: 1px 1px 10px rgba(0,0,0,0.5)
+        transition: text-shadow 0.3s ease-in-out
+
+      .cbutton__block-bg
+        transition: height 0.3s ease-in-out
+
+        &--0
+          height: 0
+        &--1
+          height: 100%
 
 
   &__block
@@ -79,6 +93,7 @@
       left: 0
       width: 100%
       background-color: $colorFuelYellow
+      transition: height 0.3s ease-in-out
 
       .cbutton--hover &
         opacity: 0
@@ -120,6 +135,7 @@
       weight: bold
       size: 35px
     letter-spacing: 4px
+    transition: text-shadow 0.3s ease-in-out
 
 
     .homepage__main-cbtn &,

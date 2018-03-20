@@ -66,7 +66,7 @@ mixin prgramsBlock(className, imgName, hashText, title, time, text)
 
       .programs__block-video
         img(src="./img/" + imgName + ".jpg")
-        +customBtnImage('#gallery', 'cbutton--icon js-play', "icon-play")
+        +customBtnImage('#gallery', 'cbutton--active cbutton--icon js-play', "icon-play")
 
       p!= hashText
 
@@ -81,7 +81,7 @@ mixin prgramsBlock(className, imgName, hashText, title, time, text)
 
       p!= text
 
-      +customBtnId('#callback', 'programs__block-cbtn js-popup', "СТОИМОСТЬ")
+      +customBtnId('#callback', 'cbutton--active programs__block-cbtn js-popup', "СТОИМОСТЬ")
 
 
 mixin programFullBlock(imgName, hashText, cbtnText, time)
