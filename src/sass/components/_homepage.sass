@@ -5,13 +5,13 @@
     position: relative
     +rmin(1024)
       min-height: 760px
-      padding-top: 75px
+      padding-top: 58px
     +rmin(1440)
       min-height: 860px
-      padding-top: 90px
+      padding-top: 73px
     +rmin(1920)
       min-height: 960px
-      padding-top: 105px
+      padding-top: 98px
 
     &-bg
       position: absolute
@@ -29,6 +29,7 @@
       z-index: 1
       text-align: center
       text-shadow: 0 0 50px rgba(0, 0, 0, 0.95)
+      letter-spacing: 4px
       +rmin(1024)
         font-size: 25px
       +rmin(1440)
@@ -42,7 +43,7 @@
 
   &__program
     position: relative
-    min-height: 2000px
+    min-height: 2040px
     background-color: $colorBlack
 
     .container
@@ -53,11 +54,11 @@
       right: 0
       height: 100%
       +rmin(1024)
-        padding-top: 75px
+        padding-top: 115px
       +rmin(1440)
-        padding-top: 90px
+        padding-top: 145px
       +rmin(1920)
-        padding-top: 105px
+        padding-top: 175px
 
     &-bg
       position: absolute
@@ -86,7 +87,7 @@
 
     &-text
       margin:
-        bottom: 70px
+        bottom: 60px
       +rmin(1024)
         font-size: 20px
       +rmin(1440)
@@ -95,20 +96,23 @@
         font-size: 30px
 
     &-box
-      width: 48%
+      width: 62%
       margin:
         left: auto
+      padding:
+        right: 180px
+      line-height: 1.5
       +rmin(1024)
         margin:
-          top: 90px
+          top: 80px
           bottom: 217px
       +rmin(1440)
         margin:
-          top: 110px
+          top: 100px
           bottom: 247px
       +rmin(1920)
         margin:
-          top: 130px
+          top: 120px
           bottom: 277px
 
     &-woman
@@ -130,7 +134,7 @@
 
   &__news
     padding:
-      top: 121px
+      top: 111px
       bottom: 127px
     background-color: $colorNero
 
