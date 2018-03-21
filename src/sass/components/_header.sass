@@ -4,6 +4,7 @@
   top: 0
   right: 0
   left: 0
+  width: 100%
   background: $colorBlack
   transition: 0.5s
 
@@ -66,8 +67,7 @@
       font:
         weight: bold
       transition: color .25s ease-in-out
-      +rmin(1024)
-        font-size: 20px
+      font-size: 20px
       +rmin(1440)
         font-size: 22px
       +rmin(1920)
@@ -94,9 +94,7 @@
     color: $colorFuelYellow
     text-align: right
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out
-
-    +rmin(1024)
-      font-size: 20px
+    font-size: 20px
     +rmin(1440)
       font-size: 22px
     +rmin(1920)

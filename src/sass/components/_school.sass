@@ -6,27 +6,19 @@
     position: relative
     background-color: $colorBlack
     min-height: 100vh
-    //+rmin(1024)
-    //  min-height: 880px
-    //+rmin(1440)
-    //  min-height: 980px
-    //+rmin(1920)
-    //  min-height: 1080px
-
 
     .container
       z-index: 1
-      position: absolute
+      position: relative
       left: 0
       top: 0
       right: 0
       height: 100%
-      +rmin(1024)
-        padding-top: 90px
+      margin-top: 90px
       +rmin(1440)
-        padding-top: 95px
+        margin-top: 95px
       +rmin(1920)
-        padding-top: 105px
+        margin-top: 105px
 
     &-bg
       z-index: 0
@@ -37,32 +29,20 @@
     &-man
       z-index: 1
       position: absolute
-      bottom: 0
-      right: 40px
+      top: 0
+      right: 0
       max-width: 100%
       min-height: 100%
-      display: block
       height: auto
-
-  &__wrap
-    overflow: hidden
+      display: block
 
   &__row
-    float: left
-    clear: both
-    +rmin(1024)
-      width: 57%
-    +rmin(1440)
-      width: 52%
-    +rmin(1920)
-      width: 47%
-
+    width: 50%
 
     > p
       padding-left: 30px
       margin-bottom: 10px
-      +rmin(1024)
-        font-size: 30px
+      font-size: 30px
       +rmin(1440)
         font-size: 35px
       +rmin(1920)
@@ -70,13 +50,11 @@
 
 
     &-text
-
       p
         font:
           weight: normal
         display: block
-        +rmin(1024)
-          font-size: 20px
+        font-size: 20px
         +rmin(1440)
           font-size: 22px
         +rmin(1920)
@@ -84,10 +62,9 @@
 
 
         &:first-child
-          +rmin(1024)
-            margin:
-              top: 50px
-              bottom: 38px
+          margin:
+            top: 50px
+            bottom: 38px
           +rmin(1440)
             margin:
               top: 60px
@@ -98,25 +75,18 @@
               bottom: 58px
 
         &:nth-child(2)
-          +rmin(1024)
-            margin-bottom: 38px
-          +rmin(1440)
-            margin-bottom: 48px
-          +rmin(1920)
-            margin-bottom: 58px
+          margin-bottom: 28px
 
         &:last-child
           color: $colorFuelYellow
-          +rmin(1024)
-            margin-bottom: 64px
+          margin-bottom: 64px
           +rmin(1440)
             margin-bottom: 74px
           +rmin(1920)
             margin-bottom: 84px
 
   .footer__question
-    +rmin(1024)
-      margin-bottom: 100px
+    margin-bottom: 100px
     +rmin(1440)
       margin-bottom: 110px
     +rmin(1920)
@@ -125,3 +95,4 @@
   .social
     position: relative
     z-index: 2
+    margin-bottom: 100px

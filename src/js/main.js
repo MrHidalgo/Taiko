@@ -455,7 +455,7 @@ $(document).ready(function(){
         easing: easingSwing, // swing
         duration: 300,
         complete: function(anim) {
-          triggerBody()
+          triggerBody();
           _this.done();
         }
       });
