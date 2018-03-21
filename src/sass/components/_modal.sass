@@ -13,6 +13,10 @@
   +rmin(1920)
     padding: 30px 60px 67px 67px
 
+  .show &
+    animation-duration: 0.5s
+    animation-name: zoomIn
+
   &__form
     p,
     span
@@ -93,8 +97,9 @@
           font-size: 24px
 
 
-.popup-buble.mfp-bg
+.show.mfp-bg
   background-color: rgba($colorBlack, 0.5)
+  transition: background-color 0.5s ease-in-out
 
   &:before
     z-index: 0
@@ -110,4 +115,4 @@
     background-position: top left
 
 .mfp-close-btn-in .mfp-close
-  color: #CCCCCC
+  color: #ccc

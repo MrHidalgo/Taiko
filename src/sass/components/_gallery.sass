@@ -12,15 +12,15 @@
     background-color: $colorNero
     margin: 40px auto
     color: $colorWhite
-    min-height: 580px
-    +rmin(1440)
-      min-height: 680px
-    +rmin(1920)
-      min-height: 780px
 
     .show &
       animation-duration: 0.5s
       animation-name: zoomIn
+
+      img
+        display: block
+        max-width: 100%
+        height: auto
 
 
 .popup-buble.mfp-bg
@@ -40,7 +40,7 @@
     background-position: top left
 
 .mfp-close-btn-in .mfp-close
-  color: #CCCCCC
+  color: #ccc
   
 .slick-prev,
 .slick-next

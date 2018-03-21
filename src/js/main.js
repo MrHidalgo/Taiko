@@ -226,16 +226,18 @@ $(document).ready(function(){
     });
 
     // other individual sliders goes here
-    $('.js-gallerySlider').slick({
-      dots: false,
-      pauseOnDotsHover: true,
-      prevArrow: slickNextArrow,
-      nextArrow: slickPrevArrow,
-      speed: 550,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    })
+    // $('.js-gallerySlider').slick({
+    //   dots: false,
+    //   prevArrow: slickNextArrow,
+    //   nextArrow: slickPrevArrow,
+    //   speed: 550,
+    //   infinite: true,
+    //   slidesToShow: 1,
+    //   slidesToScroll: 1,
+    //   fade: true,
+    //   cssEase: 'linear',
+    //   lazyLoad: 'ondemand'
+    // })
 
   }
 
@@ -257,7 +259,7 @@ $(document).ready(function(){
       preloader: false,
       midClick: true,
       removalDelay: 300,
-      mainClass: 'popup-buble',
+      mainClass: 'show',
       callbacks: {
         beforeOpen: function() {
           startWindowScroll = _window.scrollTop();
@@ -284,6 +286,22 @@ $(document).ready(function(){
         beforeOpen: function() {
           startWindowScroll = _window.scrollTop();
           // $('html').addClass('mfp-helper');
+
+          var slickNextArrow = '<div class="slick-prev"><i class="icon-prev"></div>';
+          var slickPrevArrow = '<div class="slick-next"><i class="icon-next"></div>';
+
+          $('.js-gallerySlider').slick({
+            dots: false,
+            prevArrow: slickNextArrow,
+            nextArrow: slickPrevArrow,
+            speed: 550,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            cssEase: 'linear',
+            lazyLoad: 'ondemand'
+          }).on('init');
         },
         close: function() {
           // $('html').removeClass('mfp-helper');
