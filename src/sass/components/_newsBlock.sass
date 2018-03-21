@@ -10,10 +10,14 @@
       overflow: hidden
       position: relative
       margin: 15px
-      width: 100%
-      background-color: #000
+      background-color: transparent
       box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+
       &:hover
+        img
+          transform: scale(1.05)
+          transition: transform 0.5s ease-in-out
+
         .news__wrap-hidden
           opacity: 1
           visibility: visible
@@ -28,8 +32,8 @@
       img
         z-index: 0
         position: relative
-        left: 50%
-        transform: translate(-50%, 0)
+        max-width: 100%
+        transition: transform 0.5s ease-in-out
 
     &-hidden
       opacity: 0
