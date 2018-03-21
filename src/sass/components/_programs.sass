@@ -7,7 +7,8 @@
     background-color: $colorBlack
     background-image: url("../img/ImageBgMain_programs.jpg")
     background-repeat: no-repeat
-    background-position: center
+    background-position-x: center
+    background-position-y: 100px
     background-size: cover
     background-attachment: fixed
     min-height: 760px
@@ -159,6 +160,7 @@
       > p
         margin-bottom: 80px
         font-size: 20px
+        line-height: 1.4
         +rmin(1440)
           font-size: 22px
         +rmin(1920)
@@ -260,21 +262,54 @@
       margin-top: 30px
       padding-left: 0
       text-align: center
+      display: flex
+      justify-content: center
+      align-items: center
 
       li
         cursor: pointer
-        vertical-align: middle
-        width: 30px
-        height: 30px
-        margin-right: 45px
-        background-color: $colorFuelYellow
-        &:last-child
-          margin-right: 0
+        position: relative
+        width: 60px
+        height: 60px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin:
+          left: 10px
+          right: 10px
+        transition: width 0.45s ease-in-out, height 0.45s ease-in-out, border 0.45s ease-in-out, background-color 0.45s ease-in-out
 
         &.slick-active
-          width: 60px
-          height: 60px
-          border: 15px solid $colorFuelYellow
-          background-color: transparent
+          div
+            width: 60px
+            height: 60px
+            background-color: transparent
+            border: 15px solid $colorFuelYellow
+            transition: width 0.45s ease-in-out, height 0.45s ease-in-out, border 0.45s ease-in-out, background-color 0.45s ease-in-out
+
+
+        div
+          width: 30px
+          height: 30px
+          border-color: transparent
+          background-color: $colorFuelYellow
+          transition: width 0.45s ease-in-out, height 0.45s ease-in-out, border 0.45s ease-in-out, background-color 0.45s ease-in-out
+
+
+
+//cursor: pointer
+//vertical-align: middle
+//width: 30px
+//height: 30px
+//margin-right: 45px
+//background-color: $colorFuelYellow
+//&:last-child
+//  margin-right: 0
+//
+//&.slick-active
+//  width: 60px
+//  height: 60px
+//  border: 15px solid $colorFuelYellow
+//  background-color: transparent
 
 
