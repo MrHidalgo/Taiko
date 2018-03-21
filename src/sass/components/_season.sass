@@ -94,17 +94,12 @@
     cursor: pointer
     overflow: hidden
     position: relative
-    margin-bottom: 113px
-    background-color: $colorBlack
     box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
     margin-bottom: 87px
-    height: 400px
     +rmin(1440)
       margin-bottom: 100px
-      height: 500px
     +rmin(1920)
       margin-bottom: 113px
-      height: 600px
 
     &:hover
       .season__box-img
@@ -120,11 +115,10 @@
         height: 100%
 
     &-img
-      position: absolute
-      top: 0
-      left: 0
+      position: relative
       width: 100%
       height: 100%
+
       &:before
         content: ""
         z-index: 1
@@ -137,16 +131,15 @@
 
       img
         z-index: 0
-        position: absolute
+        position: relative
         max-width: 100%
-        max-height: 100%
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)
 
     &-info
       z-index: 1
-      position: relative
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
       height: 100%
       display: flex
       flex-direction: column
@@ -167,7 +160,10 @@
       opacity: 0
       visibility: hidden
       z-index: 1
-      position: relative
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
       display: flex
       flex-direction: column
       justify-content: center
