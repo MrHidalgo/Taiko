@@ -120,18 +120,17 @@
     +rmin(1920)
       margin-bottom: 113px
 
-
     &--reverse
       flex-direction: row-reverse
 
     &--left
       width: 100%
       max-width: 600px
-      margin-right: 80px
+      margin-right: 70px
       +rmin(1440)
-        margin-right: 130px
+        margin-right: 120px
       +rmin(1920)
-        margin-right: 180px
+        margin-right: 170px
 
       .programs__block--reverse &
         margin:
@@ -182,6 +181,10 @@
 
     &-header
       overflow: hidden
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      justify-content: space-between
       margin-bottom: 40px
       +rmin(1440)
         margin-bottom: 50px
@@ -194,8 +197,7 @@
         vertical-align: middle
 
       h4
-        min-width: 450px
-        margin: 0
+        margin: 10px 20px 10px 0
         font:
           weight: bold
         color: $colorFuelYellow
@@ -206,12 +208,18 @@
           font-size: 40px
 
     &-time
-      i,
-      span
-        display: inline-block
-        vertical-align: middle
+      max-width: 320px
+      white-space: nowrap
+
       i
-        margin-right: 30px
+        margin:
+          right: 25px
+        transform: scale(0.8)
+        +rmin(1440)
+          transform: scale(0.9)
+        +rmin(1920)
+          transform: scale(1)
+
       span
         color: $colorNobel
         font-size: 30px
@@ -277,7 +285,7 @@
         margin:
           left: 10px
           right: 10px
-        transition: width 0.45s ease-in-out, height 0.45s ease-in-out, border 0.45s ease-in-out, background-color 0.45s ease-in-out
+        transition: width 0.35s ease-in-out, height 0.35s ease-in-out, border 0.35s ease-in-out, background-color 0.35s ease-in-out
 
         &.slick-active
           div
@@ -285,31 +293,11 @@
             height: 60px
             background-color: transparent
             border: 15px solid $colorFuelYellow
-            transition: width 0.45s ease-in-out, height 0.45s ease-in-out, border 0.45s ease-in-out, background-color 0.45s ease-in-out
-
+            transition: width 0.35s ease-in-out, height 0.35s ease-in-out, border 0.35s ease-in-out, background-color 0.35s ease-in-out
 
         div
           width: 30px
           height: 30px
           border-color: transparent
           background-color: $colorFuelYellow
-          transition: width 0.45s ease-in-out, height 0.45s ease-in-out, border 0.45s ease-in-out, background-color 0.45s ease-in-out
-
-
-
-//cursor: pointer
-//vertical-align: middle
-//width: 30px
-//height: 30px
-//margin-right: 45px
-//background-color: $colorFuelYellow
-//&:last-child
-//  margin-right: 0
-//
-//&.slick-active
-//  width: 60px
-//  height: 60px
-//  border: 15px solid $colorFuelYellow
-//  background-color: transparent
-
-
+          transition: width 0.35s ease-in-out, height 0.35s ease-in-out, border 0.35s ease-in-out, background-color 0.35s ease-in-out
