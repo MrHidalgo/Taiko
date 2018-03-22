@@ -1,29 +1,23 @@
 /* HEADER
 .header
-  position: absolute
+  z-index: 100
+  position: fixed
   top: 0
-  right: 0
   left: 0
   width: 100%
   background: $colorBlack
   transition: 0.5s
-
-  &.is-fixed
-    z-index: 100
-    position: fixed
-    left: 0
-    top: 0
-    width: 100%
-    animation-name: slideInDown
 
   &__wrapper
     display: flex
     justify-content: space-between
     align-items: center
     height: 120px
+    transition: height 0.3s ease-in-out
 
     .is-fixed &
       height: 90px
+      transition: height 0.3s ease-in-out
 
   &__hamburger
     cursor: pointer

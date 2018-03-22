@@ -97,6 +97,7 @@ $(document).ready(function(){
       var visibleWhen = Math.round(_document.height() / _window.height()) >  2.5;
 
       if (visibleWhen){
+        // vScroll > headerHeight
         if ( vScroll > headerHeight ){
           header.addClass('is-fixed');
         } else {
@@ -115,11 +116,11 @@ $(document).ready(function(){
   // HAMBURGER TOGGLER
   _document.on('click', '[js-hamburger]', function(){
     $("html").addClass('is-activeMenu');
-    $("#menu").addClass("flipInX").removeClass("fadeOut");
+    $("#menu").addClass("slideInLeft").removeClass("fadeOut");
   });
   _document.on('click', '[js-backMenu], .menu__row a', function(){
     $("html").removeClass('is-activeMenu');
-    $("#menu").removeClass("flipInX").addClass("fadeOut");
+    $("#menu").removeClass("slideInLeft").addClass("fadeOut");
   });
   _document.on('click', '[js-order]', function(){
     $("html").addClass('is-activeOrder');
@@ -492,6 +493,8 @@ $(document).ready(function(){
 
     pageReady();
     closeMobileMenu();
+
+    $('.header').removeClass('is-fixed');
 
   });
 

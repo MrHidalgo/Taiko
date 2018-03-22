@@ -73,7 +73,7 @@ $(document).ready(function(){
       },
       password: {
         required: true,
-        minlength: 6,
+        minlength: 6
       }
       // phone: validatePhone
     },
@@ -122,7 +122,7 @@ $(document).ready(function(){
       },
       date: {
         required: "Заполните это поле",
-        date: "Введите корректную дату"
+        date: "Введите дату в формате dd-mm-yyyy"
       },
       phone: {
         required: "Заполните это поле",
