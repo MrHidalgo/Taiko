@@ -55,6 +55,7 @@
     z-index: 1
     position: relative
     display: block
+    transition: .45s $ease
     margin:
       left: auto
       right: auto
@@ -63,6 +64,8 @@
       margin-top: 50px
     +rmin(1920)
       margin-top: 60px
+    &:hover
+      transform: rotate(360deg)
 
   &__row
     z-index: 1
@@ -102,4 +105,3 @@
       font-size: 24px
       margin:
         bottom: 39px
-

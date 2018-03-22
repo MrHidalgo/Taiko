@@ -529,8 +529,7 @@ $(document).ready(function(){
   // alert(jQuery.fn.jquery);
 
 });
-
-$(window).on("load resize ready scroll", function(){
+function setViewport(){
   var metaTag = '<meta name="viewport" content="width=device-width, initial-scale=1">';
 
   if($(window).width() < '1024') {
@@ -541,4 +540,7 @@ $(window).on("load resize ready scroll", function(){
     } else {
     }
   }
-});
+}
+
+$(window).on("load ready", setViewport);
+$(window).on("resize", debounce(setViewport, 200));
