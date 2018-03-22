@@ -11,10 +11,10 @@ block content
 
     .container
 
-      img(src="./img/ImageMan_school.png" class="school__main-man")
+      img(src="./img/ImageMan_school.png" class="school__main-man wow wowFadeRight" data-animation-delay="0.45s")
 
       .school__wrap
-        .school__row
+        .school__row.wow.wowFadeLeft(data-animation-delay="0.45s")
 
           p.school__title!= "Стань частью"
 
@@ -30,5 +30,5 @@ block content
             a(href="tel:89199994858").footer__question-phone!= '8 (919) 999-48-58'
             a(href="mailto:school@taiko.moscow").footer__question-email!= 'SCHOOL@TAIKO.MOSCOW'
 
-      .school__wrap
+      .school__wrap.wow.wowFadeUp(data-animation-delay="0.45s")
         include ./components/_social
