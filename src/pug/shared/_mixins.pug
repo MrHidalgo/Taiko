@@ -101,7 +101,7 @@ mixin programFullBlock(imgName, hashText, cbtnText, time)
 
 
 mixin programFullBlockHover(imgName, hashText, cbtnText, hoverText, hoverName)
-  .season__box
+  .season__box.wow.wowFadeUp(data-animation-delay="0.85s")
 
     .season__box-img
       img(src="./img/" + imgName + ".jpg")
@@ -116,10 +116,10 @@ mixin programFullBlockHover(imgName, hashText, cbtnText, hoverText, hoverName)
 
 
 mixin seasconBlock(text, arr)
-  .season__block
+  .season__block.wow.wowFadeUp(data-animation-delay="0.65s")
     p!= text
 
-  .season__elem
+  .season__elem.wow.wowFadeUp(data-animation-delay="0.85s")
     -for(var i = 0, len = arr.length; i < len; i++)
       .season__elem-container
         .season__elem-item

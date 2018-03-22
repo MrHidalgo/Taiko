@@ -89,8 +89,9 @@ block content
 
 
   .season__main
-    p.season__main-hash!= "#ШОУ-ПРОГРАММА"
-    +customBtn('season__main-cbtn', "ЯПОНСКИЕ СЕЗОНЫ")
+    .season__main-wrap.wow.wowFadeUp(data-animation-delay="0.35s")
+      p.season__main-hash!= "#ШОУ-ПРОГРАММА"
+      +customBtn('season__main-cbtn', "ЯПОНСКИЕ СЕЗОНЫ")
 
 
   .season__concept
@@ -99,12 +100,12 @@ block content
     img(src="./img/ImageBg1_concept.png" class="season__concept-image season__concept-image--right")
 
     .container
-      +customBtn('season__concept-cbtn', "КОНЦЕПЦИЯ")
+      +customBtn('season__concept-cbtn wow wowFadeLeft', "КОНЦЕПЦИЯ")
 
-      p.season__concept-title!= "В японской природе за год"
-      span.season__concept-subtitle!= "происходит тысяча изменений<br/>и десять тысяч перемен..."
+      p.season__concept-title.wow.wowFadeLeft(data-animation-delay="0.55s")!= "В японской природе за год"
+      span.season__concept-subtitle.wow.wowFadeLeft(data-animation-delay="0.65s")!= "происходит тысяча изменений<br/>и десять тысяч перемен..."
 
-      .season__concept-text
+      .season__concept-text.wow.wowFadeRight(data-animation-delay="0.55s")
         p!= "Загадка японских сезонов кроется не в яркой смене времён года, а в том, как японцы смотрят на каждое природное явление."
         br
         br
@@ -115,8 +116,8 @@ block content
 
   .season__container
     .container
-      p.season__container-tilte!= "ШОУ-ПРОГРАММА ВКЛЮЧАЕ В СЕБЯ"
-      p.season__container-subtilte!= "<b>6 БЛОКОВ<b/> ПО 15 МИНУТ"
+      p.season__container-tilte.wow.wowFadeUp(data-animation-delay="0.45s")!= "ШОУ-ПРОГРАММА ВКЛЮЧАЕ В СЕБЯ"
+      p.season__container-subtilte.wow.wowFadeUp(data-animation-delay="0.65s")!= "<b>6 БЛОКОВ<b/> ПО 15 МИНУТ"
 
       -for(var i = 0, len = objData.length; i < len; i++)
         +programFullBlockHover(
@@ -132,7 +133,7 @@ block content
         )
 
 
-      +customBtnId("#callback", 'cbutton--active season__container-cbtn js-popup', "СТОИМОСТЬ")
+      +customBtnId("#callback", 'cbutton--active season__container-cbtn js-popup wow wowFadeUp', "СТОИМОСТЬ")
 
 block footer
   include ./components/_footer
