@@ -21,7 +21,7 @@ block content
 
   .programs__main
 
-      +customBtn('programs__main-cbtn', "ШОУ-ПРОГРАММЫ")
+      +customBtn('programs__main-cbtn wow wowFadeDown', "ШОУ-ПРОГРАММЫ")
 
 
   .programs__wrap
@@ -46,12 +46,13 @@ block content
       +prgramsBlock("", "ImageBlock_programs", "#БАРАБАННОЕ ШОУ", "GEISHa KITSUNE", "3 мин.", programsTextArr[8])
 
 
-      p.programs__suit-title!= "КОСТЮМЫ"
+      .programs__wrap-row.wow.wowFadeUp(data-animation-delay="0.55s")
+        p.programs__suit-title!= "КОСТЮМЫ"
 
-      .programs__suit.js-programSuitSlider
-        -for(var i = 0; i < 9; i++)
-          .programs__suit-item
-            img(src="./img/ImageSuit_program.jpg")
+        .programs__suit.js-programSuitSlider
+          -for(var i = 0; i < 9; i++)
+            .programs__suit-item
+              img(src="./img/ImageSuit_program.jpg")
 
 block footer
   include ./components/_footer

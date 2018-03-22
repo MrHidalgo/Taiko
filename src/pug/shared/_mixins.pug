@@ -62,7 +62,7 @@ mixin customBtnImage(href, className, iconName)
 // programs__block--reverse
 mixin prgramsBlock(className, imgName, hashText, title, time, text)
   div(class="programs__block " + className)
-    .programs__block--left
+    .programs__block--left.wow.wowFadeLeft(data-animation-delay="0.65s")
 
       .programs__block-video
         img(src="./img/" + imgName + ".jpg")
@@ -70,7 +70,7 @@ mixin prgramsBlock(className, imgName, hashText, title, time, text)
 
       p!= hashText
 
-    .programs__block--right
+    .programs__block--right.wow.wowFadeRight(data-animation-delay="0.65s")
 
       .programs__block-header
         h4!= title
@@ -85,7 +85,7 @@ mixin prgramsBlock(className, imgName, hashText, title, time, text)
 
 
 mixin programFullBlock(imgName, hashText, cbtnText, time)
-  .programs__container
+  .programs__container.wow.wowFadeUp(data-animation-delay="0.1s")
 
     .programs__container-video
       img(src="./img/" + imgName + ".jpg")
