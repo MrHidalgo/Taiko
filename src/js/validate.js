@@ -36,7 +36,7 @@ $(document).ready(function(){
         }
       }
     });
-  }
+  };
 
   var validatePhone = {
     required: true,
@@ -50,7 +50,7 @@ $(document).ready(function(){
     },
     minlength: 11,
     digits: true
-  }
+  };
 
   ////////
   // FORMS
@@ -131,6 +131,8 @@ $(document).ready(function(){
       }
     }
   });
+
+  $("#date").mask("99/99/9999");
 
   // CONTACTS
   ////////////////////
