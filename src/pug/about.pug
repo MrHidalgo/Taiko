@@ -8,11 +8,11 @@ block content
 
   .about__main
 
-    img(src="./img/ImageBg_about.png" class="about__main-bg")
+    img(src="./img/ImageBg_about.png" class="about__main-bg wow wowFadeLeft" data-animation-delay="0.35s")
 
     .container
 
-      .about__main-row
+      .about__main-row.wow.wowFadeRight(data-animation-delay="0.35s")
 
         +customBtn('about__main-cbtn', "О ГРУППЕ")
 
@@ -23,7 +23,7 @@ block content
 
     //img(src="./img/ImageInfo_about.jpg")
 
-    .container
+    .container.wow.wowFadeUp(data-animation-delay="0.75s")
 
       .about__info-slider.js-myCustomSlider(data-num=[7, 32, 18, 46, 3], data-text=["ЛЕТ","НОМЕРА","ТУРОВ","БРЕНДОВ","КЛИПА"])
         -
@@ -43,7 +43,7 @@ block content
   .about__member
     .container
 
-      .about__member-wrap
+      .about__member-wrap.wow.wowFadeUp(data-animation-delay="0.55s")
         img(src="./img/ImageMemberMain_about.png")
 
         .about__member-row
@@ -71,7 +71,7 @@ block content
 
       -for(var i = 0, len = arrImage.length; i < len; i++)
         div
-          img(src="./img/" + arrImage[i] + ".jpg")
+          img(src="./img/" + arrImage[i] + ".jpg" class="wow wowFadeUp" data-animation-delay="0.65s")
 
           .about__member-grid-hidden
             p!= "@SHELOMKA"
@@ -86,11 +86,11 @@ block content
 
       .about__reviews-row
 
-        .about__reviews-row--left
+        .about__reviews-row--left.wow.wowFadeLeft(data-animation-delay="0.55s")
           .about__reviews-image
             img(src="./img/ImageReview_about.jpg")
 
-        .about__reviews-row--right
+        .about__reviews-row--right.wow.wowFadeRight(data-animation-delay="0.55s")
           p!= "Очень зажигали барабанщицы! Они такое творили! Это было фантастически мощно и красиво."
           .about__reviews-wrap
             p!= "певец, актёр, композитор и продюсер"

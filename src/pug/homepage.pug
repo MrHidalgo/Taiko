@@ -9,10 +9,11 @@ block content
     .homepage__main
       .homepage__main-bg
 
-      p.homepage__main-title!= "#единственное в России"
+      .homepage__main-wrap.wow.wowFadeDown(data-animation-delay="0.3s")
+        p.homepage__main-title!= "#единственное в России"
 
-      +customBtn('homepage__main-cbtn', "ЯПОНСКОE")
-      +customBtn('homepage__main-cbtn', "БАРАБАННОЕ ШОУ")
+        +customBtn('homepage__main-cbtn', "ЯПОНСКОE")
+        +customBtn('homepage__main-cbtn', "БАРАБАННОЕ ШОУ")
 
 
     // block programs
@@ -22,16 +23,17 @@ block content
 
       .container
 
-        p.homepage__program-title!= "ТАКАЯ ДАЛЕКАЯ И ЗАГАДОЧНАЯ ЯПОНИЯ"
-        p.homepage__program-subTitle!= "ОКАЖЕТСЯ СОВСЕМ РЯДОМ..."
+        .homepage__program-wrap.wow.wowFadeLeft(data-animation-delay="0.7s")
+          p.homepage__program-title!= "ТАКАЯ ДАЛЕКАЯ И ЗАГАДОЧНАЯ ЯПОНИЯ"
+          p.homepage__program-subTitle!= "ОКАЖЕТСЯ СОВСЕМ РЯДОМ..."
 
-        .homepage__program-box
+        .homepage__program-box.wow.wowFadeRight(data-animation-delay="0.7s")
 
           p.homepage__program-text!= "В нашем репертуаре по-настоящему 'ударные' фестивальные композиции и современные барабанные ритмы. Этническая музыка, традиционные костюмы и народные танцы погружают наших зрителей в атмосферу таинственной Азии и заставляют их сердца биться в такт барабанов!"
 
           +customBtn('cbutton--active homepage__program-cbtn', "ПРОГРАММЫ")
 
-        img(src="./img/ImageWoman_main.png" class="homepage__program-woman")
+        img(src="./img/ImageWoman_main.png" data-animation-delay="0.7s" class="homepage__program-woman wow wowFadeUp")
 
         .homepage__program-video
           iframe(
@@ -43,7 +45,7 @@ block content
 
     // block news
     .homepage__news
-      .container
+      .container.wow.wowFadeUp(data-animation-delay="0.65s")
         p.homepage__news-title!= "ПОСЛЕДНИЕ НОВОСТИ"
 
 
