@@ -9,7 +9,7 @@ block content
     .contacts__main
       .container
         .contacts__main-row
-          .contacts__main-row--left
+          .contacts__main-row--left.wow.wowFadeLeft(data-animation-delay=".3s")
 
             +customBtn('contacts__main-cbtn', "КОНТАКТЫ")
 
@@ -30,7 +30,7 @@ block content
                 p.footer__present-size!= 'PDF, 4МБ'
 
 
-          .contacts__main-row--right
+          .contacts__main-row--right.wow.wowFadeRight(data-animation-delay=".3s")
 
             form.contacts__form(js-contacts)
 

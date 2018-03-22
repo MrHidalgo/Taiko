@@ -6,9 +6,9 @@ PageList:
 - file: about.html
   ready: 95
 - file: contacts.html
-  ready: 95
+  ready: 100
 - file: news.html
-  ready: 95
+  ready: 100
 - file: programs.html
   ready: 95
 - file: school.html

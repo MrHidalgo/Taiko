@@ -9,13 +9,13 @@ block content
   .news__main
     .container
 
-      +customBtn('news__main-cbtn', "НОВОСТИ")
+      +customBtn('news__main-cbtn wow wowFadeUp', "НОВОСТИ")
 
-      +newsBlock(3, "news__wrap-elem--alone")
+      +newsBlock(3, "news__wrap-elem--alone wow wowFadeUp")
 
       .news__wrap
         -for(var i = 0; i < 2; i++)
-          a.news__wrap-elem(href="", class!= (i === 0) ? "news__wrap-elem--full" : "news__wrap-elem--alone")
+          a.news__wrap-elem(href="", data-animation-delay=".5s", class!= (i === 0) ? "news__wrap-elem--full wow wowFadeUp" : "news__wrap-elem--alone wow wowFadeUp")
             if(i === 0)
               img(src="./img/ImagePreview-full_news.jpg")
             else
