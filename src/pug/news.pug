@@ -15,7 +15,7 @@ block content
 
       .news__wrap
         -for(var i = 0; i < 2; i++)
-          a(href="").news__wrap-elem(class!= (i === 0) ? "news__wrap-elem--full" : "news__wrap-elem--alone")
+          a.news__wrap-elem(href="", class!= (i === 0) ? "news__wrap-elem--full" : "news__wrap-elem--alone")
             if(i === 0)
               img(src="./img/ImagePreview-full_news.jpg")
             else

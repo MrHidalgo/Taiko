@@ -526,4 +526,19 @@ $(document).ready(function(){
     }
   }
 
+  // alert(jQuery.fn.jquery);
+
+});
+
+$(window).on("load resize ready scroll", function(){
+  var metaTag = '<meta name="viewport" content="width=device-width, initial-scale=1">';
+
+  if($(window).width() < '1024') {
+    $('head meta[name="viewport"]').remove();
+  } else {
+    if($('head meta[name="viewport"]').length === 0) {
+      $('head').append(metaTag);
+    } else {
+    }
+  }
 });
