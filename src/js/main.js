@@ -188,58 +188,47 @@ $(document).ready(function(){
     })
 
     // other individual sliders goes here
-    $('.js-myCustomSlider').slick({
-      dots: true,
-      prevArrow: false,
-      nextArrow: false,
-      infinite: true,
-      speed: 550,
-      pauseOnDotsHover: true,
-      fade: true,
-      slidesToShow: 1,
-      autoplay: true,
-      customPaging: function(slick,index) {
+    if($('.js-myCustomSlider')) {
+      $('.js-myCustomSlider').not('.slick-initialized').slick({
+        dots: true,
+        prevArrow: false,
+        nextArrow: false,
+        infinite: true,
+        speed: 550,
+        pauseOnDotsHover: true,
+        fade: true,
+        slidesToShow: 1,
+        autoplay: true,
+        customPaging: function(slick,index) {
 
-        var sliderName = $(".js-myCustomSlider"),
-          arrNum = sliderName.data('num'),
-          arrText = sliderName.data('text');
+          var sliderName = $(".js-myCustomSlider"),
+            arrNum = sliderName.data('num'),
+            arrText = sliderName.data('text');
 
-        return '<div>' +
+          return '<div>' +
             '<p>' + arrNum[index] + '</p>' +
             '<p>' + arrText[index] + '</p>' +
-          '</div>';
-      }
-    });
+            '</div>';
+        }
+      });
+    }
 
     // other individual sliders goes here
-    $('.js-programSuitSlider').slick({
-      dots: true,
-      pauseOnDotsHover: true,
-      prevArrow: false,
-      nextArrow: false,
-      speed: 550,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      customPaging: function(slick,index) {
-        return '<div></div>';
-      }
-    });
-
-    // other individual sliders goes here
-    // $('.js-gallerySlider').slick({
-    //   dots: false,
-    //   prevArrow: slickNextArrow,
-    //   nextArrow: slickPrevArrow,
-    //   speed: 550,
-    //   infinite: true,
-    //   slidesToShow: 1,
-    //   slidesToScroll: 1,
-    //   fade: true,
-    //   cssEase: 'linear',
-    //   lazyLoad: 'ondemand'
-    // })
-
+    if ($('.js-programSuitSlider')) {
+      $('.js-programSuitSlider').not('.slick-initialized').slick({
+        dots: true,
+        pauseOnDotsHover: true,
+        prevArrow: false,
+        nextArrow: false,
+        speed: 550,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        customPaging: function() {
+          return '<div></div>';
+        }
+      });
+    }
   }
 
   //////////
@@ -291,7 +280,7 @@ $(document).ready(function(){
           var slickNextArrow = '<div class="slick-prev"><i class="icon-prev"></div>';
           var slickPrevArrow = '<div class="slick-next"><i class="icon-next"></div>';
 
-          $('.js-gallerySlider').slick({
+          $('.js-gallerySlider').not('.slick-initialized').slick({
             dots: false,
             prevArrow: slickNextArrow,
             nextArrow: slickPrevArrow,
@@ -496,6 +485,7 @@ $(document).ready(function(){
 
     $('.header').removeClass('is-fixed');
 
+    _window.scrollTop(1);
   });
 
   // some plugins get bindings onNewPage only that way
