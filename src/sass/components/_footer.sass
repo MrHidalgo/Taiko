@@ -1,9 +1,9 @@
 // FOOTER
 .footer
   background: $colorBlack
-  min-height: 420px
+  min-height: 240px
   padding:
-    top: 42px
+    top: 60px
     bottom: 63px
   +rmin(1440)
     min-height: 450px
@@ -17,15 +17,16 @@
       bottom: 97px
 
   .container
-    max-width: (1300 + (40 * 2)) * 1px
+    max-width: 780px
+    +rmin(1440)
+      max-width: (1300 + (40 * 2)) * 1px
 
   .social
-    margin-top: 83px
+    margin-top: 40px
     +rmin(1440)
       margin-top: 93px
     +rmin(1920)
       margin-top: 103px
-
 
   &__wrapper
     display: flex
@@ -48,7 +49,8 @@
 
     > p
       color: $colorNobel
-      font-size: 20px
+      font-size: 12px
+      letter-spacing: 1.6px
       +rmin(1440)
         font-size: 22px
       +rmin(1920)
@@ -78,7 +80,7 @@
           visibility: visible
           transform: scaleX(1)
 
-      font-size: 27px
+      font-size: 19px
       +rmin(1440)
         font-size: 33px
       +rmin(1920)
@@ -91,7 +93,9 @@
       .footer__present-bg
         height: 100%
       .footer__present-icon
-        bottom: ((137 - 120) / 2) * 1px
+        bottom: -15px
+        +rmin(1440)
+          bottom: ((137 - 120) / 2) * 1px
       .footer__present-text
         p:first-child
           color: $colorFuelYellow
@@ -99,30 +103,42 @@
 
     &-image
       position: relative
-      width: 120px
-      height: 137px
-      margin-right: 34px
+      width: 70px
+      height: 87px
+      margin-right: 20px
+      +rmin(1440)
+        width: 120px
+        height: 137px
+        margin-right: 34px
 
     &-bg
-      width: 120px
-      height: 120px
+      width: 70px
+      height: 70px
       background-color: $colorFuelYellow
       transition: height .3s ease-in-out, bottom .3s ease-in-out
+      +rmin(1440)
+        width: 120px
+        height: 120px
 
     &-icon
       position: absolute
-      left: 0
+      left: -5px
       right: 0
-      bottom: 0
+      bottom: -25px
       margin: auto
       transition: bottom .3s ease-in-out
+      transform: scale(0.5)
+      +rmin(1440)
+        left: 0
+        bottom: 0
+        transform: scale(1)
 
     &-text
       display: flex
       flex-direction: column
       justify-content: space-between
       transition: color 0.3s ease-in-out
-      font-size: 20px
+      font-size: 10px
       +rmin(1440)
         font-size: 22px
       +rmin(1920)

@@ -3,15 +3,19 @@
     display: flex
     align-items: stretch
     justify-content: space-between
-    margin-bottom: 60px
+    margin-bottom: 20px
+    +rmin(1440)
+      margin-bottom: 60px
 
     &-elem
       cursor: pointer
       overflow: hidden
       position: relative
-      margin: 15px
+      margin: 15px 35px
       background-color: transparent
       box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+      +rmin(1440)
+        margin: 15px
 
       &:hover
         img
@@ -55,7 +59,7 @@
         text-align: center
         color: $colorFuelYellow
         text-shadow: 0 0 48px rgba(0, 0, 0, 0.4)
-        font-size: 25px
+        font-size: 20px
         +rmin(1440)
           font-size: 30px
         +rmin(1920)

@@ -3,8 +3,8 @@
 .homepage
   &__main
     position: relative
-    min-height: 760px
-    padding-top: 58px
+    min-height: 510px
+    padding-top: 50px
     +rmin(1440)
       min-height: 860px
       padding-top: 73px
@@ -31,7 +31,7 @@
       text-align: center
       text-shadow: 0 0 50px rgba(0, 0, 0, 0.95)
       letter-spacing: 4px
-      font-size: 25px
+      font-size: 18px
       +rmin(1440)
         font-size: 30px
       +rmin(1920)
@@ -44,8 +44,10 @@
   &__program
     overflow: hidden
     position: relative
-    min-height: 2040px
+    min-height: 1080px
     background-color: $colorBlack
+    +rmin(1440)
+      min-height: 2040px
 
     .container
       z-index: 1
@@ -54,7 +56,7 @@
       top: 0
       right: 0
       height: 100%
-      padding-top: 115px
+      padding-top: 95px
       +rmin(1440)
         padding-top: 145px
       +rmin(1920)
@@ -86,8 +88,8 @@
 
     &-text
       margin:
-        bottom: 60px
-      font-size: 20px
+        bottom: 50px
+      font-size: 15px
       +rmin(1440)
         font-size: 25px
       +rmin(1920)
@@ -101,8 +103,8 @@
         right: 180px
       line-height: 1.5
       margin:
-        top: 80px
-        bottom: 217px
+        top: 50px
+        bottom: 137px
       +rmin(1440)
         margin:
           top: 100px
@@ -117,33 +119,42 @@
       position: absolute
       right: 40px
       bottom: 50px
+      max-width: 30%
+      +rmin(1440)
+        max-width: 100%
 
     &-video
       z-index: 0
       position: relative
-      max-width: 1080px
-      height: 600px
+      max-width: 680px
+      height: 340px
       background-color: $colorNero
+      +rmin(1440)
+        max-width: 1080px
+        height: 600px
 
       iframe
-        // position: absolute
         width: 100%
         height: 100%
 
 
   &__news
     padding:
-      top: 111px
-      bottom: 127px
+      top: 55px
+      bottom: 67px
     background-color: $colorNero
+    +rmin(1440)
+      padding:
+        top: 111px
+        bottom: 127px
 
     &-title
       font:
         weight: bold
       text-align: center
       color: $colorFuelYellow
-      margin-bottom: 56px
-      font-size: 25px
+      margin-bottom: 20px
+      font-size: 19px
       +rmin(1440)
         font-size: 30px
       +rmin(1920)

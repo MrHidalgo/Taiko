@@ -2,7 +2,7 @@
   cursor: pointer
   position: relative
   display: table
-  height: 53px
+  min-height: 30px
   background-color: transparent
   border: none
   padding: 0
@@ -34,11 +34,11 @@
   &.season__concept-cbtn,
   &.season__container-cbtn,
   &.menu__cbtn
-    height: 71px
+    min-height: 55px
     +rmin(1440)
-      height: 88px
+      min-height: 88px
     +rmin(1920)
-      height: 105px
+      min-height: 105px
 
   &.homepage__program-cbtn,
   &.school__main-cbtn,
@@ -67,6 +67,7 @@
           animation-name: slideInDown
         &--1
           animation-name: slideInUp
+
   &--active
     &:hover
       .cbutton__text
@@ -129,13 +130,17 @@
     z-index: 1
     padding-top: 7px
     padding:
-      left: 30px
-      right: 30px
+      left: 10px
+      right: 10px
     font:
       weight: bold
-      size: 35px
+      size: 20px
     letter-spacing: 4px
     transition: text-shadow 0.3s ease-in-out
+    +rmin(1440)
+      padding:
+        left: 30px
+        right: 30px
 
 
     .homepage__main-cbtn &,
@@ -153,7 +158,7 @@
     .menu__cbtn &
       padding-top: 11px
       letter-spacing: 6px
-      font-size: 50px
+      font-size: 40px
       +rmin(1440)
         font-size: 65px
       +rmin(1920)

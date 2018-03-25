@@ -49,9 +49,11 @@ html
     display: flex
     flex-direction: column
     // header offset ex
-    padding-top: 120px
+    padding-top: 65px
     +r(1023)
       padding-top: 0
+    +rmin(1440)
+      padding-top: 120px
 
 .container
   max-width: (1560 + (40 * 2)) * 1px
