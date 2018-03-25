@@ -11,7 +11,7 @@
     background-position-y: 100px
     background-size: cover
     background-attachment: fixed
-    min-height: 760px
+    min-height: 510px
     +rmin(1440)
       min-height: 860px
     +rmin(1920)
@@ -21,8 +21,8 @@
     background-color: $colorNero
     box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
     padding:
-      top: 70px
-      bottom: 70px
+      top: 50px
+      bottom: 0
     +rmin(1440)
       padding:
         top: 80px
@@ -36,8 +36,12 @@
     overflow: hidden
     position: relative
     box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
-    margin-bottom: 93px
+    margin-bottom: 63px
+    margin-left: 50px
+    margin-right: 50px
     +rmin(1440)
+      margin-left: 0
+      margin-right: 0
       margin-bottom: 103px
     +rmin(1920)
       margin-bottom: 113px
@@ -114,7 +118,7 @@
 
   &__block
     display: flex
-    margin-bottom: 93px
+    margin-bottom: 50px
     +rmin(1440)
       margin-bottom: 103px
     +rmin(1920)
@@ -125,17 +129,26 @@
 
     &--left
       width: 100%
-      max-width: 600px
-      margin-right: 70px
+      max-width: 470px
+      margin-right: 0
+      padding:
+        left: 50px
+        right: 100px
       +rmin(1440)
+        max-width: 600px
         margin-right: 120px
+        padding-left: 0
+        padding-right: 0
       +rmin(1920)
         margin-right: 170px
 
       .programs__block--reverse &
         margin:
           right: 0
-          left: 120px
+          left: 0
+        padding:
+          left: 100px
+          right: 50px
         +rmin(1440)
           margin-left: 150px
         +rmin(1920)
@@ -143,7 +156,7 @@
 
       > p
         color: $colorNobel
-        font-size: 20px
+        font-size: 11px
         +rmin(1440)
           font-size: 22px
         +rmin(1920)
@@ -154,13 +167,22 @@
 
     &--right
       width: 100%
-      padding-top: 30px
+      padding-top: 0
+      +rmin(1440)
+        padding-top: 30px
+
+      .programs__block--reverse &
+        padding-left: 50px
+        +rmin(1440)
+          padding-left: 0
 
       > p
-        margin-bottom: 80px
-        font-size: 20px
+        margin-bottom: 60px
+        font-size: 13px
         line-height: 1.4
+        letter-spacing: 1.1px
         +rmin(1440)
+          margin-bottom: 80px
           font-size: 22px
         +rmin(1920)
           font-size: 24px
@@ -185,7 +207,7 @@
       flex-wrap: wrap
       align-items: center
       justify-content: space-between
-      margin-bottom: 40px
+      margin-bottom: 0
       +rmin(1440)
         margin-bottom: 50px
       +rmin(1920)
@@ -201,7 +223,7 @@
         font:
           weight: bold
         color: $colorFuelYellow
-        font-size: 25px
+        font-size: 18px
         +rmin(1440)
           font-size: 40px
         +rmin(1920)
@@ -213,16 +235,17 @@
 
       i
         margin:
-          right: 25px
-        transform: scale(0.8)
+          right: 15px
+        transform: scale(0.6)
         +rmin(1440)
+          margin-right: 25px
           transform: scale(0.9)
         +rmin(1920)
           transform: scale(1)
 
       span
         color: $colorNobel
-        font-size: 30px
+        font-size: 18px
         +rmin(1440)
           font-size: 35px
         +rmin(1920)
@@ -241,12 +264,12 @@
       height: auto
 
     &-title
-      margin-bottom: 30px
+      margin-bottom: 20px
       font:
         weight: bold
       color: $colorFuelYellow
       text-align: center
-      font-size: 30px
+      font-size: 20px
       +rmin(1440)
         font-size: 35px
       +rmin(1920)
@@ -277,8 +300,8 @@
       li
         cursor: pointer
         position: relative
-        width: 60px
-        height: 60px
+        width: 30px
+        height: 30px
         display: flex
         align-items: center
         justify-content: center
@@ -286,18 +309,28 @@
           left: 10px
           right: 10px
         transition: width 0.35s ease-in-out, height 0.35s ease-in-out, border 0.35s ease-in-out, background-color 0.35s ease-in-out
+        +rmin(1440)
+          width: 60px
+          height: 60px
 
         &.slick-active
           div
-            width: 60px
-            height: 60px
+            width: 30px
+            height: 30px
             background-color: transparent
-            border: 15px solid $colorFuelYellow
+            border: 8px solid $colorFuelYellow
             transition: width 0.35s ease-in-out, height 0.35s ease-in-out, border 0.35s ease-in-out, background-color 0.35s ease-in-out
+            +rmin(1440)
+              width: 60px
+              height: 60px
+              border-width: 15px
 
         div
-          width: 30px
-          height: 30px
+          width: 15px
+          height: 15px
           border-color: transparent
           background-color: $colorFuelYellow
           transition: width 0.35s ease-in-out, height 0.35s ease-in-out, border 0.35s ease-in-out, background-color 0.35s ease-in-out
+          +rmin(1440)
+            width: 30px
+            height: 30px
