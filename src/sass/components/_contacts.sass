@@ -7,21 +7,24 @@
     background-position: center
     background-size: cover
     min-height: 100vh
-    padding-top: 80px
+    padding-top: 60px
     +rmin(1440)
       padding-top: 100px
     +rmin(1920)
       padding-top: 120px
 
     &-cbtn
-      margin-bottom: 67px
+      margin-bottom: 37px
       +rmin(1440)
         margin-bottom: 77px
       +rmin(1920)
         margin-bottom: 87px
 
     .container
+      max-width: 900px
       padding-bottom: 100px
+      +rmin(1440)
+        max-width: 1640px
 
     &-row
       display: flex
@@ -38,8 +41,9 @@
   &__phone,
   &__email
     &-title
-      margin-bottom: 5px
-      font-size: 20px
+      margin-bottom: 10px
+      font-size: 13px
+      letter-spacing: 1.1px
       +rmin(1440)
         font-size: 22px
       +rmin(1920)
@@ -69,7 +73,7 @@
           visibility: visible
           transform: scaleX(1)
 
-      font-size: 25px
+      font-size: 19px
       +rmin(1440)
         font-size: 30px
       +rmin(1920)
@@ -77,10 +81,12 @@
 
   &__phone
     &-wrap
-      margin-bottom: 50px
+      margin-bottom: 25px
+      +rmin(1440)
+        margin-bottom: 50px
   &__email
     &-wrap
-      margin-bottom: 140px
+      margin-bottom: 100px
       +rmin(1440)
         margin-bottom: 170px
       +rmin(1920)
@@ -89,32 +95,41 @@
   &__form
     float: right
     width: 100%
-    max-width: 660px
-    min-height: 400px
-    padding: 60px
+    max-width: 350px
+    min-height: 350px
+    padding: 30px
     background-color: $colorNero
     box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+    +rmin(1440)
+      max-width: 660px
+      padding: 60px
+
 
     &-field
       width: 100%
-      min-height: 60px
-      margin-bottom: 30px
+      min-height: 40px
+      margin-bottom: 10px
+      +rmin(1440)
+        margin-bottom: 25px
 
       &--phone
         border-color: $colorFuelYellow
 
       &--message
-        min-height: 210px
-        margin-bottom: 60px
+        min-height: 100px
+        margin-bottom: 30px
+        +rmin(1440)
+          min-height: 210px
+          margin-bottom: 60px
 
       input
         width: 100%
-        height: 60px
+        height: 40px
         padding:
           left: 15px
           right: 15px
         background-color: transparent
-        border: 5px solid $colorBlack
+        border: 3px solid $colorBlack
         font:
           weight: bold
         text-align: left
@@ -129,11 +144,15 @@
         &:-moz-placeholder
           text-align: center
 
+        +rmin(1440)
+          height: 60px
+          border-width: 5px
+
         &:focus
           border-color: $colorFuelYellow
           transition: border-color 0.3s ease-in-out
 
-        font-size: 20px
+        font-size: 14px
         +rmin(1440)
           font-size: 22px
         +rmin(1920)
@@ -142,20 +161,23 @@
       textarea
         resize: none
         width: 100%
-        min-height: 210px
+        min-height: 100px
         padding: 15px
         background-color: transparent
-        border: 5px solid $colorBlack
+        border: 3px solid $colorBlack
         font:
           weight: bold
         text-align: center
         color: $colorFuelYellow
+        +rmin(1440)
+          min-height: 210px
+          border-width: 5px
 
         &:focus
           border-color: $colorFuelYellow
           transition: border-color 0.3s ease-in-out
 
-        font-size: 20px
+        font-size: 14px
         +rmin(1440)
           font-size: 22px
         +rmin(1920)
