@@ -5,7 +5,7 @@
     overflow: hidden
     position: relative
     background-color: $colorBlack
-    min-height: 880px
+    min-height: 570px
     +rmin(1440)
       min-height: 980px
     +rmin(1920)
@@ -31,7 +31,7 @@
       top: 0
       right: 0
       height: 100%
-      padding-top: 40px
+      padding-top: 30px
       +rmin(1440)
         padding-top: 50px
       +rmin(1920)
@@ -42,8 +42,8 @@
       width: 50%
 
     &-text
-      padding-top: 58px
-      font-size: 30px
+      padding-top: 35px
+      font-size: 21px
       +rmin(1440)
         padding-top: 68px
         font-size: 35px
@@ -60,7 +60,7 @@
     background-size: cover
     background-position: center
     background-attachment: fixed
-    min-height: 680px
+    min-height: 580px
     +rmin(1440)
       min-height: 880px
     +rmin(1920)
@@ -88,7 +88,8 @@
 
       &-item
         text-align: center
-        font-size: 20px
+        font-size: 14px
+        letter-spacing: 1px
         +rmin(1440)
           font-size: 22px
         +rmin(1920)
@@ -186,19 +187,24 @@
                   font-size: 40px
 
   &__member
-    padding-top: 120px
+    padding-top: 60px
     background-color: $colorNero
+    +rmin(1440)
+      padding-top: 120px
 
     &-wrap
       overflow: hidden
       position: relative
       width: 100%
-      margin-bottom: 120px
+      margin-bottom: 60px
       background-color: $colorBlack
       box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
-      min-height: 640px
+      min-height: 380px
+      height: 380px
       +rmin(1440)
+        height: 100%
         min-height: 680px
+        margin-bottom: 120px
       +rmin(1920)
         min-height: 720px
 
@@ -255,8 +261,8 @@
         weight: bold
       color: $colorFuelYellow
       text-align: center
-      margin-bottom: 40px
-      font-size: 25px
+      margin-bottom: 30px
+      font-size: 19px
       +rmin(1440)
         margin-bottom: 50px
         font-size: 30px
@@ -325,8 +331,8 @@
 
   &__reviews
     background-color: $colorNero
-    min-height: 880px
-    padding-top: 80px
+    min-height: 560px
+    padding-top: 45px
     +rmin(1440)
       min-height: 980px
       padding-top: 100px
@@ -342,8 +348,8 @@
         weight: bold
       color: $colorFuelYellow
       text-align: center
-      margin-bottom: 141px
-      font-size: 25px
+      margin-bottom: 91px
+      font-size: 19px
       +rmin(1440)
         margin-bottom: 161px
         font-size: 30px
@@ -353,18 +359,25 @@
 
     &-row
       display: flex
+      +r(1440)
+        max-width: 800px
+        margin-left: auto
+        margin-right: auto
 
       &--left
-        width: 480px
+        width: 280px
         margin-right: 60px
+        +rmin(1440)
+          width: 480px
 
 
       &--right
         display: flex
         flex-direction: column
         justify-content: space-between
-
-        width: calc(100% - (480px + 60px))
+        width: calc(100% - (280px + 60px))
+        +rmin(1440)
+          width: calc(100% - (480px + 60px))
 
         > p
           padding-top: 15px
@@ -377,15 +390,20 @@
     &-image
       overflow: hidden
       position: relative
-      width: 480px
-      height: 480px
+      width: 280px
+      height: 280px
       box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
+      +rmin(1440)
+        width: 480px
+        height: 480px
+
 
       img
         position: absolute
         top: 0
         left: 1px
         width: 100%
+        max-width: 100%
         height: 100%
 
     &-wrap
@@ -393,7 +411,7 @@
 
       p
         color: $colorNobel
-        font-size: 20px
+        font-size: 12px
         +rmin(1440)
           font-size: 22px
         +rmin(1920)
@@ -401,7 +419,7 @@
 
       span
         display: block
-        font-size: 25px
+        font-size: 18px
         +rmin(1440)
           font-size: 30px
         +rmin(1920)
