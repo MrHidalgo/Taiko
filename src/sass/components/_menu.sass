@@ -35,6 +35,9 @@
   .container
     z-index: 1
     position: relative
+    max-width: 910px
+    +rmin(1440)
+      max-width: 1640px
 
   .row
     z-index: 0
@@ -44,7 +47,7 @@
     width: 100%
 
   &__cbtn
-    margin-bottom: 15px
+    margin-bottom: 5px
     padding-left: 20px
     &:last-child
       margin-bottom: 0
@@ -56,22 +59,22 @@
     position: relative
     display: block
     transition: .45s $ease
+    transform: scale(0.5)
     margin:
       left: auto
       right: auto
-      top: 40px
+      top: 0
     +rmin(1440)
       margin-top: 50px
+      transform: scale(1)
     +rmin(1920)
       margin-top: 60px
-    &:hover
-      transform: rotate(360deg)
 
   &__row
     z-index: 1
     position: relative
     padding:
-      top: 35px
+      top: 0
       bottom: 77px
     +rmin(1440)
       padding:
@@ -84,7 +87,7 @@
 
   &__back
     display: block
-    padding-left: 60px
+    padding-left: 30px
     font:
       weight: bold
     color: $colorNobel
@@ -94,13 +97,13 @@
       color: $colorFuelYellow
       transition: color 0.3s ease-in-out
 
-    font-size: 20px
-    margin:
-      bottom: 31px
+    font-size: 14px
+    margin-bottom: 31px
     +rmin(1440)
-      font-size: 22px
+      padding-left: 60px
       margin:
         bottom: 35px
+      font-size: 22px
     +rmin(1920)
       font-size: 24px
       margin:
