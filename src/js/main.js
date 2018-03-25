@@ -31,7 +31,7 @@ $(document).ready(function(){
     initSliders();
     initScrollMonitor();
     initMasks();
-    initLazyLoad();
+    // initLazyLoad();
 
     // development helper
     _window.on('resize', debounce(setBreakpoint, 200))
@@ -386,30 +386,7 @@ $(document).ready(function(){
     });
 
   }
-
-
-  //////////
-  // LAZY LOAD
-  //////////
-  function initLazyLoad(){
-    _document.find('[js-lazy]').Lazy({
-      threshold: 500,
-      enableThrottle: true,
-      throttle: 100,
-      scrollDirection: 'vertical',
-      effect: 'fadeIn',
-      effectTime: 350,
-      // visibleOnly: true,
-      // placeholder: "data:image/gif;base64,R0lGODlhEALAPQAPzl5uLr9Nrl8e7...",
-      onError: function(element) {
-          console.log('error loading ' + element.data('src'));
-      },
-      beforeLoad: function(element){
-        // element.attr('style', '')
-      }
-    });
-  }
-
+  
   //////////
   // BARBA PJAX
   //////////
@@ -519,8 +496,7 @@ $(document).ready(function(){
   // alert(jQuery.fn.jquery);
 
 });
-
-$(window).on("load resize ready scroll", function(){
+function setViewport(){
   var metaTag = '<meta name="viewport" content="width=device-width, initial-scale=1">';
 
   if($(window).width() < '1024') {
@@ -531,4 +507,7 @@ $(window).on("load resize ready scroll", function(){
     } else {
     }
   }
-});
+}
+
+$(window).on("load ready", setViewport);
+$(window).on("resize", debounce(setViewport, 200));
