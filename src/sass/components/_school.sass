@@ -3,8 +3,12 @@
 .school
   &__wrap
     &:last-child
-      margin-top: 120px
-      margin-bottom: 100px
+      margin-top: 70px
+      margin-bottom: 30px
+      +rmin(1440)
+        margin-top: 120px
+        margin-bottom: 100px
+
   &__main
     overflow: hidden
     position: relative
@@ -18,7 +22,7 @@
       top: 0
       right: 0
       height: 100%
-      margin-top: 90px
+      margin-top: 40px
       +rmin(1440)
         margin-top: 95px
       +rmin(1920)
@@ -35,18 +39,23 @@
       position: absolute
       top: 0
       right: 0
-      max-width: 100%
+      max-width: 50%
       min-height: 100%
       height: auto
       display: block
+      +rmin(1440)
+        max-width: 100%
 
   &__row
     width: 50%
+    padding-left: 50px
+    +rmin(1440)
+      padding-left: 0
 
     > p
       padding-left: 30px
       margin-bottom: 10px
-      font-size: 30px
+      font-size: 20px
       +rmin(1440)
         font-size: 35px
       +rmin(1920)
@@ -58,7 +67,8 @@
         font:
           weight: normal
         display: block
-        font-size: 20px
+        font-size: 14px
+        letter-spacing: 1.1px
         +rmin(1440)
           font-size: 22px
         +rmin(1920)
@@ -67,8 +77,8 @@
 
         &:first-child
           margin:
-            top: 50px
-            bottom: 38px
+            top: 40px
+            bottom: 30px
           +rmin(1440)
             margin:
               top: 60px
@@ -83,7 +93,7 @@
 
         &:last-child
           color: $colorFuelYellow
-          margin-bottom: 64px
+          margin-bottom: 24px
           +rmin(1440)
             margin-bottom: 74px
           +rmin(1920)
