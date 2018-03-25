@@ -11,7 +11,7 @@
     background-position: center
     background-size: cover
     background-attachment: fixed
-    min-height: 760px
+    min-height: 510px
     +rmin(1440)
       min-height: 860px
     +rmin(1920)
@@ -22,7 +22,8 @@
         weight: bold
       text-align: center
       margin-bottom: 10px
-      font-size: 20px
+      font-size: 13px
+      letter-spacing: 1.1px
       +rmin(1440)
         font-size: 22px
       +rmin(1920)
@@ -32,7 +33,7 @@
     overflow: hidden
     position: relative
     background-color: $colorBlack
-    min-height: 1000px
+    min-height: 630px
     +rmin(1440)
       min-height: 1100px
     +rmin(1920)
@@ -45,7 +46,9 @@
       top: 0
       right: 0
       height: 100%
-      padding-top: 120px
+      padding-top: 60px
+      +rmin(1440)
+        padding-top: 120px
 
       > p,
       > span
@@ -58,7 +61,7 @@
       > span
         display: block
         font-weight: bold
-        margin-bottom: 149px
+        margin-bottom: 89px
         +rmin(1440)
           margin-bottom: 169px
         +rmin(1920)
@@ -66,8 +69,9 @@
 
     &-text
       p
-        font-size: 20px
-        margin-left: 30%
+        font-size: 14px
+        letter-spacing: 1.1px
+        margin-left: 40%
         +rmin(1440)
           font-size: 22px
           margin-left: 40%
@@ -76,7 +80,9 @@
           margin-left: 50%
 
     &-cbtn
-      margin-bottom: 64px
+      margin-bottom: 34px
+      +rmin(1440)
+        margin-bottom: 64px
 
     &-image
       position: absolute
@@ -96,9 +102,13 @@
     overflow: hidden
     position: relative
     box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
-    margin-bottom: 87px
+    margin-bottom: 57px
+    margin-left: 50px
+    margin-right: 50px
     +rmin(1440)
       margin-bottom: 100px
+      margin-left: 0
+      margin-right: 0
     +rmin(1920)
       margin-bottom: 113px
 
@@ -180,14 +190,14 @@
 
       p
         margin-bottom: 10px
-        font-size: 30px
+        font-size: 20px
         +rmin(1440)
           font-size: 35px
         +rmin(1920)
           font-size: 40px
       span
         color: $colorFuelYellow
-        font-size: 20px
+        font-size: 15px
         +rmin(1440)
           font-size: 22px
         +rmin(1920)
@@ -198,8 +208,8 @@
     background-color: $colorNero
     box-shadow: inset 0 0 20px 5px rgba(0, 0, 0, 0.3)
     padding:
-      top: 88px
-      bottom: 88px
+      top: 50px
+      bottom: 50px
     +rmin(1440)
       padding:
         top: 100px
@@ -211,7 +221,7 @@
 
     &-tilte,
     &-subtilte
-      font-size: 40px
+      font-size: 30px
       +rmin(1440)
         font-size: 50px
       +rmin(1920)
@@ -226,7 +236,7 @@
 
     &-subtilte
       color: $colorFuelYellow
-      margin-bottom: 88px
+      margin-bottom: 50px
       +rmin(1440)
         margin-bottom: 100px
       +rmin(1920)
@@ -234,10 +244,10 @@
 
   &__block
     position: relative
-    margin-bottom: 81px
+    margin-bottom: 61px
     padding:
-      top: 40px
-      bottom: 40px
+      top: 30px
+      bottom: 30px
     +rmin(1440)
       margin-bottom: 100px
       padding:
@@ -274,7 +284,8 @@
       font:
         weight: normal
       text-align: center
-      font-size: 20px
+      font-size: 15px
+      letter-spacing: 1.1px
       +rmin(1440)
         font-size: 22px
       +rmin(1920)
