@@ -95,7 +95,6 @@
         +rmin(1920)
           font-size: 24px
 
-
         p
           width: 75%
           margin:
@@ -361,10 +360,12 @@
 
     &-row
       display: flex
-      +r(1440)
-        max-width: 800px
-        margin-left: auto
-        margin-right: auto
+      max-width: 800px
+      margin-left: auto
+      margin-right: auto
+      +rmin(1440)
+        max-width: 100%
+
 
       &--left
         width: 280px

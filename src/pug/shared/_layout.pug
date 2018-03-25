@@ -27,11 +27,11 @@ html(lang="en")
           //  include ../components/_footer
 
       block modal
-        if(bodyClass === "season" || bodyClass === "programs")
+        if(outClass === "season" || outClass === "programs")
           include ../components/_modal
 
       block gallery
-        if(bodyClass === "programs")
+        if(outClass === "programs")
           include ../components/_gallery
 
       block scripts
