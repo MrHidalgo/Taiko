@@ -1,14 +1,14 @@
 // MENU
 
 .menu
-  opacity: 0
-  visibility: hidden
+  //opacity: 0
+  //visibility: hidden
   z-index: 100
   position: fixed
   top: 0
   left: 0
   width: 100vw
-  height: 100vh
+  min-height: 100vh
   background-color: $colorBlack
   overflow: auto
   transition: 0.35s
@@ -29,8 +29,8 @@
       right: -5%
 
     &--bg
-      bottom: 0
-      left: 0
+      bottom: -5%
+      left: -20%
 
   .container
     z-index: 1
@@ -41,10 +41,22 @@
 
   .row
     z-index: 0
+    overflow: hidden
     position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
     top: 0
     left: 0
     width: 100%
+    min-height: 100%
+    +rmin(1440)
+      padding-top: 50px
+      min-height: calc(100% - 50px)
+    +rmin(1920)
+      padding-top: 60px
+      min-height: calc(100% - 60px)
+
 
   &__cbtn
     margin-bottom: 5px
@@ -63,12 +75,11 @@
     margin:
       left: auto
       right: auto
-      top: 0
     +rmin(1440)
-      margin-top: 50px
+      //margin-top: 50px
       transform: scale(1)
     +rmin(1920)
-      margin-top: 60px
+      //margin-top: 60px
 
   &__row
     z-index: 1

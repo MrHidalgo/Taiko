@@ -13,7 +13,17 @@
     overflow: hidden
     position: relative
     background-color: $colorBlack
-    min-height: 100vh
+    min-height: calc(100vh - (120px + 40px))
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-top: 40px
+    +rmin(1440)
+      min-height: calc(100vh - (120px + 95px))
+      padding-top: 95px
+    +rmin(1920)
+      min-height: calc(100vh - (120px + 105px))
+      padding-top: 105px
 
     .container
       z-index: 1
@@ -22,11 +32,6 @@
       top: 0
       right: 0
       height: 100%
-      margin-top: 40px
-      +rmin(1440)
-        margin-top: 95px
-      +rmin(1920)
-        margin-top: 105px
 
     &-bg
       z-index: 0
@@ -35,7 +40,7 @@
       right: 0
 
     &-man
-      z-index: 1
+      z-index: 0
       position: absolute
       top: 0
       right: 0

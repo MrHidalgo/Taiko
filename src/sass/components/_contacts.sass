@@ -2,16 +2,20 @@
 
 .contacts
   &__main
+    display: flex
+    align-items: center
     background-image: url("../img/ImageBg_contacts.jpg")
     background-repeat: no-repeat
     background-position: center
     background-size: cover
-    min-height: 100vh
+    min-height: calc(100vh - (60px))
     padding-top: 60px
     +rmin(1440)
       padding-top: 100px
+      min-height: calc(100vh - (100px))
     +rmin(1920)
       padding-top: 120px
+      min-height: calc(100vh - (120px))
 
     &-cbtn
       margin-bottom: 37px
@@ -86,11 +90,11 @@
         margin-bottom: 50px
   &__email
     &-wrap
-      margin-bottom: 100px
+      margin-bottom: 90px
       +rmin(1440)
-        margin-bottom: 170px
+        margin-bottom: 120px
       +rmin(1920)
-        margin-bottom: 200px
+        margin-bottom: 150px
 
   &__form
     float: right
