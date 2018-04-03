@@ -122,6 +122,10 @@ $(document).ready(function(){
     $("html").removeClass('is-activeMenu');
     $("#menu").removeClass("slideInLeft").addClass("fadeOut");
   });
+  _document.on('click', '.menu__logo', function(){
+    $("html").removeClass('is-activeMenu');
+    $("#menu").removeClass("slideInLeft").addClass("fadeOut");
+  });
   _document.on('click', '[js-order]', function(){
     $("html").addClass('is-activeOrder');
   });
