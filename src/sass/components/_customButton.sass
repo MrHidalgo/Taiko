@@ -48,6 +48,10 @@
   &.season__concept-cbtn,
   &.menu__cbtn
     margin-left: 0
+    +rmin(1440)
+      margin-left: 100px
+    +rmin(1920)
+      margin-left: 0
   &.about__member-cbtn
     margin-right: 0
 
@@ -71,7 +75,7 @@
   &--active
     &:hover
       .cbutton__text
-        padding-bottom: 7px
+        //padding-bottom: 7px
         text-shadow: 1px 1px 10px rgba(0,0,0,0.5)
         transition: text-shadow 0.3s ease-in-out, padding-bottom 0.3s ease-in-out
 
