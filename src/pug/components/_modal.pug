@@ -1,10 +1,38 @@
 // FOOTER :: START
 
-#callback.modal.mfp-hide.animated
+//#callback.modal.mfp-hide.animated
+#callback.modal.animated
 
-  form.modal__form(js-modal)
+  form.modal__form.modal__form-choose.is-active.animated
 
-    p!= "14 чел. / 350 000 p."
+    span!= "SAKURA BLOSSOM"
+
+    .modal__form-field(js-chooseLabel, data-count="5 чел. / 50 000 p.")
+        .modal__form-field--left
+          +icon('ico-people')
+          | 5 ЧЕЛ.
+        .modal__form-field--right
+          | 50 000 p.
+
+    .modal__form-field(js-chooseLabel, data-count="7 чел. / 75 000 p.")
+        .modal__form-field--left
+          +icon('ico-people')
+          | 7 ЧЕЛ.
+        .modal__form-field--right
+          | 75 000 p.
+
+    .modal__form-field(js-chooseLabel, data-count="10 чел. / 100 000 p.")
+        .modal__form-field--left
+          +icon('ico-people')
+          | 10 ЧЕЛ.
+        .modal__form-field--right
+          | 100 000 p.
+
+    +customBtn('cbutton--active modal__cbtn js-chooseModal', "ЗАКАЗАТЬ")
+
+  form.modal__form.modal__form-data.animated(js-modal)
+
+    p(js-count)!= "5 чел. / 50 000 p."
     span!= "ЯПОНСКИЕ СЕЗОНЫ"
 
     .modal__form-field

@@ -140,6 +140,22 @@ $(document).ready(function(){
     }
   });
 
+  _document.on('click', "[js-chooseLabel]", function (e) {
+    var el = $(e.target).closest(".modal__form-field");
+    var data = el.attr("data-count");
+
+    $("[js-count]").text(data);
+
+    $("[js-chooseLabel]").removeClass('is-choose');
+    el.addClass("is-choose");
+  });
+  _document.on('click', ".js-chooseModal", function (e) {
+    $(".modal__form-choose").removeClass('is-active');
+    $(".modal__form-data").addClass('is-active');
+
+
+  });
+
   function closeMobileMenu(){
     $('[js-hamburger]').removeClass('is-active');
     $('.mobile-navi').removeClass('is-active');
@@ -275,6 +291,9 @@ $(document).ready(function(){
         close: function() {
           // $('html').removeClass('mfp-helper');
           _window.scrollTop(startWindowScroll);
+
+          $(".modal__form-choose").addClass('is-active');
+          $(".modal__form-data").removeClass('is-active');
         }
       }
     });

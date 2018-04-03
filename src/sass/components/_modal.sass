@@ -7,18 +7,39 @@
   background-color: $colorNero
   margin: 40px auto
   color: $colorWhite
-  padding: 20px 40px 47px 47px
   +rmin(1440)
     max-width: 600px
-    padding: 25px 50px 57px 57px
-  +rmin(1920)
-    padding: 30px 60px 67px 67px
 
   .show &
     animation-duration: 0.5s
     animation-name: zoomIn
 
   &__form
+    display: none
+    animation-name: fadeOut
+
+    &.is-active
+      display: block
+      animation-name: fadeIn
+
+
+    &-choose
+      padding: 20px 0 47px 0
+      +rmin(1440)
+        padding: 25px 0 57px 0
+      +rmin(1920)
+        padding: 30px 0 67px 0
+
+      .js-chooseModal
+        margin-top: 50px
+
+    &-data
+      padding: 20px 40px 47px 47px
+      +rmin(1440)
+        padding: 25px 50px 57px 57px
+      +rmin(1920)
+        padding: 30px 60px 67px 67px
+
     p,
     span
       display: block
@@ -49,6 +70,64 @@
       width: 100%
       min-height: 40px
       margin-bottom: 10px
+
+      .modal__form-choose &
+        cursor: pointer
+        display: flex
+        align-items: center
+        height: 90px
+        margin-bottom: 0
+        background-color: transparent
+        transition: background-color 0.3s ease-in-out
+
+        &.is-choose
+          background-color: $colorFuelYellow !important
+
+          .modal__form-field--left,
+          .modal__form-field--right
+            color: #000
+
+        &:hover
+          background-color: rgba($colorFuelYellow, 0.75)
+          transition: background-color 0.3s ease-in-out
+
+          .modal__form-field--left
+            svg
+              fill: $colorBlack
+              transition: fill 0.3s ease-in-out
+
+          .modal__form-field--left,
+          .modal__form-field--right
+            color: #000
+            transition: color 0.3s ease-in-out
+
+      &--left,
+      &--right
+        width: 50%
+        height: 100%
+        display: flex
+        align-items: center
+        transition: color 0.3s ease-in-out
+
+      &--left
+        .modal__form-choose &
+          padding-left: 55px
+          font-size: 24px
+          color: #fff
+
+          svg
+            fill: $colorWhite
+            width: 60px
+            height: 60px
+            margin-right: 25px
+            transition: fill 0.3s ease-in-out
+
+      &--right
+        .modal__form-choose &
+          padding-left: 55px
+          font-size: 30px
+          font-weight: bold
+          color: $colorFuelYellow
 
       &--email
         margin-bottom: 10px
