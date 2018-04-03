@@ -248,6 +248,11 @@
         &:last-child
           color: $colorNobel
           font-size: 25px
+          transition: color .3s ease-in-out
+          &:hover
+            color: $colorFuelYellow
+            transition: color .3s ease-in-out
+
           +rmin(1440)
             font-size: 30px
           +rmin(1920)
@@ -295,6 +300,10 @@
         &:first-child
           color: $colorNobel
           font-size: 20px
+          transition: color .3s ease-in-out
+          &:hover
+            color: $colorFuelYellow
+            transition: color .3s ease-in-out
           +rmin(1440)
             font-size: 22px
           +rmin(1920)
@@ -309,6 +318,7 @@
             font-size: 30px
           +rmin(1920)
             font-size: 40px
+
 
       &-hidden
         opacity: 0
@@ -359,7 +369,7 @@
         font-size: 40px
 
     &-row
-      display: flex
+      display: flex !important
       max-width: 800px
       margin-left: auto
       margin-right: auto
@@ -395,7 +405,6 @@
       position: relative
       width: 280px
       height: 280px
-      box-shadow: 0 5px 21px 9px rgba(0, 0, 0, 0.3)
       +rmin(1440)
         width: 480px
         height: 480px

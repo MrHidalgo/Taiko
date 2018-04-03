@@ -133,14 +133,14 @@
       margin-right: 0
       padding:
         left: 50px
-        right: 100px
+        right: 90px
       +rmin(1440)
         max-width: 600px
         margin-right: 120px
         padding-left: 0
         padding-right: 0
       +rmin(1920)
-        margin-right: 170px
+        margin-right: 150px
 
       .programs__block--reverse &
         margin:
@@ -182,7 +182,7 @@
       > p
         margin-bottom: 60px
         font-size: 13px
-        line-height: 1.4
+        line-height: 1.5
         letter-spacing: 1.1px
         +rmin(1440)
           margin-bottom: 80px
@@ -209,26 +209,22 @@
       display: flex
       flex-wrap: wrap
       align-items: center
-      justify-content: space-between
+      justify-content: flex-start
       margin-bottom: 0
       +rmin(1440)
         margin-bottom: 50px
       +rmin(1920)
         margin-bottom: 60px
 
-      > h4,
-      > .programs__block-time
-        display: inline-block
-        vertical-align: middle
-
       h4
-        margin: 10px 20px 10px 0
+        margin: 10px 50px 10px 0
         font:
           weight: bold
         color: $colorFuelYellow
-        font-size: 18px
+        font-size: 20px
+        letter-spacing: 0
         +rmin(1440)
-          font-size: 40px
+          font-size: 30px
         +rmin(1920)
           font-size: 40px
 

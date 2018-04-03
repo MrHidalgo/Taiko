@@ -55,7 +55,8 @@ block content
             +customBtn('about__member-cbtn', "САМОХИНА")
 
           .about__member-col
-            p.about__member-cAt!= "@ALEX_TAIKO"
+            p.about__member-cAt
+              a(href="#")!= "@ALEX_TAIKO"
 
       p.about__member-title!= "НАШИ БАРАБАНЩИЦЫ"
 
@@ -75,28 +76,39 @@ block content
           img(src="./img/" + arrImage[i] + ".jpg" class="wow wowFadeUp" data-animation-delay="0.65s")
 
           .about__member-grid-hidden
-            p!= "@SHELOMKA"
+            p
+              a(href="#")!= "@SHELOMKA"
             p!= "АНАСТАСИЯ"
             p!= "ШЕЛОМОВА"
 
 
 
   .about__reviews
-    .container
+    .container.wow.wowFadeLeft(data-animation-delay="0.55s")
       p.about__reviews-title!= "ОТЗЫВЫ"
 
-      .about__reviews-row
+      .about__reviews-row.js-reviews
+        .about__reviews-row
+          .about__reviews-row--left
+            .about__reviews-image
+              img(src="./img/ImageReview_about.jpg")
 
-        .about__reviews-row--left.wow.wowFadeLeft(data-animation-delay="0.55s")
-          .about__reviews-image
-            img(src="./img/ImageReview_about.jpg")
+          .about__reviews-row--right
+            p!= "Очень зажигали барабанщицы! Они такое творили! Это было фантастически мощно и красиво."
+            .about__reviews-wrap
+              p!= "певец, актёр, композитор и продюсер"
+              span!= "ФИЛЛИП КИРКОРОВ"
 
-        .about__reviews-row--right.wow.wowFadeRight(data-animation-delay="0.55s")
-          p!= "Очень зажигали барабанщицы! Они такое творили! Это было фантастически мощно и красиво."
-          .about__reviews-wrap
-            p!= "певец, актёр, композитор и продюсер"
-            span!= "ФИЛЛИП КИРКОРОВ"
+        .about__reviews-row
+          .about__reviews-row--left
+            .about__reviews-image
+              img(src="./img/ImageReview_about0.jpg")
 
+          .about__reviews-row--right
+            p!= "Девочки отлично вписались в спектакль. И как музыканты, и как актеры они прекрасно чувствовали себя на сцене."
+            .about__reviews-wrap
+              p!= 'режиссер, художественный руководитель "Театриума"'
+              span!= "ТЕРЕЗА ДУРОВА"
 
 
 block footer

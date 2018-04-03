@@ -158,8 +158,8 @@ $(document).ready(function(){
   //////////
 
   function initSliders(){
-    var slickNextArrow = '<div class="slick-prev"><i class="icon-prev"></div>';
-    var slickPrevArrow = '<div class="slick-next"><i class="icon-next"></div>';
+    var slickPrevArrow = '<div class="slick-prev"><i class="icon-prev"></div>';
+    var slickNextArrow = '<div class="slick-next"><i class="icon-next"></div>';
 
     // General purpose sliders
     $('[js-slider]').each(function(i, slider){
@@ -227,6 +227,19 @@ $(document).ready(function(){
         customPaging: function() {
           return '<div></div>';
         }
+      });
+    }
+
+    // Reviews
+    if ($('.js-reviews')) {
+      $('.js-reviews').not('.slick-initialized').slick({
+        dots: false,
+        prevArrow: slickPrevArrow,
+        nextArrow: slickNextArrow,
+        speed: 550,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
       });
     }
   }
