@@ -7,7 +7,7 @@
     background-color: $colorBlack
     min-height: 570px
     +rmin(1440)
-      min-height: 980px
+      min-height: 810px
     +rmin(1920)
       min-height: 1080px
 
@@ -19,10 +19,6 @@
       max-height: 100%
       height: auto
       left: 0
-      +rmin(1440)
-        left: -10%
-      +rmin(1920)
-        left: 0
 
     .container
       z-index: 1
@@ -45,8 +41,9 @@
       padding-top: 35px
       font-size: 21px
       +rmin(1440)
-        padding-top: 68px
-        font-size: 35px
+        padding-top: 48px
+        font-size: 30px
+        line-height: 1.4
       +rmin(1920)
         padding-top: 78px
         font-size: 40px
@@ -62,7 +59,7 @@
     background-attachment: fixed
     min-height: 580px
     +rmin(1440)
-      min-height: 880px
+      min-height: 810px
     +rmin(1920)
       min-height: 1080px
 
@@ -189,6 +186,8 @@
     padding-top: 60px
     background-color: $colorNero
     +rmin(1440)
+      padding-top: 90px
+    +rmin(1920)
       padding-top: 120px
 
     &-wrap
@@ -201,9 +200,9 @@
       min-height: 380px
       height: 380px
       +rmin(1440)
-        height: 100%
-        min-height: 680px
-        margin-bottom: 120px
+        max-width: 1170px
+        height: 540px
+        margin: 0 auto 80px
       +rmin(1920)
         min-height: 720px
 
@@ -233,7 +232,10 @@
       text-align: right
       min-height: 640px
       +rmin(1440)
-        min-height: 680px
+        padding:
+          top: 50px
+          right: 70px
+        min-height: 550px
       +rmin(1920)
         min-height: 720px
 
@@ -345,14 +347,18 @@
     min-height: 560px
     padding-top: 45px
     +rmin(1440)
-      min-height: 980px
-      padding-top: 100px
+      min-height: 780px
+      padding-top: 70px
     +rmin(1920)
       min-height: 1080px
       padding-top: 120px
 
     .container
       max-width: (1300 + (40 * 2)) * 1px
+      +rmin(1440)
+        max-width: 1170px
+      +rmin(1920)
+        max-width: (1300 + (40 * 2)) * 1px
 
     &-title
       font:
@@ -362,7 +368,7 @@
       margin-bottom: 91px
       font-size: 19px
       +rmin(1440)
-        margin-bottom: 161px
+        margin-bottom: 131px
         font-size: 30px
       +rmin(1920)
         margin-bottom: 181px
@@ -381,6 +387,8 @@
         width: 280px
         margin-right: 60px
         +rmin(1440)
+          width: 410px
+        +rmin(1920)
           width: 480px
 
 
@@ -390,6 +398,8 @@
         justify-content: space-between
         width: calc(100% - (280px + 60px))
         +rmin(1440)
+          width: calc(100% - (410px + 60px))
+        +rmin(1920)
           width: calc(100% - (480px + 60px))
 
         > p
@@ -406,6 +416,9 @@
       width: 280px
       height: 280px
       +rmin(1440)
+        width: 410px
+        height: 410px
+      +rmin(1920)
         width: 480px
         height: 480px
 
@@ -425,7 +438,7 @@
         color: $colorNobel
         font-size: 12px
         +rmin(1440)
-          font-size: 22px
+          font-size: 20px
         +rmin(1920)
           font-size: 24px
 
@@ -433,6 +446,6 @@
         display: block
         font-size: 18px
         +rmin(1440)
-          font-size: 30px
+          font-size: 28px
         +rmin(1920)
           font-size: 40px
