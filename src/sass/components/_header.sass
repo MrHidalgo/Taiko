@@ -17,6 +17,8 @@
     height: 65px
     transition: height 0.3s ease-in-out
     +rmin(1440)
+      height: 90px
+    +rmin(1920)
       height: 120px
 
     .is-fixed &
@@ -30,6 +32,9 @@
     height: 65px
     padding-left: 30px
     +rmin(1440)
+      height: 90px
+      padding-left: 45px
+    +rmin(1920)
       height: 120px
       padding-left: 60px
     .is-fixed &
@@ -48,6 +53,9 @@
       width: 22px
       margin-right: 30px
       +rmin(1440)
+        width: 30px
+        margin-right: 40px
+      +rmin(1920)
         width: 42px
         margin-right: 60px
 
@@ -59,6 +67,9 @@
       background-color: $colorWhite
       transition: background-color .25s ease-in-out
       +rmin(1440)
+        height: 3px
+        margin-bottom: 3px
+      +rmin(1920)
         height: 4px
         margin-bottom: 3px
       &:last-child
@@ -70,6 +81,8 @@
           left: auto
           right: auto
         +rmin(1440)
+          width: 15px
+        +rmin(1920)
           width: 21px
 
     &-text
@@ -79,7 +92,7 @@
       transition: color .25s ease-in-out
       font-size: 11px
       +rmin(1440)
-        font-size: 22px
+        font-size: 18px
       +rmin(1920)
         font-size: 24px
 
@@ -92,6 +105,8 @@
     transform: translateY(-50%) scale(0.5)
     margin: auto
     +rmin(1440)
+      transform: translateY(-50%) scale(0.75)
+    +rmin(1920)
       transform: translateY(-50%) scale(1)
 
 
@@ -108,10 +123,13 @@
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out
     font-size: 9px
     +rmin(1440)
+      width: 300px
+      padding-right: 45px
+      font-size: 14px
+      line-height: 1.5
+    +rmin(1920)
       width: 310px
       padding-right: 55px
-      font-size: 22px
-    +rmin(1920)
       font-size: 24px
 
     &:hover

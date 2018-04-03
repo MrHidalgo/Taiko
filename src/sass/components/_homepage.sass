@@ -6,7 +6,7 @@
     min-height: 510px
     padding-top: 50px
     +rmin(1440)
-      min-height: 860px
+      min-height: 720px
       padding-top: 73px
     +rmin(1920)
       min-height: 960px
@@ -33,12 +33,12 @@
       letter-spacing: 4px
       font-size: 18px
       +rmin(1440)
-        font-size: 30px
+        font-size: 29px
       +rmin(1920)
         font-size: 40px
 
     &-cbtn
-      margin-top: 10px
+      margin-top: 5px
 
 
   &__program
@@ -47,6 +47,8 @@
     min-height: 1080px
     background-color: $colorBlack
     +rmin(1440)
+      min-height: 1530px
+    +rmin(1920)
       min-height: 2040px
 
     .container
@@ -58,7 +60,7 @@
       height: 100%
       padding-top: 95px
       +rmin(1440)
-        padding-top: 145px
+        padding-top: 135px
       +rmin(1920)
         padding-top: 175px
 
@@ -75,6 +77,8 @@
         bottom: 0
         right: 0
 
+    &-wrap
+      padding-left: 100px
 
     &-title
       font:
@@ -89,7 +93,7 @@
     &-subTitle
       font-size: 30px
       +rmin(1440)
-        font-size: 45px
+        font-size: 47px
       +rmin(1920)
         font-size: 60px
 
@@ -98,6 +102,7 @@
         bottom: 50px
       font-size: 15px
       +rmin(1440)
+        margin-bottom: 40px
         font-size: 25px
       +rmin(1920)
         font-size: 30px
@@ -109,13 +114,16 @@
       padding:
         right: 180px
       line-height: 1.5
+      letter-spacing: 0
       margin:
         top: 50px
         bottom: 137px
       +rmin(1440)
+        width: 60%
         margin:
-          top: 100px
-          bottom: 247px
+          top: 77px
+          bottom: 207px
+        line-height: 1.6
       +rmin(1920)
         margin:
           top: 120px
@@ -128,6 +136,11 @@
       bottom: 50px
       max-width: 30%
       +rmin(1440)
+        bottom: 40px
+        right: 130px
+        transform: scale(0.75)
+      +rmin(1920)
+        transform: scale(1)
         max-width: 100%
 
     &-video
@@ -137,6 +150,10 @@
       height: 340px
       background-color: $colorNero
       +rmin(1440)
+        left: 90px
+        max-width: 820px
+        height: 450px
+      +rmin(1920)
         max-width: 1080px
         height: 600px
 
@@ -152,6 +169,10 @@
     background-color: $colorNero
     +rmin(1440)
       padding:
+        top: 81px
+        bottom: 97px
+    +rmin(1920)
+      padding:
         top: 111px
         bottom: 127px
 
@@ -163,6 +184,7 @@
       margin-bottom: 20px
       font-size: 19px
       +rmin(1440)
-        font-size: 30px
+        margin-bottom: 30px
+        font-size: 29px
       +rmin(1920)
         font-size: 40px
