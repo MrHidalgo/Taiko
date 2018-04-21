@@ -14,12 +14,14 @@
   &--icon
     position: absolute
     left: 50%
-    right: 0
     top: 50%
-    bottom: 0
-    margin-top: -(105px / 2)
-    margin-left: -(82px / 2)
-    height: 105px
+    transform: translate(-50%,-50%)
+    size: 65px 55px
+    // +rmin(1440)
+    //   size: 70px 60px
+    +rmin(1440)
+      size: 120px 105px
+
 
   &.homepage__main-cbtn,
   &.news__main-cbtn,
@@ -117,12 +119,17 @@
           box-shadow: none
 
   &__icon
-    position: relative
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-45%,-45%) scale(0.5)
     z-index: 1
-    margin:
-      top: 27px
-      left: 27px
-      right: 26px
+    // margin:
+    //   top: 27px
+    //   left: 27px
+    //   right: 26px
+    +rmin(1440)
+      transform: translate(-45%,-45%) scale(1)
 
 
   &__text
@@ -170,4 +177,3 @@
         font-size: 55px
       +rmin(1920)
         font-size: 80px
-

@@ -35,14 +35,6 @@ $(document).ready(function(){
 
     // development helper
     _window.on('resize', debounce(setBreakpoint, 200))
-
-    // AVAILABLE in _components folder
-    // copy paste in main.js and initialize here
-
-    // initTeleport();
-    // parseSvg();
-    // revealFooter();
-    // _window.on('resize', throttle(revealFooter, 100));
   }
 
   // this is a master function which should have all functionality
@@ -254,6 +246,9 @@ $(document).ready(function(){
     if ($('.js-reviews')) {
       $('.js-reviews').not('.slick-initialized').slick({
         dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
         prevArrow: slickPrevArrow,
         nextArrow: slickNextArrow,
         speed: 550,
@@ -422,7 +417,7 @@ $(document).ready(function(){
     });
 
   }
-  
+
   //////////
   // BARBA PJAX
   //////////

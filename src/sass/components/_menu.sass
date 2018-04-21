@@ -25,7 +25,9 @@
     height: auto
 
     &--girl
-      bottom: 0
+      bottom: -5%
+      transform: scale(1.05)
+      transform-origin: right bottom
       right: -5%
 
     &--bg
@@ -112,11 +114,12 @@
     font-size: 14px
     margin-bottom: 31px
     +rmin(1440)
-      padding-left: 80px
+      padding-left: 45px
       margin:
         bottom: 10px
       font-size: 20px
     +rmin(1920)
+      padding-left: 55px
       font-size: 24px
       margin:
         bottom: 39px
