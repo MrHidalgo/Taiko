@@ -12,22 +12,22 @@ block content
         .contacts__main-row
           .contacts__main-row--left.wow.wowFadeLeft(data-animation-delay=".3s")
 
-            +customBtn('contacts__main-cbtn', "КОНТАКТЫ")
+            +customBtn('contacts__main-cbtn', "Контакты")
 
             .contacts__phone-wrap
-              p.contacts__phone-title!= "ПОЗВОНИТЬ"
+              p.contacts__phone-title!= "Позвонить"
               a(href="tel:89629996662").contacts__phone-number!= '8 (962) 999-666-2'
 
             .contacts__email-wrap
-              p.contacts__email-title!= "НАПИСАТЬ"
-              a(href="mailto:info@taiko.moscow").contacts__email-number!= 'INFO@TAIKO.MOSCOW'
+              p.contacts__email-title!= "Написать"
+              a(href="mailto:info@taiko.moscow").contacts__email-number!= 'info@taiko.moscow'
 
             .footer__present
               .footer__present-image
                 .footer__present-bg
                 .footer__present-icon.icon-pfd
               .footer__present-text
-                p.footer__present-title!= 'СКАЧАЙТЕ <br/> ПРЕЗЕНТАЦИЮ'
+                p.footer__present-title!= 'Скачайте <br/> Презентацию'
                 p.footer__present-size!= 'PDF, 4МБ'
 
 
@@ -36,19 +36,18 @@ block content
             form.contacts__form(js-contacts)
 
               .contacts__form-field
-                input(type="text" name="name" placeholder="ВАШЕ ИМЯ")
+                input(type="text" name="name" placeholder="Ваше имя")
 
               .contacts__form-field.contacts__form-field--phone
-                input(type="tel" name="phone" placeholder="ВАШ НОМЕР")
+                input(type="tel" name="phone" placeholder="Ваш номер")
 
               .contacts__form-field
-                input(type="email" name="email" placeholder="ПОЧТА")
+                input(type="email" name="email" placeholder="Почта")
 
               .contacts__form-field.contacts__form-field--message
-                textarea(placeholder="СООБЩЕНИЕ" name="message")
+                textarea(placeholder="Сообщение" name="message")
 
-              +customBtnSubmit('cbutton--active contacts__form-cbtn', "ОТПРАВИТЬ")
+              +customBtnSubmit('cbutton--active contacts__form-cbtn', "Отправить")
 
 
         include ./components/_social
-

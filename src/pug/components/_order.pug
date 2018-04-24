@@ -6,31 +6,31 @@
   .order__block
 
     .order__phone-wrap
-      p.order__phone-title!= "ПОЗВОНИТЬ"
+      p.order__phone-title!= "Позвонить"
       a(href="tel:89629996662").order__phone-number!= '8 (962) 999-666-2'
 
     .order__email-wrap
-      p.order__email-title!= "НАПИСАТЬ"
-      a(href="mailto:info@taiko.moscow").order__email-number!= 'INFO@TAIKO.MOSCOW'
+      p.order__email-title!= "Написать"
+      a(href="mailto:info@taiko.moscow").order__email-number!= 'info@taiko.moscow'
 
     form.order__form(js-registrationOrder)
 
       .order__form-field
-        input(type="text" name="name" placeholder="ВАШЕ ИМЯ")
+        input(type="text" name="name" placeholder="Ваше имя")
 
       .order__form-field.order__form-field--phone
-        input(type="tel" name="phone" placeholder="ВАШ НОМЕР")
+        input(type="tel" name="phone" placeholder="ваш номер")
 
       .order__form-field.order__form-field--email
-        input(type="email" name="email" placeholder="ПОЧТА")
+        input(type="email" name="email" placeholder="Почта")
 
-      p.order__form-title!= "СПОСОБ СВЯЗИ"
+      p.order__form-title!= "Способ связи"
 
       .order__form-social
-        a(href="tel:89629996662" title="Phone" class="order__form-link")
+        a(href="#" title="Phone" class="order__form-link")
           i.icon-phone
           i.icon-phone_hover
-        a(href="mailto:info@taiko.moscow" title="Email" class="order__form-link")
+        a(href="#" title="Email" class="order__form-link")
           i.icon-email
           i.icon-email_hover
         a(href="#" title="WhatsApp" class="order__form-link")
@@ -44,8 +44,8 @@
           i.icon-viber_hover
 
       .order__form-field.order__form-field--date
-        input(id="date" type="text" name="date" placeholder="ДАТА МЕРОПРИЯТИЯ")
+        input(id="date" type="text" name="date" placeholder="Дата Мероприятия")
 
-      +customBtnSubmit('cbutton--active order__cbtn', "ОТПРАВИТЬ")
+      +customBtnSubmit('cbutton--active order__cbtn', "Отправить")
 
 // ORDER :: END

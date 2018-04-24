@@ -15,7 +15,7 @@ mixin newsBlock(idx, className)
       a(href="#", class="news__wrap-elem " + className, data-animation-delay=".5s")
         img(src="./img/ImagePreview-" + i + "_news.jpg")
         .news__wrap-hidden
-          p!= "ОТКРЫТИЕ<br/>ЮНИКЛО"
+          p!= "Открытие<br/>Юникло"
 
 
 mixin customBtn(className, text)
@@ -126,4 +126,3 @@ mixin seasconBlock(text, arr)
           != arr[i]
 
         p!= "#БАРАБАННЫЙ НОМЕР"
-
