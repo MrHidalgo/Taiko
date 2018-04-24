@@ -31,6 +31,7 @@ $(document).ready(function(){
     initSliders();
     initScrollMonitor();
     initMasks();
+    initValidations();
     // initLazyLoad();
 
     // development helper
@@ -525,6 +526,167 @@ $(document).ready(function(){
   }
 
   // alert(jQuery.fn.jquery);
+
+  // FORM VALIDATIONS
+  ////////////////
+
+  function initValidations(){
+
+    // jQuery validate plugin
+    // https://jqueryvalidation.org
+
+    var validateErrorPlacement = function(error, element) {
+      error.addClass('ui-input__validation');
+      error.appendTo(element.parent("div"));
+    }
+    var validateHighlight = function(element) {
+      $(element).parent('div').addClass("has-error");
+    }
+    var validateUnhighlight = function(element) {
+      $(element).parent('div').removeClass("has-error");
+    }
+
+    var validatePhone = {
+      required: true,
+      normalizer: function(value) {
+          var PHONE_MASK = '+X (XXX) XXX-XXXX';
+          if (!value || value === PHONE_MASK) {
+              return value;
+          } else {
+              return value.replace(/[^\d]/g, '');
+          }
+      },
+      minlength: 11,
+      digits: true
+    };
+
+    jQuery.validator.addMethod("dateITA", function(value, element) {
+        var check = false;
+        var re = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+        if( re.test(value)) {
+            var adata = value.split('/');
+            var gg = parseInt(adata[0],10);
+            var mm = parseInt(adata[1],10);
+            var aaaa = parseInt(adata[2],10);
+            var xdata = new Date(aaaa,mm-1,gg);
+            var currentdata = new Date();
+
+            if (xdata.getFullYear() >= currentdata.getFullYear()-3) {
+                check = false;
+            }
+            else if ( ( xdata.getFullYear() === aaaa ) && ( xdata.getMonth() === mm - 1 ) && ( xdata.getDate() === gg ) ){
+                check = true;
+            } else {
+                check = false;
+            }
+        } else {
+            check = false;
+        }
+        return this.optional(element) || check;
+    }, "Please enter a correct date");
+
+    // ORDER
+    ////////////////////
+    $("[js-registrationOrder]").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: function(form) {
+        $(form).addClass('loading');
+        $.ajax({
+          type: "POST",
+          url: 'php/order.php',
+          data: $(form).serialize(),
+          success: function(response) {
+            $(form).removeClass('loading');
+            var data = $.parseJSON(response);
+            if (data.status == 'success') {
+              // do something I can't test
+            } else {
+                $(form).find('[data-error]').html(data.message).show();
+            }
+          }
+        })
+      },
+      rules: {
+        name: "required",
+        email: {
+          required: true,
+          email: true
+        },
+        date: {
+          required: true,
+          // date: dateValidator,
+          dateITA: true
+        },
+        phone: validatePhone
+      },
+      messages: {
+        name: "Заполните это поле",
+        email: {
+          required: "Заполните это поле",
+          email: "Email содержит неправильный формат"
+        },
+        date: {
+          required: "Заполните это поле",
+          dateITA: "Введите дату в формате dd/mm/yyyy"
+        },
+        phone: {
+          required: "Заполните это поле",
+          minlength: "Введите не менее 11 символов",
+          phone: "Введите корректный телефон"
+        }
+      }
+    });
+
+    $("#date").mask("99/99/9999");
+
+    // CONTACTS
+    ////////////////////
+    $("[js-contacts], [js-modal]").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: function(form) {
+        $(form).addClass('loading');
+        $.ajax({
+          type: "POST",
+          url: 'php/call.php',
+          data: $(form).serialize(),
+          success: function(response) {
+            $(form).removeClass('loading');
+            var data = $.parseJSON(response);
+            if (data.status == 'success') {
+              // do something I can't test
+            } else {
+                $(form).find('[data-error]').html(data.message).show();
+            }
+          }
+        })
+      },
+      rules: {
+        name: "required",
+        email: {
+          required: true,
+          email: true
+        },
+        phone: validatePhone
+      },
+      messages: {
+        name: "Заполните это поле",
+        email: {
+          required: "Заполните это поле",
+          email: "Email содержит неправильный формат"
+        },
+        phone: {
+          required: "Заполните это поле",
+          minlength: "Введите не менее 11 символов",
+          phone: "Введите корректный телефон"
+        }
+      }
+    });
+
+  }
 
 });
 function setViewport(){
