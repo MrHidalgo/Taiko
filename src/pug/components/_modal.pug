@@ -1,4 +1,4 @@
-// FOOTER :: START
+// MODALS :: START
 
 //#callback.modal.mfp-hide.animated
 #callback.modal.animated.mfp-hide
@@ -46,4 +46,16 @@
 
     +customBtnSubmit('cbutton--active modal__cbtn', "Отправить")
 
-// FOOTER :: END
+
+#thanks.modal.animated.mfp-hide
+
+  .modal__form.modal__form-choose.is-active.animated
+
+    span!= "Заявка отправлена"
+    
+    .modal__thanks
+      p(data-message) Ваша заявка успешно отправлена. Спасибо
+
+    +customBtnSubmit('cbutton--active modal__cbtn js-close-modal', "Закрыть")
+
+    

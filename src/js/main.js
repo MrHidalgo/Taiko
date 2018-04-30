@@ -348,6 +348,10 @@ $(document).ready(function(){
   	});
   }
 
+  _document.on('click', '.js-close-modal', function(){
+    closeMfp();
+  })
+
   function closeMfp(){
     $.magnificPopup.close();
   }
@@ -571,7 +575,7 @@ $(document).ready(function(){
             var xdata = new Date(aaaa,mm-1,gg);
             var currentdata = new Date();
 
-            if (xdata.getFullYear() >= currentdata.getFullYear()-3) {
+            if (xdata.getFullYear() >= currentdata.getFullYear() + 2) {
                 check = false;
             }
             else if ( ( xdata.getFullYear() === aaaa ) && ( xdata.getMonth() === mm - 1 ) && ( xdata.getDate() === gg ) ){
@@ -601,12 +605,42 @@ $(document).ready(function(){
             $(form).removeClass('loading');
             var data = $.parseJSON(response);
             if (data.status == 'success') {
-              // do something I can't test
+              // blank all values
+              $(form).find('input').val('');
+              // hide form
+              $("html").removeClass('is-activeOrder');
+
+              // paste sucess message
+              $('#thanks').find('[data-message]').html(data.message);
+
+              // show modal
+              $.magnificPopup.open({
+                items: {
+                  src: '#thanks'
+                },
+                type: 'inline',
+                fixedContentPos: true,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'show',
+                callbacks: {
+                  close: function() {
+                    // $('html').removeClass('mfp-helper');
+                    $(".modal__form-choose").addClass('is-active');
+                    $(".modal__form-data").removeClass('is-active');
+                  }
+                }
+              });
             } else {
-                $(form).find('[data-error]').html(data.message).show();
+              $(form).find('[data-message]').html(data.message).show();
             }
           }
         })
+
       },
       rules: {
         name: "required",
@@ -657,9 +691,36 @@ $(document).ready(function(){
             $(form).removeClass('loading');
             var data = $.parseJSON(response);
             if (data.status == 'success') {
-              // do something I can't test
+              // blank all values
+              $(form).find('input').val('');
+
+              // paste sucess message
+              $('#thanks').find('[data-message]').html(data.message);
+
+              // show modal
+              $.magnificPopup.open({
+                items: {
+                  src: '#thanks'
+                },
+                type: 'inline',
+                fixedContentPos: true,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'show',
+                callbacks: {
+                  close: function() {
+                    // $('html').removeClass('mfp-helper');
+                    $(".modal__form-choose").addClass('is-active');
+                    $(".modal__form-data").removeClass('is-active');
+                  }
+                }
+              });
             } else {
-                $(form).find('[data-error]').html(data.message).show();
+              $(form).find('[data-message]').html(data.message).show();
             }
           }
         })

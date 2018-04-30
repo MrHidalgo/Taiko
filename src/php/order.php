@@ -11,7 +11,7 @@
   if (empty($_POST['phone']))
       $errors['content'] = 'Phone is required.';
 
-  $sucessMessage = "Спасибо! Успешно отправлено";
+  $sucessMessage = "Ваша заявка успешно отправлена. Мы свяжемся с вами для подтверждения в ближайшее время";
 
   // return a response ===========================================================
   // if there are any errors in our errors array, return a success boolean of false
