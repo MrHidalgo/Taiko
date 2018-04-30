@@ -22,7 +22,7 @@
   } else {
     $email_to = 'xs290@me.com, info@taiko.moscow';
     $email_subject = "Форма звонка :: TAIKO ";
-    $email_message = "You have new message from contact form\n\n";
+    $email_message = "Новая заявка с формы обратного звонка\n\n";
     function clean_string($string) {
       $bad = array("content-type","bcc:","to:","cc:","href");
       return str_replace($bad,"",$string);

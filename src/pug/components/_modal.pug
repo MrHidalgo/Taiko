@@ -1,9 +1,9 @@
 // MODALS :: START
 
 //#callback.modal.mfp-hide.animated
-#callback.modal.animated.mfp-hide
+#callback.modal.mfp-hide
 
-  form.modal__form.modal__form-choose.is-active.animated
+  form.modal__form.modal__form-choose.is-active
 
     span!= "SAKURA BLOSSOM"
 
@@ -30,7 +30,7 @@
 
     +customBtn('cbutton--active modal__cbtn js-chooseModal', "Заказать")
 
-  form.modal__form.modal__form-data.animated(js-modal)
+  form.modal__form.modal__form-data(js-modal)
 
     p(js-count)!= "5 чел. / 50 000 p."
     span!= "ЯПОНСКИЕ СЕЗОНЫ"
@@ -47,9 +47,9 @@
     +customBtnSubmit('cbutton--active modal__cbtn', "Отправить")
 
 
-#thanks.modal.animated.mfp-hide
+#thanks.modal.mfp-hide
 
-  .modal__form.modal__form-choose.is-active.animated
+  .modal__form.modal__form-choose.is-active
 
     span!= "Заявка отправлена"
     

@@ -604,7 +604,7 @@ $(document).ready(function(){
           success: function(response) {
             $(form).removeClass('loading');
             var data = $.parseJSON(response);
-            if (data.status == 'success') {
+            if (data.success == true) {
               // blank all values
               $(form).find('input').val('');
               // hide form
@@ -690,7 +690,7 @@ $(document).ready(function(){
           success: function(response) {
             $(form).removeClass('loading');
             var data = $.parseJSON(response);
-            if (data.status == 'success') {
+            if (data.success == true) {
               // blank all values
               $(form).find('input').val('');
 
