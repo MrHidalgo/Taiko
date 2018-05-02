@@ -1,53 +1,5 @@
 // MODALS :: START
 
-//#callback.modal.mfp-hide.animated
-#callback.modal.mfp-hide
-
-  form.modal__form.modal__form-choose.is-active
-
-    span!= "SAKURA BLOSSOM"
-
-    .modal__form-field(js-chooseLabel, data-count="5 чел. / 50 000 p.")
-        .modal__form-field--left
-          +icon('ico-people')
-          | 5 ЧЕЛ.
-        .modal__form-field--right
-          | 50 000 p.
-
-    .modal__form-field(js-chooseLabel, data-count="7 чел. / 75 000 p.")
-        .modal__form-field--left
-          +icon('ico-people')
-          | 7 ЧЕЛ.
-        .modal__form-field--right
-          | 75 000 p.
-
-    .modal__form-field(js-chooseLabel, data-count="10 чел. / 100 000 p.")
-        .modal__form-field--left
-          +icon('ico-people')
-          | 10 ЧЕЛ.
-        .modal__form-field--right
-          | 100 000 p.
-
-    +customBtn('cbutton--active modal__cbtn js-chooseModal', "Заказать")
-
-  form.modal__form.modal__form-data(js-modal)
-
-    p(js-count)!= "5 чел. / 50 000 p."
-    span!= "ЯПОНСКИЕ СЕЗОНЫ"
-    input(type="hidden" name="programm" value="")
-    input(type="hidden" name="people" value="")
-      
-    .modal__form-field
-      input(type="text" name="name" placeholder="Ваше имя")
-
-    .modal__form-field.modal__form-field--phone
-      input(type="tel" name="phone" placeholder="Ваш номер")
-
-    .modal__form-field.modal__form-field--email
-      input(type="email" name="email" placeholder="почта")
-
-    +customBtnSubmit('cbutton--active modal__cbtn', "Отправить")
-
 
 #thanks.modal.mfp-hide
 
