@@ -141,12 +141,20 @@ $(document).ready(function(){
 
     $("[js-chooseLabel]").removeClass('is-choose');
     el.addClass("is-choose");
+
+    $(this).closest('.modal').find('input[name="people"]').val(data);
   });
   _document.on('click', ".js-chooseModal", function (e) {
     $(".modal__form-choose").removeClass('is-active');
     $(".modal__form-data").addClass('is-active');
+  });
 
+  _document.on('click', ".order__form-social a", function (e) {
+    var value = $(this).attr('title');
+    $(this).parent().find('input[type=hidden]').val(value);
 
+    $(this).siblings().removeClass('is-active');
+    $(this).addClass('is-active');
   });
 
   function closeMobileMenu(){
@@ -283,6 +291,39 @@ $(document).ready(function(){
         beforeOpen: function() {
           startWindowScroll = _window.scrollTop();
           // $('html').addClass('mfp-helper');
+        },
+        close: function() {
+          // $('html').removeClass('mfp-helper');
+          _window.scrollTop(startWindowScroll);
+
+          $(".modal__form-choose").addClass('is-active');
+          $(".modal__form-data").removeClass('is-active');
+        }
+      }
+    });
+
+    $('.js-order').magnificPopup({
+      type: 'inline',
+      fixedContentPos: true,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'show',
+      callbacks: {
+        beforeOpen: function() {
+          startWindowScroll = _window.scrollTop();
+          // $('html').addClass('mfp-helper');
+        },
+        open: function(){
+          var mfp = $.magnificPopup.instance;
+          var parentBlock = mfp.currItem.el.closest('.programs__block');
+          var programName = parentBlock.find('.programs__block-header h4').html();
+
+          mfp.content.find('span').html(programName);
+          mfp.content.find('input[name="programm"]').val(programName)
         },
         close: function() {
           // $('html').removeClass('mfp-helper');
@@ -575,7 +616,7 @@ $(document).ready(function(){
             var xdata = new Date(aaaa,mm-1,gg);
             var currentdata = new Date();
 
-            if (xdata.getFullYear() >= currentdata.getFullYear() + 2) {
+            if ( xdata.getFullYear() >= currentdata.getFullYear() + 2 ) {
                 check = false;
             }
             else if ( ( xdata.getFullYear() === aaaa ) && ( xdata.getMonth() === mm - 1 ) && ( xdata.getDate() === gg ) ){
@@ -677,7 +718,80 @@ $(document).ready(function(){
 
     // CONTACTS
     ////////////////////
-    $("[js-contacts], [js-modal]").validate({
+    $("[js-contacts]").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: function(form) {
+        $(form).addClass('loading');
+        $.ajax({
+          type: "POST",
+          url: 'php/contacts.php',
+          data: $(form).serialize(),
+          success: function(response) {
+            $(form).removeClass('loading');
+            var data = $.parseJSON(response);
+            if (data.success == true) {
+              // blank all values
+              $(form).find('input').val('');
+
+              // paste sucess message
+              $('#thanks').find('[data-message]').html(data.message);
+
+              // show modal
+              $.magnificPopup.open({
+                items: {
+                  src: '#thanks'
+                },
+                type: 'inline',
+                fixedContentPos: true,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'show',
+                callbacks: {
+                  close: function() {
+                    // $('html').removeClass('mfp-helper');
+                    $(".modal__form-choose").addClass('is-active');
+                    $(".modal__form-data").removeClass('is-active');
+                  }
+                }
+              });
+            } else {
+              $(form).find('[data-message]').html(data.message).show();
+            }
+          }
+        })
+      },
+      rules: {
+        name: "required",
+        email: {
+          required: true,
+          email: true
+        },
+        phone: validatePhone
+      },
+      messages: {
+        name: "Заполните это поле",
+        email: {
+          required: "Заполните это поле",
+          email: "Email содержит неправильный формат"
+        },
+        phone: {
+          required: "Заполните это поле",
+          minlength: "Введите не менее 11 символов",
+          phone: "Введите корректный телефон"
+        }
+      }
+    });
+
+
+
+    /// modal
+    $("[js-modal]").validate({
       errorPlacement: validateErrorPlacement,
       highlight: validateHighlight,
       unhighlight: validateUnhighlight,

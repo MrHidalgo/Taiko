@@ -22,7 +22,7 @@
   } else {
     $email_to = 'xs290@me.com, info@taiko.moscow';
     $email_subject = "Форма звонка :: TAIKO ";
-    $email_message = "Новая заявка с формы обратного звонка\n\n";
+    $email_message = "Новая заявка\n\n";
     function clean_string($string) {
       $bad = array("content-type","bcc:","to:","cc:","href");
       return str_replace($bad,"",$string);
@@ -30,6 +30,8 @@
     $email_message .= "Имя: ".clean_string($_POST['name'])."\n";
     $email_message .= "Почта: ".clean_string($_POST['email'])."\n";
     $email_message .= "Телефон: ".clean_string($_POST['phone'])."\n";
+    $email_message .= "Программа: ".clean_string($_POST['programm'])."\n";
+    $email_message .= "Количество человек: ".clean_string($_POST['people'])."\n";
     @mail($email_to, $email_subject, $email_message);
     // show a message of success and provide a true success variable
     $data['success'] = true;

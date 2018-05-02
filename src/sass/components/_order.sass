@@ -158,6 +158,7 @@
         margin-bottom: 30px
 
       a
+        position: relative
         display: flex
         align-items: center
         justify-content: center
@@ -174,7 +175,7 @@
           height: 60px
           border-width: 5px
 
-        &:hover
+        &:hover, &.is-active
           border-color: $colorFuelYellow
           transition: border-color 0.3s ease-in-out
 
@@ -189,16 +190,18 @@
 
         i
           position: absolute
+          top: 50%
+          left: 50%
           transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out
-          transform: scale(0.5)
+          transform: translate(-50%,-50%) scale(0.5)
           &:last-child
             opacity: 0
             visibility: hidden
 
           +rmin(1440)
-            transform: scale(0.75)
+            transform: translate(-50%,-50%) scale(0.75)
           +rmin(1920)
-            transform: scale(1)
+            transform: translate(-50%,-50%) scale(1)
 
     &-field
       width: 100%
